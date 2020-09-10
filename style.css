@@ -1,19 +1,11 @@
-*,
-::after,
-::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit; }
+@charset "UTF-8";
 
-html {
-  font-size: 62.5%; }
-
-body {
-  box-sizing: border-box;
-  background-color: #D7BB7E; }
-
-h1 {
-  color: #fff; }
-
-a {
-  text-decoration: none; }
+/*
+Theme Name: vluxe
+Theme URI: https://https://vertlette.valedor.devwebgarneau.com/
+Author: Valerie Dorval - Bianka Halle
+Author URI: https://https://vertlette.valedor.devwebgarneau.com/
+Description: Site VLuxe
+Version: 0.1
+Text Domain: vluxe
+*/

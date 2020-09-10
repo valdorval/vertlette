@@ -1,0 +1,81 @@
+.header {
+
+     img {
+          height: 16rem;
+          margin-top: 2rem;
+     }
+
+     &__box {
+          height: 22rem;
+          background-image: linear-gradient(
+               to bottom, 
+               $color-white, 
+               $color-primary-light);
+     }
+
+     .nav {
+          background-color: $color-primary;
+          height: 5.5rem;
+
+          &__menu {
+               list-style-type: none;
+               height: 100%;
+               margin: 0 auto;
+               justify-content: space-between;
+
+               &--item {
+                    padding: 0 5rem;
+                    cursor: pointer;
+                    height: 100%;
+                    position: relative;
+                    padding: 0 5rem;
+                    transition: all .5s;
+
+                    a {
+                         display: block;
+                         width: 100%;
+                         position: absolute;
+                         left: 0;
+                         right: 0;
+                         top: 50%;
+                         transform: translateY(-50%);
+                         color: $color-black;
+                         font-weight: 500;
+                         text-transform: uppercase;
+                    }
+
+                    &:hover {
+                         background-color: rgba($color-primary-light, .3);
+                    }
+               }
+          }
+
+          &__submenu {
+               display: none;
+          }
+     }
+
+     &__message {
+          background-color: $color-primary-light;
+
+          p {
+               padding: 3rem 0;
+               color: $color-secondary-dark;
+               font-family: $title-font;
+               font-weight: bold;
+               font-size: 2rem;
+               position: relative;
+
+               &::after {
+                    content: 'X';
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    right: 2%;
+                    transform: translateY(-50%);
+                    color: $color-secondary-dark;
+                    cursor: pointer;
+               }
+          }
+     }
+} 
