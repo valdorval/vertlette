@@ -1,0 +1,37 @@
+.footer {
+     background-color: $color-primary;
+     height: 25rem;
+     position: relative;
+
+     &__content {
+          @include position;
+          justify-content: space-around;
+     }
+
+     &__category {
+          color: $color-secondary-dark;
+
+          a {
+               color: $color-secondary-dark;
+               transition: all .3s;
+
+               &:hover {
+                    color: rgba($color-white, .6);
+               }
+          }
+
+          p {
+               &:first-child {
+                    font-weight: 700;
+               }
+          }
+     }
+
+     &__allrights {
+          color: $color-secondary-dark;
+          position: absolute;
+          bottom: 5%;
+          left: 50%;
+          transform: translateX(-50%);
+     }
+}

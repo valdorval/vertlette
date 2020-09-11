@@ -1,9 +1,12 @@
 @import "./base/base";
-// @import "./base/buttons";
-// @import "./base/mixins";
+@import "./base/buttons";
+@import "./base/mixins";
 @import "./base/typography";
 @import "./base/variables";
 @import "./base/_utilities";
 
 @import "./layout/footer";
 @import "./layout/header";
+
+@import "./module/newsletter";
+@import "./module/index-corpo";

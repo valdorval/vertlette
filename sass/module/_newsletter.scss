@@ -1,0 +1,35 @@
+.newsletter {
+     background-color: $color-secondary;
+     height: 35rem;
+     position: relative;
+
+     p {
+          font-size: 1.6rem;
+          font-weight: 300;
+     }
+
+     &__box {
+          width: 50%;
+          @include position;
+     }
+
+     &__form--input {
+          width: 50%;
+          padding: 1.3rem 2rem;
+          margin-right: 5rem;
+          background-color: $color-primary-special-light;
+          border: 1px solid $color-transparent;
+          border-bottom: 4px solid $color-primary;
+          color: $color-primary-dark;
+          transition: all .4s;
+
+          &:focus {
+               outline: none;
+               box-shadow: 0 0 0 .2rem rgba($color-primary, .7);
+          }
+
+          &::placeholder {
+               color: rgba($color-primary-dark, .5);
+          }
+     }
+}

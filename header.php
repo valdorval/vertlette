@@ -38,5 +38,3 @@
                <p class="center">Livraison gratuite à partir de 2 500$ d'achats</p>
           </div>
      </header>
-     <h1>Test</h1>
-     <h2>Oups</h2>

@@ -2,6 +2,8 @@
 
 body {
      font-family: $text-font;
+     font-size: 1.8rem;
+     font-weight: 400;
 }
 
 h1, h2, h3,
@@ -9,4 +11,17 @@ h4, h5, h6 {
      font-family: $title-font;
      color: $color-primary-dark;
      text-transform: uppercase;
+}
+
+.p-light {
+     color: $color-white;
+}
+
+.heading-primary {
+     font-size: 5.5rem;
+}
+
+.heading-secondary {
+     font-size: 3.6 rem;
+     color: $color-primary;
 }
