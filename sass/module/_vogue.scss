@@ -1,0 +1,79 @@
+.vogue {
+     background-color: rgba($color-primary-light, .5);
+     padding: 7rem 0 9rem;
+
+     &__main-content {
+          background-color: rgba($color-primary, .8);
+          width: 25%;
+          height: 48rem;
+          position: absolute;
+          left: 0;
+          top: 0;
+
+          p {
+               padding: 0 1rem;
+               font-weight: 500;
+          }
+     }
+
+     &__main-product {
+          position: relative;
+          height: 48rem;
+          background-image: url(../img/sofa.jpg);
+          background-repeat: no-repeat;
+          background-position: bottom;
+          background-size: cover;
+
+          img {
+               height: 100%;
+          }
+
+          &::after {
+               @include contour;
+             }
+     }
+
+     &__other-product {
+          justify-content: space-between;
+     }
+
+     &__second-item {
+          width: 36%;
+          position: relative;
+          height: 40rem;
+          background-image: url(../img/laveuse.jpg);
+          background-repeat: no-repeat;
+          background-position: top;
+          background-size: cover;
+
+          &--text {
+               background-color: rgba($color-primary-light, .9);
+               height: 22%;
+               padding: 1rem 5rem;
+          } 
+
+          &::after {
+               @include contour;
+          }
+     }
+
+     &__third-item {
+          width: 56%;
+          position: relative;
+          height: 40rem;
+          background-image: url(../img/chambre.jpg);
+          background-repeat: no-repeat;
+          background-position: bottom;
+          background-size: cover;
+
+          &--text {
+               background-color: rgba($color-primary-light, .9);
+               height: 22%;
+               padding: 1rem 5rem;
+          } 
+
+          &::after {
+               @include contour;
+          }
+     }
+}

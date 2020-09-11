@@ -1,0 +1,27 @@
+.presentation {
+     margin: 9rem 0;
+
+     &__content {
+          position: relative;
+          height: 60rem;
+          background-image: url(../img/table-cuisine.jpg);
+          background-position: center;
+          background-size: cover;  
+
+          button {
+               position: absolute;
+               left: 2rem;
+               bottom: 2rem;
+          }
+
+          &::after {
+               @include contour;
+          }
+     }
+
+     &__title {
+          background-color: rgba($color-primary, .8);
+          height: 9rem;
+          padding: 3rem;
+     }  
+}
