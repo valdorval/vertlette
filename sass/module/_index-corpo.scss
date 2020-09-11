@@ -1,19 +1,30 @@
 .index-corpo {
-
+     
      &__image  {
           position: relative;
-          
+          height: 70rem;
+          background-image: url(../img/abonnement-corpo.jpg);
+          background-repeat: no-repeat;
+          background-position: top;
+          background-size: cover;
+
           img {
                width: 100%;
-               z-index: 1;
           }
          
+          &::after {
+            @include contour;
+          }
      }
 
      &__content {
           position: absolute;
-          left: 2%;
-          top: 2%;
-          z-index: 1000;
+          top: 5%;
+          left: 5%;
+          width: 50%;
+
+          p {
+               text-shadow: 1px 1px 3px rgba($color-black, .8);
+          }
      }
 }

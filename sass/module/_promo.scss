@@ -1,0 +1,51 @@
+.promo {
+
+     &__content {
+          justify-content: space-between;
+
+          &--item {
+               width: 25%;
+               position: relative;
+
+               img {
+                    width: 100%;
+               }
+
+               &::after {
+                    @include contour;
+               }
+          }
+
+          button {
+               position: absolute;
+               bottom: 2rem;
+               left: 50%;
+               transform: translateX(-50%);
+          }
+     }
+
+     &__title {
+          background-color: $color-primary-special;
+          width: 100%;
+          height: 5rem;
+          padding: .4rem;
+          position: absolute;
+          left: -2rem;
+          top: 2rem;
+     }
+
+     &__price {
+          display: block;
+          width: 100%;
+          position: absolute;
+          bottom: 7.5rem;
+          font-size: 3.5rem;
+          text-shadow: 1px 2px 5px rgba($color-black, .6);
+          font-weight: 300;
+
+          span {
+               text-decoration: line-through;
+               padding-right: 2rem;
+          }
+     }
+}
