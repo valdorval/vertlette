@@ -2,6 +2,10 @@
 get_header();
 ?>
 <main>
+<<<<<<< HEAD
+=======
+
+>>>>>>> devval
     <section class="presentation u-margin-top-big">
         <div class="presentation__content container">
             <div class="presentation__title">
@@ -92,4 +96,8 @@ get_header();
 
 <?php
 get_footer();
+<<<<<<< HEAD
 ?>
+=======
+?>
+>>>>>>> devval
