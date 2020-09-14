@@ -11,7 +11,7 @@ function vluxe_supports()
      add_theme_support('menus');
      add_theme_support('woocommerce');
      register_nav_menus(array(
-          'primary' => __('Navigation en-tête', 'vluze'),
+          'primary' => __('Navigation en-tête', 'vluxe'),
      ));
 }
 
