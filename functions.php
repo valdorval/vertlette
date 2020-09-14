@@ -8,26 +8,11 @@ function enqueue_styles_vluxe()
 
 function vluxe_supports()
 {
-     add_theme_support('automatic-feed-links');
-     add_theme_support('title-tag');
-     add_theme_support('post-thumbnails');
      add_theme_support('menus');
      add_theme_support('woocommerce');
      register_nav_menus(array(
-          'primary' => __('Navigation en-tête', 'vluxe')
+          'primary' => __('Navigation en-tête', 'vluxe'),
      ));
-     add_theme_support(
-          'html5',
-          [
-               'search-form',
-               'comment-form',
-               'comment-list',
-               'gallery',
-               'caption',
-               'style',
-               'script'
-          ]
-     );
 }
 
 function vluxe_menu_class($classes)
