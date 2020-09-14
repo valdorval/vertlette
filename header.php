@@ -20,13 +20,12 @@
           </div>
 
           <nav class="nav" id="main_nav">
-               <?php wp_nav_menu(
-                    array(
-                         'theme_location' => 'primary',
-                         'container' => 'ul',
-                         'menu_class' => 'nav__menu container-big flex center'
-                    )
-               ); ?>
+               <?php wp_nav_menu([
+                    'theme_location' => 'main_nav',
+                    'container' => 'ul',
+                    'menu_class' => 'nav__menu container-big flex center'
+               ]); ?>
+
           </nav>
           <div class="header__message">
                <p class="center">Livraison gratuite à partir de 2 500$ d'achats</p>
