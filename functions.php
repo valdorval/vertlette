@@ -8,9 +8,10 @@ function enqueue_styles_vluxe()
 
 function vluxe_supports()
 {
+     add_theme_support('title-tag');
+     add_theme_support('post-thumbnails');
      add_theme_support('menus');
      add_theme_support('woocommerce');
-     add_theme_support('menus');
      register_nav_menus(array(
           'primary' => __('Navigation en-tête', 'vluxe')
      ));
