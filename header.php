@@ -17,6 +17,7 @@
                     <img src="<?php echo get_template_directory_uri(); ?>/img/logo-v-luxe.svg" alt="Image du logo">
                </div>
           </div>
+<<<<<<< HEAD
           <nav class="nav">
                <ul class="nav__menu container-big flex">
                     <li class="nav__menu--item"><a href="#" class="center">Accueil</a></li>
@@ -33,6 +34,17 @@
                     <li class="nav__menu--item"><a href="#" class="center">Nous contacter</a></li>
                     <li class="nav__menu--item"><a href="#" class="center">À propos</a></li>
                </ul>
+=======
+
+          <nav class="nav" id="main_nav">
+               <?php wp_nav_menu(
+                    array(
+                         'theme_location' => 'primary',
+                         'container' => 'ul',
+                         'menu_class' => 'nav__menu container-big flex center'
+                    )
+               ); ?>
+>>>>>>> parent of fe20a0f... ajustement fichier fonction
           </nav>
           <div class="header__message">
                <p class="center">Livraison gratuite à partir de 2 500$ d'achats</p>
