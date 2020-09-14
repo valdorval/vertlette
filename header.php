@@ -18,6 +18,9 @@
                </div>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 25ffc23... Merge branch 'master' of https://github.com/valdorval/vertlette
           <nav class="nav">
                <ul class="nav__menu container-big flex">
                     <li class="nav__menu--item"><a href="#" class="center">Accueil</a></li>
@@ -34,6 +37,7 @@
                     <li class="nav__menu--item"><a href="#" class="center">Nous contacter</a></li>
                     <li class="nav__menu--item"><a href="#" class="center">À propos</a></li>
                </ul>
+<<<<<<< HEAD
 =======
 
           <nav class="nav" id="main_nav">
@@ -45,6 +49,8 @@
                     )
                ); ?>
 >>>>>>> parent of fe20a0f... ajustement fichier fonction
+=======
+>>>>>>> parent of 25ffc23... Merge branch 'master' of https://github.com/valdorval/vertlette
           </nav>
           <div class="header__message">
                <p class="center">Livraison gratuite à partir de 2 500$ d'achats</p>

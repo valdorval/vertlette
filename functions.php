@@ -6,6 +6,7 @@ function enqueue_styles_vluxe() {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 function vluxe_supports()
 {
@@ -25,6 +26,8 @@ function vluxe_menu_class($classes)
 
 add_action('after_setup_theme', 'vluxe_supports');
 >>>>>>> parent of fe20a0f... ajustement fichier fonction
+=======
+>>>>>>> parent of 25ffc23... Merge branch 'master' of https://github.com/valdorval/vertlette
 add_action('wp_enqueue_scripts', 'enqueue_styles_vluxe');
 
 // print(get_template_directory_uri().'/css/main.css/');
