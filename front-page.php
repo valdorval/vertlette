@@ -1,6 +1,6 @@
-<!-- <?php
-     get_header();
-     ?>
+<?php
+get_header();
+?>
 <main>
 
      <section class="presentation u-margin-top-big">
@@ -92,4 +92,4 @@
 </main>
 <?php
 get_footer();
-?> -->
+?>

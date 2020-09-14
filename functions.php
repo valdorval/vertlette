@@ -13,6 +13,19 @@ function vluxe_supports()
      add_theme_support('post-thumbnails');
      add_theme_support('menus');
      register_nav_menu('main_nav', 'Navigation en-tête');
+     register_nav_menu('footer_nav', 'Pied de page');
+     add_theme_support(
+          'html5',
+          [
+               'search-form',
+               'comment-form',
+               'comment-list',
+               'gallery',
+               'caption',
+               'style',
+               'script'
+          ]
+     );
 }
 
 function vluxe_menu_class($classes)
