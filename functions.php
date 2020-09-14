@@ -15,7 +15,6 @@ function vluxe_supports()
      ));
      // register_nav_menu('main_nav', 'Navigation en-tête');
      // register_nav_menu('footer_nav', 'Pied de page');
-
      add_theme_support(
           'html5',
           [
