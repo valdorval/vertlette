@@ -18,30 +18,15 @@
                </div>
                <?php get_search_form() ?>
           </div>
-          <nav class="nav" id="main_nav">
 
+          <nav class="nav" id="main_nav">
                <?php wp_nav_menu(
                     array(
-                         'theme_location' => 'Menu-1',
+                         'theme_location' => 'primary',
                          'container' => 'ul',
                          'menu_class' => 'nav__menu container-big flex center'
                     )
                ); ?>
-               <!-- <ul class="nav__menu container-big flex">
-                    <li class="nav__menu--item"><a href="index.php" class="center">Accueil</a></li>
-                    <li class="nav__menu--item"><a href="#" class="center">Boutique</a>
-                         <ul class="nav__submenu">
-                              <li class="nav__submenu--item"><a href="#" class="center">Boutique</a></li>
-                              <li class="nav__submenu--item"><a href="#" class="center">Boutique corporative</a></li>
-                         </ul>
-                    </li>
-                    <li class="nav__menu--item"><a href="news.php" class="center">Nouvelles</a></li>
-                    <li class="nav__menu--item"><a href="abonnement.php" class="center">Abonnement</a></li>
-                    <li class="nav__menu--item"><a href="reparation.php" class="center">Réparation & Récupération</a></li>
-                    <li class="nav__menu--item"><a href="live.php" class="center">Live YouTube</a></li>
-                    <li class="nav__menu--item"><a href="contact.php" class="center">Nous contacter</a></li>
-                    <li class="nav__menu--item"><a href="about.php" class="center">À propos</a></li>
-               </ul> -->
           </nav>
           <div class="header__message">
                <p class="center">Livraison gratuite à partir de 2 500$ d'achats</p>
