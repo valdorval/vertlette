@@ -24,5 +24,5 @@ function vluxe_menu_class($classes)
 
 add_action('after_setup_theme', 'vluxe_supports');
 add_action('wp_enqueue_scripts', 'enqueue_styles_vluxe');
-
-// print(get_template_directory_uri().'/css/main.css/');
+add_filter('nav_menu_css_class', 'vluxe_menu_class', 10, 4);
+//nav_menu_submenu_css_class

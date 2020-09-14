@@ -17,28 +17,6 @@
                     <img src="<?php echo get_template_directory_uri(); ?>/img/logo-v-luxe.svg" alt="Image du logo">
                </div>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of 25ffc23... Merge branch 'master' of https://github.com/valdorval/vertlette
-          <nav class="nav">
-               <ul class="nav__menu container-big flex">
-                    <li class="nav__menu--item"><a href="#" class="center">Accueil</a></li>
-                    <li class="nav__menu--item"><a href="#" class="center">Boutique</a>
-                         <ul class="nav__submenu">
-                              <li class="nav__submenu--item"><a href="#" class="center">Boutique</a></li>
-                              <li class="nav__submenu--item"><a href="#" class="center">Boutique corporative</a></li>
-                         </ul>
-                    </li>
-                    <li class="nav__menu--item"><a href="#" class="center">Nouvelles</a></li>
-                    <li class="nav__menu--item"><a href="#" class="center">Abonnement</a></li>
-                    <li class="nav__menu--item"><a href="#" class="center">Réparation & Récupération</a></li>
-                    <li class="nav__menu--item"><a href="#" class="center">Live YouTube</a></li>
-                    <li class="nav__menu--item"><a href="#" class="center">Nous contacter</a></li>
-                    <li class="nav__menu--item"><a href="#" class="center">À propos</a></li>
-               </ul>
-<<<<<<< HEAD
-=======
 
           <nav class="nav" id="main_nav">
                <?php wp_nav_menu(
@@ -48,10 +26,9 @@
                          'menu_class' => 'nav__menu container-big flex center'
                     )
                ); ?>
->>>>>>> parent of fe20a0f... ajustement fichier fonction
-=======
->>>>>>> parent of 25ffc23... Merge branch 'master' of https://github.com/valdorval/vertlette
+
           </nav>
+
           <div class="header__message">
                <p class="center">Livraison gratuite à partir de 2 500$ d'achats</p>
           </div>
