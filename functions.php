@@ -12,7 +12,7 @@ function vluxe_supports()
      add_theme_support('woocommerce');
      add_theme_support('menus');
      register_nav_menus(array(
-          'primary' => __('Navigation en-tête', 'vluxe'),
+          'primary' => __('Navigation en-tête', 'vluxe')
      ));
      // register_nav_menu('main_nav', 'Navigation en-tête');
      // register_nav_menu('footer_nav', 'Pied de page');
