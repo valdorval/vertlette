@@ -126,17 +126,11 @@ h4, h5, h6 {
     color: #07043A; }
     .footer__category a {
       color: #07043A;
-      transition: all .4s; }
+      transition: all .3s; }
       .footer__category a:hover {
         color: rgba(255, 255, 255, 0.6); }
     .footer__category p:first-child {
       font-weight: 700; }
-    .footer__category--social img {
-      width: 3rem;
-      margin-right: 2rem;
-      transition: all .4s; }
-      .footer__category--social img:hover {
-        transform: scale(1.2); }
   .footer__allrights {
     color: #07043A;
     position: absolute;
