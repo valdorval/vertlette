@@ -8,6 +8,7 @@ function enqueue_styles_vluxe()
 
 function vluxe_supports()
 {
+<<<<<<< HEAD
      add_theme_support('menus');
      add_theme_support('woocommerce');
      add_theme_support('menus');
@@ -16,6 +17,16 @@ function vluxe_supports()
      ));
      // register_nav_menu('main_nav', 'Navigation en-tête');
      // register_nav_menu('footer_nav', 'Pied de page');
+=======
+     add_theme_support('automatic-feed-links');
+     add_theme_support('title-tag');
+     add_theme_support('post-thumbnails');
+     add_theme_support('menus');
+     add_theme_support('woocommerce');
+     register_nav_menu('main_nav', 'Navigation en-tête');
+     register_nav_menu('footer_nav', 'Pied de page');
+
+>>>>>>> devval
      add_theme_support(
           'html5',
           [
