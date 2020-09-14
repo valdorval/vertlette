@@ -10,11 +10,9 @@ function vluxe_supports()
 {
      add_theme_support('menus');
      add_theme_support('woocommerce');
-<<<<<<< HEAD
-     register_nav_menus(array(
-          'primary' => __('Navigation en-tête', 'vluxe'),
-     ));
-=======
+     // register_nav_menus(array(
+     //      'primary' => __('Navigation en-tête', 'vluxe'),
+     // ));
      register_nav_menu('main_nav', 'Navigation en-tête');
      register_nav_menu('footer_nav', 'Pied de page');
 
@@ -30,7 +28,6 @@ function vluxe_supports()
                'script'
           ]
      );
->>>>>>> devval
 }
 
 function vluxe_menu_class($classes)
