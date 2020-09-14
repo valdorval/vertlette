@@ -13,7 +13,7 @@
 
           a {
                color: $color-secondary-dark;
-               transition: all .3s;
+               transition: all .4s;
 
                &:hover {
                     color: rgba($color-white, .6);
@@ -23,6 +23,19 @@
           p {
                &:first-child {
                     font-weight: 700;
+               }
+          }
+
+          &--social {
+               
+               img {
+                    width: 3rem;
+                    margin-right: 2rem;
+                    transition: all .4s;
+
+                    &:hover {
+                         transform: scale(1.2);
+                    }
                }
           }
      }
