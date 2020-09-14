@@ -2,10 +2,6 @@
 get_header();
 ?>
 <main>
-<<<<<<< HEAD
-=======
-
->>>>>>> devval
     <section class="presentation u-margin-top-big">
         <div class="presentation__content container">
             <div class="presentation__title">
