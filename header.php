@@ -9,7 +9,7 @@
      <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class() ?>>
 
      <header class="header">
           <div class="header__box flex">
@@ -20,11 +20,13 @@
           </div>
           <nav class="nav" id="main_nav">
 
-               <?php wp_nav_menu([
-                    'theme_location' => 'main_nav',
-                    'container' => 'ul',
-                    'menu_class' => 'nav__menu container-big flex center'
-               ]); ?>
+               <?php wp_nav_menu(
+                    array(
+                         'theme_location' => 'Menu-1',
+                         'container' => 'ul',
+                         'menu_class' => 'nav__menu container-big flex center'
+                    )
+               ); ?>
                <!-- <ul class="nav__menu container-big flex">
                     <li class="nav__menu--item"><a href="index.php" class="center">Accueil</a></li>
                     <li class="nav__menu--item"><a href="#" class="center">Boutique</a>
