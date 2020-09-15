@@ -2,7 +2,6 @@
 get_header();
 ?>
 <main>
-
     <section class="presentation u-margin-top-big">
         <div class="presentation__content container">
             <div class="presentation__title">
@@ -90,6 +89,7 @@ get_header();
         </div>
     </section>
 </main>
+
 <?php
 get_footer();
 ?>
