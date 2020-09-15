@@ -1,4 +1,3 @@
-</body>
 <?php wp_footer(); ?>
 <footer class="footer">
      <div class="footer__content container flex">
@@ -23,5 +22,8 @@
      </div>
      <p class="center footer__allrights">Tous droits réservés @2020 VLuxe</p>
 </footer>
+
+
+</body>
 
 </html>

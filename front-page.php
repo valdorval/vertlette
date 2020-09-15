@@ -9,7 +9,6 @@ get_header();
             </div>
             <button class="btn">Découvrir nos produits</button>
         </div>
-
     </section>
 
     <section class="promo u-margin-top-big">
