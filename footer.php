@@ -18,12 +18,15 @@
           </div>
           <div class="footer__category center">
                <p class="u-margin-bottom-xsmall">Réseaux sociaux</p>
+               <div class="footer__category--social flex">
+                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/twitter.svg" alt="Twitter"></a>
+                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/facebook.svg" alt="facebook"></a>
+                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/instagram.svg" alt="instagram"></a>
+               </div>
           </div>
      </div>
      <p class="center footer__allrights">Tous droits réservés @2020 VLuxe</p>
 </footer>
-
-
 </body>
 
 </html>
