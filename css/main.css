@@ -32,6 +32,19 @@ a {
   .btn__dark {
     background-color: #917A5E; }
 
+.form-input {
+  border: 1px solid #D7BB7E;
+  border-radius: 3px;
+  background-color: rgba(254, 245, 220, 0.6);
+  color: #917A5E;
+  padding: 1.3rem 2rem;
+  margin: 1.5rem; }
+  .form-inputfocus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(215, 187, 126, 0.7); }
+  .form-input::placeholder {
+    color: rgba(145, 122, 94, 0.5); }
+
 body {
   font-family: "Rubik", sans-serif;
   font-size: 1.8rem;
@@ -214,6 +227,29 @@ p {
       transform: translateY(-50%);
       color: #07043A;
       cursor: pointer; }
+
+.contact__header img {
+  width: 100%; }
+
+.contact__coordonne {
+  width: 40%;
+  border-right: 1px solid #D7BB7E; }
+
+.contact__map {
+  width: 80%;
+  height: 40rem; }
+
+.contact__details {
+  margin: 0 auto;
+  width: 90%; }
+  .contact__details--hours {
+    margin: 0 auto;
+    width: 70%;
+    justify-content: space-between; }
+
+.contact__form {
+  background: red;
+  width: 50%; }
 
 .index-corpo__image {
   position: relative;
