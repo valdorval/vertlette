@@ -1,0 +1,36 @@
+.contact {
+
+     &__header {
+
+          img {
+               width: 100%;
+          }
+     }
+
+     &__coordonne {
+          width: 40%;
+          border-right: 1px solid $color-primary;
+     }
+
+     &__map {
+          width: 80%;
+          height: 40rem;
+     }
+
+     &__details {
+          margin: 0 auto;
+          width: 90%;
+
+          &--hours {
+               margin: 0 auto;
+               width: 70%;
+               justify-content: space-between;
+          }
+     }
+
+     &__form {
+
+          background: red;
+          width: 50%;
+     }
+}
