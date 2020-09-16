@@ -14,6 +14,14 @@ get_header();
     <section class="promo u-margin-top-big">
         <h2 class="heading-primary u-margin-bottom-big container">Nos promotions</h2>
         <div class="promo__content flex container">
+
+
+            <?php get_template_part('template-parts/articles'); ?>
+
+
+
+
+
             <div class="promo__content--item">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/chaise-fauteuil-petit.jpg" alt="Fauteuil">
                 <div class="promo__title">
