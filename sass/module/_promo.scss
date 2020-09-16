@@ -8,10 +8,10 @@
                width: 25%;
                position: relative;
 
-               img {
-                    height: 2px;
-                    width: 100%;
-               }
+          img{
+               width: 100%;
+               height: 100px;
+          }
 
                &::after {
                     @include contour;
@@ -51,6 +51,3 @@
           }
      }
 }
-
-
-.custom-class { width: 200px; height: 200px; }

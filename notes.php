@@ -30,9 +30,16 @@
 
 
 
-
-if (has_post_thumbnail($loop->post->ID)) echo get_the_post_thumbnail($loop->post->ID, 'shop_thumbnail', array($size => 'widht: 100px;', 'height:100px'));
+<?php
+if (has_post_thumbnail($loop->post->ID))
+    echo get_the_post_thumbnail($loop->post->ID);
 else
+?>
 
 
 <?php echo '<img src="' . woocommerce_placeholder_img_src() . ' />';
+
+the_post_thumbnail('portfolio', ['class' => 'custom-class', 'title' => 'Feature image'])
+?>
+
+// ---------------------

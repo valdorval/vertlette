@@ -56,7 +56,7 @@ function vluxe_supports()
     add_theme_support('automatic-feed-links');
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
-    add_image_size('portfolio', 600, 400, true);
+    add_image_size('promotions', 600, 438);
     add_theme_support('menus');
     add_theme_support('woocommerce');
     register_nav_menu('main_nav', 'Navigation en-tête');
@@ -75,21 +75,6 @@ function vluxe_supports()
         ]
     );
 }
-
-// function remove_img_attr($html)
-// {
-//     return preg_replace('/(width|height)="\d+"\s/', "", $html);
-// }
-
-// add_filter('post_thumbnail_html', 'remove_img_attr');
-
-
-// function wpdocs_setup_theme()
-// {
-//     add_theme_support('post-thumbnails');
-//     set_post_thumbnail_size(150, 150);
-// }
-// add_action('after_setup_theme', 'wpdocs_setup_theme');
 
 function vluxe_menu_class($classes)
 {
