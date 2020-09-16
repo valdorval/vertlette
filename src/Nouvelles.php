@@ -1,5 +1,10 @@
 <?php
 
+
+// Ce fichier n'est présentement pas utilisé 
+//le post de nouvelles est dans functions.php
+
+
 namespace App;
 
 class Nouvelles
