@@ -27,6 +27,9 @@ a {
   cursor: pointer;
   transition: all .4s; }
   .btn:hover {
+    background-color: #917A5E;
+    color: #FEF5DC; }
+  .btn .__dark {
     background-color: #917A5E; }
 
 body {
@@ -62,6 +65,10 @@ h4, h5, h6 {
   text-transform: none; }
   .heading-quaternary--dark {
     color: inherit; }
+
+.heading-dark {
+  font-size: 3rem;
+  color: #000; }
 
 .heading-rubik {
   font-family: "Rubik", sans-serif;
@@ -322,6 +329,29 @@ h4, h5, h6 {
   .promo__price span {
     text-decoration: line-through;
     padding-right: 2rem; }
+
+.reparation__content {
+  justify-content: space-between; }
+
+.reparation__text {
+  width: 60%;
+  padding-left: 1rem;
+  margin-left: 1px solid #D7BB7E; }
+
+.reparation__img {
+  width: 30%; }
+  .reparation__img::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: -2.5rem;
+    bottom: -2.5rem;
+    border: 1px solid #D7BB7E;
+    z-index: -1; }
+  .reparation__img img {
+    width: 100%; }
 
 .vogue {
   background-color: rgba(254, 245, 220, 0.5);

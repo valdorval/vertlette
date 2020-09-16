@@ -21,7 +21,7 @@
           <nav class="nav" id="main_nav">
                <?php wp_nav_menu(
                     array(
-                         'theme_location' => 'primary',
+                         'theme_location' => 'main_nav',
                          'container' => 'ul',
                          'menu_class' => 'nav__menu container-big flex center'
                     )
