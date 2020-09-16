@@ -15,10 +15,12 @@
             global $product; ?>
             <div class="promo__content--item">
 
-                <img src="<?php echo get_the_post_thumbnail_url($post->ID); ?>" class="custom-class" id="test" />
+
                 <a href="<?php echo get_permalink(); ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
 
-                    <div class="promo__title">
+                    <img src="<?php echo get_the_post_thumbnail_url($post->ID); ?>" class="custom-class" height="438" />
+
+                    <div class=" promo__title">
                         <h4 class="heading-rubik heading-rubik--light"><?php the_title(); ?></h4>
                     </div>
                     <span class="p-light promo__price center"><?php echo $product->get_price_html(); ?></span>
