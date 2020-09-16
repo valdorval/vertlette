@@ -11,43 +11,8 @@ get_header();
         </div>
     </section>
 
-    <section class="promo u-margin-top-big">
-        <h2 class="heading-primary u-margin-bottom-big container">Nos promotions</h2>
-        <div class="promo__content flex container">
 
-
-            <?php get_template_part('template-parts/articles'); ?>
-
-
-
-
-
-            <div class="promo__content--item">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/chaise-fauteuil-petit.jpg" alt="Fauteuil">
-                <div class="promo__title">
-                    <h4 class="heading-rubik heading-rubik--light">Lorem ipsum</h4>
-                </div>
-                <p class="p-light promo__price center"><span>499$ </span> <strong>459$</strong></p>
-                <button class="btn">Voir le produit</button>
-            </div>
-            <div class="promo__content--item">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/frigo-petit.jpg" alt="Frigo">
-                <div class="promo__title">
-                    <h4 class="heading-rubik heading-rubik--light">Lorem ipsum</h4>
-                </div>
-                <p class="p-light promo__price center"><span>499$ </span> <strong>459$</strong></p>
-                <button class="btn">Voir le produit</button>
-            </div>
-            <div class="promo__content--item">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/table-chaise-petit.jpg" alt="Table">
-                <div class="promo__title">
-                    <h4 class="heading-rubik heading-rubik--light">Lorem ipsum</h4>
-                </div>
-                <p class="p-light promo__price center"><span>499$ </span> <strong>459$</strong></p>
-                <button class="btn">Voir le produit</button>
-            </div>
-        </div>
-    </section>
+    <?php get_template_part('template-parts/promotions'); ?>
 
     <section class="vogue u-margin-top-big">
         <h2 class="heading-primary u-margin-bottom-big container">En vogue</h2>

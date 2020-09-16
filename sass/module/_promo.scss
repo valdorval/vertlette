@@ -1,6 +1,7 @@
 .promo {
 
      &__content {
+          
           justify-content: space-between;
 
           &--item {
@@ -8,6 +9,7 @@
                position: relative;
 
                img {
+                    height: 2px;
                     width: 100%;
                }
 
@@ -49,3 +51,6 @@
           }
      }
 }
+
+
+.custom-class { width: 200px; height: 200px; }

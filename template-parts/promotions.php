@@ -1,38 +1,28 @@
-<?php
-    $args_products = array('post_type' => 'product', 'posts_per_page' => 1, 'product_cat' => 'promotions', 'orderby' => 'rand');
-    $loop = new WP_Query($args_products);
-    while ($loop->have_posts()) : $loop->the_post();
-        global $product; ?>
-<div class="promo__content--item">
-        <h2>Shoes</h2>
-        <a href="<?php echo get_permalink($loop->post->ID) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
-            <?php woocommerce_show_product_sale_flash($post, $product); ?>
-            <?php if (has_post_thumbnail($loop->post->ID)) echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog');
-            else echo '<img src="' . woocommerce_placeholder_img_src() . '/>'; ?>
+<section class="promo u-margin-top-big">
+    <h2 class="heading-primary u-margin-bottom-big container">Nos promotions</h2>
+    <div class="promo__content flex container">
+        <?php
+        $args_products = array('post_type' => 'product', 'posts_per_page' => 2, 'product_cat' => 'promotions', 'orderby' => 'rand');
+        $loop = new WP_Query($args_products);
+        while ($loop->have_posts()) : $loop->the_post();
+            global $product; ?>
+            <div class="promo__content--item">
+                <a href="<?php echo get_permalink($loop->post->ID) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
 
-<div class="promo__title">
-                    <h4 class="heading-rubik heading-rubik--light"><?php the_title(); ?></h4>
-                </div>
-                <span class="price"><?php echo $product->get_price_html(); ?></span> 
-            <!-- description du produit -->
-            <p><?php the_excerpt(); ?> </p>
-        </a>
-    <?php woocommerce_template_loop_add_to_cart($loop->post, $product);?>
-</div>
-<?php>
-    endwhile; ?>
-    <?php wp_reset_query(); ?>
+                    <?php
+                    the_post_thumbnail('portfolio');
+                    ?>
 
-<!--/.products-->
-
-
-
-
-<div class="promo__content--item">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/chaise-fauteuil-petit.jpg" alt="Fauteuil">
-                <div class="promo__title">
-                    <h4 class="heading-rubik heading-rubik--light">Lorem ipsum</h4>
-                </div>
-                <p class="p-light promo__price center"><span>499$ </span> <strong>459$</strong></p>
-                <button class="btn">Voir le produit</button>
+                    <div class="promo__title">
+                        <h4 class="heading-rubik heading-rubik--light"><?php the_title(); ?></h4>
+                    </div>
+                    <span class="p-light promo__price center"><?php echo $product->get_price_html(); ?></span>
+                </a>
+                <button class="btn"><a href="<?php echo get_permalink($loop->post->ID) ?>">Voir le produit</a></button>
             </div>
+        <?php
+        endwhile;
+        wp_reset_query(); ?>
+        <!--/.products-->
+    </div>
+</section>
