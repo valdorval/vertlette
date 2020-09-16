@@ -44,28 +44,28 @@ get_header();
                <div class="contact__form ">
                     <form class=" u-margin-top-big">
                          <div class="flex">
-                              <p>
-                                   <label for="prenom">Prénom</label>
+                              <p class="p-dark">
+                                   <label for="prenom">Prénom</label><br />
                                    <input type="text" placeholder="Entrez votre prénom" id="prenom" class="form-input">
                               </p>
-                              <p>
+                              <p class="p-dark">
                                    <label for="prenom">Prénom</label>
                                    <input type="text" placeholder="Entrez votre prénom" id="prenom" class="form-input">
                               </p>
                          </div>
                          <div class="flex">
-                              <p>
+                              <p class="p-dark">
                                    <label for="prenom">Prénom</label>
                                    <input type="text" placeholder="Entrez votre prénom" id="prenom" class="form-input">
                               </p>
-                              <p>
+                              <p class="p-dark">
                                    <label for="prenom">Prénom</label>
                                    <input type="text" placeholder="Entrez votre prénom" id="prenom" class="form-input">
                               </p>
                          </div>
-                         <p>
-                              <label for="prenom">Prénom</label>
-                              <input type="text" placeholder="Entrez votre prénom" id="prenom" class="form-input">
+                         <p class="p-dark">
+                              <label for="message">Message</label><br />
+                              <textarea placeholder="Entrez votre texte" id="message" class="form-input form-input__textarea"></textarea>
                          </p>
                          <div class="recup__button-right">
                               <button class="btn btn__dark u-margin-top-small u-margin-bottom-big"><a href="#"></a>Envoyer</a></button>
