@@ -27,6 +27,9 @@ a {
   cursor: pointer;
   transition: all .4s; }
   .btn:hover {
+    background-color: #917A5E;
+    color: #FEF5DC; }
+  .btn__dark {
     background-color: #917A5E; }
 
 body {
@@ -39,6 +42,9 @@ h4, h5, h6 {
   font-family: "Domine", serif;
   color: #917A5E;
   text-transform: uppercase; }
+
+p {
+  text-align: justify; }
 
 .p-light {
   color: #fff; }
@@ -62,6 +68,10 @@ h4, h5, h6 {
   text-transform: none; }
   .heading-quaternary--dark {
     color: inherit; }
+
+.heading-black {
+  font-size: 3rem;
+  color: #000; }
 
 .heading-rubik {
   font-family: "Rubik", sans-serif;
@@ -88,6 +98,9 @@ h4, h5, h6 {
 .center {
   text-align: center; }
 
+.gradient {
+  background-image: linear-gradient(to bottom, #fff 0%, #fff 70%, #FEF5DC 100%); }
+
 .u-margin-top-big {
   margin-top: 6rem; }
 
@@ -111,6 +124,12 @@ h4, h5, h6 {
 
 .u-margin-bottom-xsmall {
   margin-bottom: 1.2rem; }
+
+.u-padding-bottom-normal {
+  padding-bottom: 2.4rem; }
+
+.u-padding-bottom-big {
+  padding-bottom: 6rem; }
 
 .footer {
   background-color: #D7BB7E;
@@ -322,6 +341,60 @@ h4, h5, h6 {
   .promo__price span {
     text-decoration: line-through;
     padding-right: 2rem; }
+
+.reparation__content {
+  justify-content: space-between; }
+
+.reparation__text {
+  width: 60%;
+  padding-left: 1rem;
+  border-left: 1px solid #D7BB7E; }
+
+.reparation__img {
+  width: 30%;
+  position: relative; }
+  .reparation__img::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: -2.5rem;
+    bottom: -2.5rem;
+    border: 1px solid #D7BB7E;
+    z-index: -1; }
+  .reparation__img img {
+    width: 100%; }
+
+.recup h2 {
+  text-align: right; }
+
+.recup__content {
+  justify-content: space-between; }
+
+.recup__text {
+  width: 60%;
+  padding-right: 1rem;
+  border-right: 1px solid #D7BB7E; }
+
+.recup__img {
+  width: 30%;
+  position: relative; }
+  .recup__img::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: -2.5rem;
+    bottom: -2.5rem;
+    border: 1px solid #D7BB7E;
+    z-index: -1; }
+  .recup__img img {
+    width: 100%; }
+
+.recup__button-right {
+  text-align: right; }
 
 .vogue {
   background-color: rgba(254, 245, 220, 0.5);

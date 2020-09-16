@@ -10,6 +10,7 @@
 </head>
 
 <body <?php body_class() ?>>
+
      <header class="header">
           <div class="header__box">
                <div class="header__logo container-big">
@@ -25,6 +26,7 @@
                          'menu_class' => 'nav__menu container-big flex center'
                     )
                ); ?>
+
           </nav>
 
           <div class="header__message">
