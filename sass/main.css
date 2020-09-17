@@ -728,4 +728,9 @@ p {
   border: 1px solid #D7BB7E;
   z-index: -1;
 }
+
+.video {
+  width: 600px;
+  height: 300px;
+}
 /*# sourceMappingURL=main.css.map */

@@ -7,6 +7,16 @@
 get_header();
 ?>
 
+<!-- style à ajouté pour modifier la dimension des vidéos -->
+<!-- .recent-embed-container iframe {
+      width: 900px;
+      height: 500px;
+  }
+
+  .embed-container iframe {
+      width: 440px;
+      height: 260px;
+  } -->
 
 <div>
     <p> ---------recent post-------</p>
@@ -23,33 +33,13 @@ get_header();
 
             <h2> <?php echo the_title(); ?> </h2>
 
-
-            <div class="embed-container">
-                <?php get_field('lien'); ?>
+            <div class="recent-embed-container">
+                <?php the_field('lien'); ?>
             </div>
 
-            <style>
-                .embed-container {
-                    position: relative;
-                    padding-bottom: 56.25%;
-                    overflow: hidden;
-                    max-width: 100%;
-                    height: auto;
-                }
+            <?php the_field('description'); ?>
 
-                .embed-container iframe,
-                .embed-container object,
-                .embed-container embed {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                }
-            </style>
-
-
-            <?php the_field('description') ?>
+            <p> Date de publication: <?php the_date(); ?></p>
     <?php endwhile;
     endif;
     ?>
@@ -58,28 +48,36 @@ get_header();
 
 
 
+<div style="display: flex;">
+    <?php
+    // affiche tout les post exepté le dernier publié avec offset
+    $args = new WP_Query(array(
+        'post_type'             => 'video',
+        'post_per_page'         =>  10,
+        'ignore_sticky_posts'   => 1,
+        'paged'                 => $paged,
+        'offset'                => 1,
+    ));
+
+    if ($args->have_posts()) :
+        while ($args->have_posts()) : $args->the_post();
+    ?>
+            <div>
+                <h2> <?php echo the_title(); ?> </h2>
+
+                <div class="embed-container">
+                    <?php the_field('lien'); ?>
+                </div>
+                <br>
+                <?php the_field('description') ?>
+                <p> Date de publication: <?php the_date(); ?></p>
+            </div>
+    <?php
+        endwhile;
+    endif;
+    ?>
+</div>
 
 <?php
-// affiche tout les post exepté le dernier publié avec offset
-$args = new WP_Query(array(
-    'post_type'             => 'video',
-    'post_per_page'         =>  10,
-    'ignore_sticky_posts'   => 1,
-    'paged'                 => $paged,
-    'offset'                => 1,
-));
-
-if ($args->have_posts()) :
-    while ($args->have_posts()) : $args->the_post();
-?>
-        <h2> <?php echo the_title(); ?> </h2>
-
-        <?php the_field('lien') ?>
-        <br>
-        <?php the_field('description') ?>
-<?php
-    endwhile;
-endif;
-
 get_footer();
 ?>

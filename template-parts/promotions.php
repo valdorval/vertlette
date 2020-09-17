@@ -18,7 +18,8 @@
 
                 <a href="<?php echo get_permalink(); ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
 
-                    <img src="<?php echo get_the_post_thumbnail_url($post->ID); ?>" class="custom-class" height="438" />
+                    <img src="<?php echo get_the_post_thumbnail_url($post->ID); ?>" class="custom-class" id="chand-w-h" height="438" />
+                    <!-- ajouter la hauteur dans le css et la modifier au besoin -->
 
                     <div class=" promo__title">
                         <h4 class="heading-rubik heading-rubik--light"><?php the_title(); ?></h4>
