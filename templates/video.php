@@ -1,40 +1,54 @@
 <?php
 
 /**
- * Template Name: Nouvelles
+ * Template Name: Video
  */
 
 get_header();
 ?>
 
-<?php
-$args_products = array(
-    'post_type' => 'product',
-    'posts_per_page' => 3,
-    'product_cat' => 'promotions',
-    'orderby' => 'rand'
-);
+<div>
+    <p> ---------recent post-------</p>
+    <?php
+    // Affiche le dernier post publié
+    $the_query = new WP_Query(array(
+        'post_type' => 'video',
+        'posts_per_page' => 1,
+    ));
 
-$loop = new WP_Query($args_products);
-
-while ($loop->have_posts()) : $loop->the_post();
-    global $product; ?>
-
-
-    <a href="<?php echo get_permalink(); ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
-
-        <img src="<?php echo get_the_post_thumbnail_url($post->ID); ?>" class="custom-class" height="438" />
-
-        <div class=" promo__title">
-            <h4 class="heading-rubik heading-rubik--light"><?php the_title(); ?></h4>
-        </div>
-        <span class="p-light promo__price center"><?php echo $product->get_price_html(); ?></span>
-    </a>
-    <button class="btn"><a href="<?php echo get_permalink() ?>">Voir le produit</a></button>
-    </div>
-<?php
-endwhile;
-wp_reset_query(); ?>
-<!--/.products-->
+    if ($the_query->have_posts()) :
+        while ($the_query->have_posts()) : $the_query->the_post();
+    ?>
+            <h2> <?php echo the_title(); ?> </h2>
+            <p> <?php echo the_content(); ?></p>
+            <?php the_field('description') ?>
+    <?php endwhile;
+        wp_reset_postdata();
+    else :
+    endif;
+    ?>
+    <p> ---------recent post-------</p>
 </div>
-</section>
+
+<?php
+// affiche tout les post exepté le dernier publié avec offset
+$args = new WP_Query(array(
+    'post_type'             => 'video',
+    'post_per_page'         =>  10,
+    'ignore_sticky_posts'   => 1,
+    'paged'                 => $paged,
+    'offset'                => 1,
+));
+
+if ($args->have_posts()) :
+    while ($args->have_posts()) : $args->the_post();
+?>
+        <h2> <?php echo the_title(); ?> </h2>
+        <p> <?php echo the_content(); ?></p>
+        <h6> <?php echo get_the_author(); ?></h6>
+<?php
+    endwhile;
+endif;
+
+get_footer();
+?>
