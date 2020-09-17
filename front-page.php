@@ -28,20 +28,28 @@ get_header();
             </div>
         </div>
 
+
+
+
         <div class="vogue__other-product flex container">
+
             <div class="vogue__second-item center">
                 <div class="vogue__second-item--text">
                     <h4 class="heading-quaternary heading-quaternary--dark">Lorem Ipsum</h4>
                     <p class="p-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
                 </div>
             </div>
+
+
             <div class="vogue__third-item center">
                 <div class="vogue__third-item--text">
                     <h4 class="heading-quaternary heading-quaternary--dark">Lorem Ipsum</h4>
                     <p class="p-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
                 </div>
             </div>
+
         </div>
+
     </section> -->
 
     <section class="index-corpo container u-margin-bottom-big u-margin-top-big">

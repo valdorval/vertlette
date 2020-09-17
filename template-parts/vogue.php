@@ -1,28 +1,11 @@
-<!-- <div class="vogue__other-product flex container">
-    <div class="vogue__second-item center">
-        <div class="vogue__second-item--text">
-            <h4 class="heading-quaternary heading-quaternary--dark">Lorem Ipsum</h4>
-            <p class="p-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-        </div>
-    </div>
-    <div class="vogue__third-item center">
-        <div class="vogue__third-item--text">
-            <h4 class="heading-quaternary heading-quaternary--dark">Lorem Ipsum</h4>
-            <p class="p-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-        </div>
-    </div>
-</div> -->
-
-
 <!-- premier produit en vogue afficher plus gros -->
 <section class="vogue u-margin-top-big">
     <h2 class="heading-primary u-margin-bottom-big container">En vogue</h2>
     <?php
     $args_products = array(
-        'post_type' => 'product',
-        'posts_per_page' => 1,
-        'product_cat' => 'vogue',
-        'orderby' => 'rand'
+        'post_type'         => 'product',
+        'posts_per_page'    => 1,
+        'product_cat'       => 'vogue',
     );
 
     $loop = new WP_Query($args_products);
@@ -36,7 +19,7 @@
 
                 <p class='p-light u-margin-bottom-normal'>
                     <?php echo get_the_excerpt() ?> </p>
-                <button class="btn"><a href="<?php echo get_permalink() ?>">Voir le produit</a></button>
+                <button class="btn u-margin-bottom-normal"><a href="<?php echo get_permalink() ?>">Voir le produit</a></button>
             </div>
         </div>
     <?php
@@ -47,10 +30,66 @@
 
 
 
+    <div class="vogue__other-product flex container">
+        <?php
+        $product_deux = array(
+            'post_type'         => 'product',
+            'posts_per_page'    => 1,
+            'offset'            => 1,
+            'product_cat'       => 'vogue',
+        );
+
+        $loop_deux = new WP_Query($product_deux);
+
+        while ($loop_deux->have_posts()) : $loop_deux->the_post();
+            global $product; ?>
+
+            <div class="vogue__second-item center" style="background-image:url(<?php echo get_the_post_thumbnail_url($post->ID); ?>);">
+
+                <div class="vogue__second-item--text">
+                    <h4 class="heading-quaternary heading-quaternary--dark"><?php the_title(); ?></h4>
+
+                    <p class="p-dark">
+                        <?php echo get_the_excerpt() ?> </p>
+                </div>
+                <button class="btn u-margin-bottom-normal"><a href="<?php echo get_permalink() ?>">Voir le produit</a></button>
+            </div>
+        <?php
+        endwhile;
+        wp_reset_query(); ?>
+        <!--/.products-->
 
 
+        <?php
+        $product_trois = array(
+            'post_type'         => 'product',
+            'posts_per_page'    => 1,
+            'offset'            => 2,
+            'product_cat'       => 'vogue',
+        );
+
+        $loop_trois = new WP_Query($product_trois);
+
+        while ($loop_trois->have_posts()) : $loop_trois->the_post();
+            global $product; ?>
+
+            <div class="vogue__third-item center" style="background-image:url(<?php echo get_the_post_thumbnail_url($post->ID); ?>);">
+
+                <div class="vogue__third-item--text">
+                    <h4 class="heading-quaternary heading-quaternary--dark"><?php the_title(); ?></h4>
+
+                    <p class="p-dark">
+                        <?php echo get_the_excerpt() ?> </p>
+                </div>
+
+                <button class="btn u-margin-bottom-normal"><a href="<?php echo get_permalink() ?>">Voir le produit</a></button>
+
+            </div>
+        <?php
+        endwhile;
+        wp_reset_query(); ?>
+        <!--/.products-->
 
 
-
-
+    </div>
 </section>

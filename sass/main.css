@@ -637,19 +637,18 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-color: rgba(215, 187, 126, 0.8);
   width: 25%;
   height: 100%;
   position: absolute;
   left: 0;
   top: 0;
-  z-index: 10;
 }
 
 .vogue__main-content p {
-  display: inline;
   text-align: center;
   overflow-wrap: break-word;
   padding: 0 3rem;
@@ -697,16 +696,33 @@ p {
   width: 36%;
   position: relative;
   height: 40rem;
-  background-image: url(../img/laveuse.jpg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
 }
 
 .vogue__second-item--text {
+  text-align: center;
+  overflow-wrap: break-word;
   background-color: rgba(254, 245, 220, 0.9);
-  height: 22%;
+  height: 25%;
   padding: 1rem 5rem;
+}
+
+.vogue__second-item button {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .vogue__second-item::after {
@@ -723,18 +739,35 @@ p {
 
 .vogue__third-item {
   width: 56%;
-  position: relative;
   height: 40rem;
-  background-image: url(../img/chambre.jpg);
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
 }
 
 .vogue__third-item--text {
+  text-align: center;
+  overflow-wrap: break-word;
   background-color: rgba(254, 245, 220, 0.9);
-  height: 22%;
+  height: 25%;
   padding: 1rem 5rem;
+}
+
+.vogue__third-item button {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .vogue__third-item::after {
