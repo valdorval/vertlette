@@ -728,43 +728,4 @@ p {
   border: 1px solid #D7BB7E;
   z-index: -1;
 }
-
-/* WooCommerce Price (Default) */
-.woocommerce ul.products li.product .price, .woocommerce-page ul.products li.product .price, .woocommerce div.product span.price, .woocommerce div.product p.price, .woocommerce #content div.product span.price, .woocommerce #content div.product p.price, .woocommerce-page div.product span.price, .woocommerce-page div.product p.price, .woocommerce-page #content div.product span.price, .woocommerce-page #content div.product p.price {
-  color: #333333;
-  font-size: 1em;
-  font-weight: normal;
-}
-
-/* WooCommerce Price (From Text) */
-.woocommerce ul.products li.product .price .from, .woocommerce-page ul.products li.product .price .from, .woocommerce div.product span.price .from, .woocommerce div.product p.price .from, .woocommerce #content div.product span.price .from, .woocommerce #content div.product p.price .from, .woocommerce-page div.product span.price .from, .woocommerce-page div.product p.price .from, .woocommerce-page #content div.product span.price .from, .woocommerce-page #content div.product p.price .from {
-  color: #777777;
-  font-size: 0.85em;
-  text-transform: uppercase;
-}
-
-/* WooCommerce Price (Regular Price) */
-.woocommerce div.product span.price del, .woocommerce div.product p.price del, .woocommerce #content div.product span.price del, .woocommerce #content div.product p.price del, .woocommerce-page div.product span.price del, .woocommerce-page div.product p.price del, .woocommerce-page #content div.product span.price del, .woocommerce-page #content div.product p.price del, .woocommerce ul.products li.product .price del, .woocommerce-page ul.products li.product .price del, .product-price del, .woocommerce ul.cart_list li .quantity del, .woocommerce-page ul.cart_list li .quantity del, .woocommerce ul.product_list_widget li .quantity del, .woocommerce-page ul.product_list_widget li .quantity del {
-  color: #777777;
-  font-size: 0.85em;
-  text-decoration: line-through;
-}
-
-/* WooCommerce Price (Sale Price) */
-.woocommerce ul.products li.product .price ins, .woocommerce-page ul.products li.product .price ins, .woocommerce div.product span.price ins, .woocommerce div.product p.price ins, .woocommerce #content div.product span.price ins, .woocommerce #content div.product p.price ins, .woocommerce-page div.product span.price ins, .woocommerce-page div.product p.price ins, .woocommerce-page #content div.product span.price ins, .woocommerce-page #content div.product p.price ins, .product-price ins, .woocommerce ul.cart_list li .quantity ins, .woocommerce-page ul.cart_list li .quantity ins, .woocommerce ul.product_list_widget li .quantity ins, .woocommerce-page ul.product_list_widget li .quantity ins {
-  color: #333333;
-  text-decoration: underline;
-}
-
-.woocommerce div.product span.price del, .woocommerce div.product p.price del, .woocommerce #content div.product span.price del, .woocommerce #content div.product p.price del, .woocommerce-page div.product span.price del, .woocommerce-page div.product p.price del, .woocommerce-page #content div.product span.price del, .woocommerce-page #content div.product p.price del, .woocommerce ul.products li.product .price del, .woocommerce-page ul.products li.product .price del, .product-price del, .woocommerce ul.cart_list li .quantity del, .woocommerce-page ul.cart_list li .quantity del, .woocommerce ul.product_list_widget li .quantity del, .woocommerce-page ul.product_list_widget li .quantity del {
-  color: #777777;
-  font-size: 0.85em;
-  text-decoration: line-through;
-}
-
-/* WooCommerce Price (Sale Price) */
-.woocommerce ul.products li.product .price ins, .woocommerce-page ul.products li.product .price ins, .woocommerce div.product span.price ins, .woocommerce div.product p.price ins, .woocommerce #content div.product span.price ins, .woocommerce #content div.product p.price ins, .woocommerce-page div.product span.price ins, .woocommerce-page div.product p.price ins, .woocommerce-page #content div.product span.price ins, .woocommerce-page #content div.product p.price ins, .product-price ins, .woocommerce ul.cart_list li .quantity ins, .woocommerce-page ul.cart_list li .quantity ins, .woocommerce ul.product_list_widget li .quantity ins, .woocommerce-page ul.product_list_widget li .quantity ins {
-  color: #333333;
-  text-decoration: underline;
-}
 /*# sourceMappingURL=main.css.map */

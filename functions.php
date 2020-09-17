@@ -76,6 +76,17 @@ function vluxe_supports()
     );
 }
 
+// lorsqu'il y a une promotion, le prix regulier sera line-through (a tester, il faudra enlever le lin-through en css)
+function bbloomer_change_cart_table_price_display($price, $values, $cart_item_key)
+{
+    $slashed_price = $values['data']->get_price_html();
+    $is_on_sale = $values['data']->is_on_sale();
+    if ($is_on_sale) {
+        $price = $slashed_price;
+    }
+    return $price;
+}
+
 function vluxe_menu_class($classes)
 {
     unset($classes);
@@ -86,5 +97,6 @@ function vluxe_menu_class($classes)
 add_action('after_setup_theme', 'vluxe_supports');
 add_action('wp_enqueue_scripts', 'enqueue_styles_vluxe');
 add_filter('nav_menu_css_class', 'vluxe_menu_class', 10, 4);
+add_filter('woocommerce_cart_item_price', 'bbloomer_change_cart_table_price_display', 30, 3);
 
 //nav_menu_submenu_css_class
