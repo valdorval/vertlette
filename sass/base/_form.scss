@@ -4,9 +4,8 @@
      background-color: rgba($color-primary-light, .6);
      color: $color-primary-dark;
      padding: 1.3rem 2rem;
-     margin: 1.5rem;
 
-     &focus {
+     &:focus {
           outline: none;
           box-shadow: 0 0 0 .2rem rgba($color-primary, .7);
      }
@@ -15,9 +14,10 @@
           color: rgba($color-primary-dark, .5);
      }
 
-     &__textarea {
+     &--textarea {
           resize: none;
-          width: 100%;
+          width: 50%;
           height: 30rem;
+          font-family: $text-font;
      }
 }

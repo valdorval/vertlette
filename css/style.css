@@ -30,26 +30,22 @@ a {
     background-color: #917A5E;
     color: #FEF5DC; }
   .btn__dark {
-    background-color: #D7BB7E;
-    border: 1px solid #917A5E;
-    color: #FEF5DC; }
+    background-color: #917A5E; }
 
 .form-input {
   border: 1px solid #D7BB7E;
   border-radius: 3px;
   background-color: rgba(254, 245, 220, 0.6);
   color: #917A5E;
-  padding: 1.3rem 2rem; }
+  padding: 1.3rem 2rem;
+  margin: 1.5rem; }
+  .form-input textarea {
+    resize: none; }
   .form-input:focus {
     outline: none;
     box-shadow: 0 0 0 0.2rem rgba(215, 187, 126, 0.7); }
   .form-input::placeholder {
     color: rgba(145, 122, 94, 0.5); }
-  .form-input--textarea {
-    resize: none;
-    width: 50%;
-    height: 30rem;
-    font-family: "Rubik", sans-serif; }
 
 body {
   font-family: "Rubik", sans-serif;
@@ -116,9 +112,6 @@ p {
 
 .center {
   text-align: center; }
-
-.align-right {
-  text-align: right; }
 
 .gradient {
   background-image: linear-gradient(to bottom, #fff 0%, #fff 70%, #FEF5DC 100%); }
@@ -240,11 +233,8 @@ p {
 .contact__header img {
   width: 100%; }
 
-.contact__content {
-  justify-content: space-between; }
-
 .contact__coordonne {
-  width: 45%;
+  width: 40%;
   border-right: 1px solid #D7BB7E; }
 
 .contact__map {
@@ -259,23 +249,9 @@ p {
     width: 70%;
     justify-content: space-between; }
 
-.contact__form-section {
+.contact__form {
+  background: blue;
   width: 50%; }
-  .contact__form-section label {
-    display: block;
-    width: 45%; }
-
-.contact__form--item {
-  width: 100%;
-  justify-content: space-between; }
-  .contact__form--item div {
-    width: 45%; }
-
-.contact__input {
-  width: 100%; }
-
-.contact__textarea {
-  width: 100%; }
 
 .index-corpo__image {
   position: relative;

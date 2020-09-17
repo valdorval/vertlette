@@ -1,12 +1,10 @@
 {
   "name": "vertlette",
   "version": "1.0.0",
-  "description": "",
+  "description": "Projet Vertlette",
   "main": "index.js",
-  "dependencies": {},
-  "devDependencies": {},
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+    "compile:sass": "node-sass sass/main.scss css/main.css -w"
   },
   "repository": {
     "type": "git",
@@ -17,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/valdorval/vertlette/issues"
   },
-  "homepage": "https://github.com/valdorval/vertlette#readme"
+  "homepage": "https://github.com/valdorval/vertlette#readme",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
 }
