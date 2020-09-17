@@ -7,6 +7,7 @@
 get_header();
 ?>
 
+
 <div>
     <p> ---------recent post-------</p>
     <?php
@@ -19,16 +20,44 @@ get_header();
     if ($the_query->have_posts()) :
         while ($the_query->have_posts()) : $the_query->the_post();
     ?>
+
             <h2> <?php echo the_title(); ?> </h2>
-            <p> <?php echo the_content(); ?></p>
+
+
+            <div class="embed-container">
+                <?php get_field('lien'); ?>
+            </div>
+
+            <style>
+                .embed-container {
+                    position: relative;
+                    padding-bottom: 56.25%;
+                    overflow: hidden;
+                    max-width: 100%;
+                    height: auto;
+                }
+
+                .embed-container iframe,
+                .embed-container object,
+                .embed-container embed {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            </style>
+
+
             <?php the_field('description') ?>
     <?php endwhile;
-        wp_reset_postdata();
-    else :
     endif;
     ?>
     <p> ---------recent post-------</p>
 </div>
+
+
+
 
 <?php
 // affiche tout les post exepté le dernier publié avec offset
@@ -44,8 +73,10 @@ if ($args->have_posts()) :
     while ($args->have_posts()) : $args->the_post();
 ?>
         <h2> <?php echo the_title(); ?> </h2>
-        <p> <?php echo the_content(); ?></p>
-        <h6> <?php echo get_the_author(); ?></h6>
+
+        <?php the_field('lien') ?>
+        <br>
+        <?php the_field('description') ?>
 <?php
     endwhile;
 endif;

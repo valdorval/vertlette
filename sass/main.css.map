@@ -21,7 +21,8 @@
         "module/_presentation.scss",
         "module/_promo.scss",
         "module/_reparation.scss",
-        "module/_vogue.scss"
+        "module/_vogue.scss",
+        "module/_video.scss"
     ],
     "names": [],
     "file": "main.css"
