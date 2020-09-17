@@ -73,6 +73,16 @@ p {
   font-weight: 500;
   font-size: 1.4rem; }
 
+.p-big {
+  font-size: 9rem;
+  color: #D7BB7E;
+  font-weight: 400; }
+
+.p-member {
+  color: #fff;
+  font-size: 2.6rem;
+  letter-spacing: 1.3rem; }
+
 .heading-primary {
   font-size: 5.5rem; }
 
@@ -236,6 +246,36 @@ p {
       transform: translateY(-50%);
       color: #07043A;
       cursor: pointer; }
+
+.abonnement__header {
+  background-color: #39384F;
+  height: 40rem;
+  position: relative; }
+  .abonnement__header::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: -2.5rem;
+    bottom: -2.5rem;
+    border: 1px solid #D7BB7E;
+    z-index: -1; }
+
+.abonnement__corpo {
+  width: 60%; }
+  .abonnement__corpo img {
+    margin-top: 2.4rem;
+    width: 40%; }
+
+.abonnement__details--special {
+  color: #FEF5DC; }
+
+.abonnement__details--p {
+  text-align: right; }
+
+.abonnement__details button {
+  width: 100%; }
 
 .contact__header img {
   width: 100%; }
