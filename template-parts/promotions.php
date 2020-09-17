@@ -29,6 +29,5 @@
         <?php
         endwhile;
         wp_reset_query(); ?>
-        <!--/.products-->
     </div>
 </section>
