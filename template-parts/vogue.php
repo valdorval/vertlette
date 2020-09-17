@@ -29,12 +29,8 @@
 
     while ($loop->have_posts()) : $loop->the_post();
         global $product; ?>
-        <div class="vogue__main-product container u-margin-bottom-big">
-            <?php
-            if (has_post_thumbnail()) {
-                the_post_thumbnail();
-            }
-            ?>
+        <div class="vogue__main-product container u-margin-bottom-big" style="background-image:url(<?php echo get_the_post_thumbnail_url($post->ID); ?>);">
+
             <div class="vogue__main-content center">
                 <h4 class="heading-quaternary u-margin-bottom-normal u-margin-top-normal"><?php the_title(); ?></h4>
 
