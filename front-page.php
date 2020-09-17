@@ -15,7 +15,9 @@ get_header();
 
     <?php get_template_part('template-parts/promotions'); ?>
 
-    <section class="vogue u-margin-top-big">
+    <?php get_template_part('template-parts/vogue'); ?>
+
+    <!-- <section class="vogue u-margin-top-big">
         <h2 class="heading-primary u-margin-bottom-big container">En vogue</h2>
         <div class="vogue__main-product container u-margin-bottom-big">
             <div class="vogue__main-content center">
@@ -38,7 +40,7 @@ get_header();
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <section class="index-corpo container u-margin-bottom-big u-margin-top-big">
         <h2 class="heading-primary">Devenir membre corporatif</h2>
