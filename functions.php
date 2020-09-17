@@ -128,6 +128,13 @@ function bbloomer_change_cart_table_price_display($price, $values, $cart_item_ke
     return $price;
 }
 
+add_action('init', 'init_remove_support', 100);
+function init_remove_support()
+{
+    $post_type = 'video';
+    remove_post_type_support($post_type, 'video');
+}
+
 function vluxe_menu_class($classes)
 {
     unset($classes);

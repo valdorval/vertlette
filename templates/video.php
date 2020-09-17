@@ -37,9 +37,9 @@ get_header();
                 <?php the_field('lien'); ?>
             </div>
 
-            <?php the_field('description'); ?>
+            <?php the_content(); ?>
 
-            <p> Date de publication: <?php the_date(); ?></p>
+            <p> Date de publication: <?php echo get_the_date() ?></p>
     <?php endwhile;
     endif;
     ?>
@@ -69,8 +69,8 @@ get_header();
                     <?php the_field('lien'); ?>
                 </div>
                 <br>
-                <?php the_field('description') ?>
-                <p> Date de publication: <?php the_date(); ?></p>
+                <?php the_content(); ?>
+                <p> Date de publication: <?php echo get_the_date(); ?></p>
             </div>
     <?php
         endwhile;
