@@ -3,18 +3,26 @@
      padding: 7rem 0 9rem;
 
      &__main-content {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
           background-color: rgba($color-primary, .8);
           width: 25%;
-          height: 48rem;
+          height: 100%;
           position: absolute;
           left: 0;
           top: 0;
           z-index: 10;
 
         p {
-               margin-bottom: 2.4rem;
-               padding: 0 1rem;
+               text-align: center;
+               word-wrap: break-word;
+               padding: 0 3rem;
                font-weight: 500;
+          }
+
+          button{
+               align-self: center;
           }
      }
 

@@ -630,9 +630,18 @@ p {
 }
 
 .vogue__main-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   background-color: rgba(215, 187, 126, 0.8);
   width: 25%;
-  height: 48rem;
+  height: 100%;
   position: absolute;
   left: 0;
   top: 0;
@@ -640,9 +649,16 @@ p {
 }
 
 .vogue__main-content p {
-  margin-bottom: 2.4rem;
-  padding: 0 1rem;
+  text-align: center;
+  word-wrap: break-word;
+  padding: 0 3rem;
   font-weight: 500;
+}
+
+.vogue__main-content button {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .vogue__main-product {
