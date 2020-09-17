@@ -5,6 +5,47 @@
 //     new App\Nouvelles();
 // }
 
+// custom post type pour live youtube
+add_action('init', 'create_post_type_video', 10, 1);
+
+function create_post_type_video()
+{
+    $label = array(
+        'name'               => __('Live youtube', 'vluxe'),
+        'singular name'      => __('Vidéo', 'vluxe'),
+        'menu_name'          => _x('Vidéos', 'Admin menu name', 'vluxe'),
+        'add_new'            => __('Ajouter une vidéo', 'vluxe'),
+        'add_new_item'       => __('Ajouter une vidéo', 'vluxe'),
+        'edit'               => __('Modifier le vidéo', 'vluxe'),
+        'new_item'           => __('Nouveau vidéo', 'vluxe'),
+        'view'               => __('Voir le vidéo', 'vluxe'),
+        'view_item'          => __('Voir le vidéo', 'vluxe'),
+        'search_items'       => __('Chercher une vidéo', 'vluxe'),
+        'not_found'          => __('Aucune vidéo trouvée', 'vluxe'),
+        'not_found_in_trash' => __('Aucune vidéo trouvée dans la corbeille', 'vluxe'),
+        'parent'             => __('Article parent', 'vluxe'),
+    );
+
+    $args = array(
+        'labels'              => $label,
+        'public'              => true,
+        'hierarchical'        => false,
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'show_in_nav_menus'   => true,
+        'show_in_admin_bar'   => true,
+        'can_export'          => true,
+        'has_archive'         => true,
+        'exclude_from_search' => false,
+        'publicly_queryable'  => true,
+        'capability_type'     => 'post',
+        'supports'            => array('title', 'editor', 'author', 'thumbnail', 'page-attributes'),
+        'rewrite'             => array('slug' => 'archivres/nouvelles', 'with_front' => true)
+    );
+    register_post_type('video', $args);
+}
+
+
 // custom post type pour la page nouvelles
 add_action('init', 'create_post_type_nouvelles', 10, 1);
 
