@@ -7,17 +7,6 @@
 get_header();
 ?>
 
-<!-- style à ajouté pour modifier la dimension des vidéos -->
-<!-- .recent-embed-container iframe {
-      width: 900px;
-      height: 500px;
-  }
-
-  .embed-container iframe {
-      width: 440px;
-      height: 260px;
-  } -->
-
 <div>
     <p> ---------recent post-------</p>
     <?php
@@ -48,7 +37,7 @@ get_header();
 
 
 
-<div style="display: flex;">
+<div>
     <?php
     // affiche tout les post exepté le dernier publié avec offset
     $args = new WP_Query(array(

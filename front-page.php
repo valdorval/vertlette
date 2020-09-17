@@ -19,6 +19,7 @@ get_header();
 
     <!-- <section class="vogue u-margin-top-big">
         <h2 class="heading-primary u-margin-bottom-big container">En vogue</h2>
+
         <div class="vogue__main-product container u-margin-bottom-big">
             <div class="vogue__main-content center">
                 <h4 class="heading-quaternary u-margin-bottom-normal u-margin-top-normal">Lorem Ipsum</h4>
@@ -26,6 +27,7 @@ get_header();
                 <button class="btn u-margin-top-normal">Voir le produit</button>
             </div>
         </div>
+
         <div class="vogue__other-product flex container">
             <div class="vogue__second-item center">
                 <div class="vogue__second-item--text">

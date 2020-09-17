@@ -88,7 +88,7 @@ function create_post_type_nouvelles()
 
 function enqueue_styles_vluxe()
 {
-    wp_enqueue_style('style-principal', get_template_directory_uri() . '/css/main.css');
+    wp_enqueue_style('style-principal', get_template_directory_uri() . '/sass/main.css');
     wp_enqueue_style('style-vluxe', get_template_directory_uri() . '/style.css');
 }
 

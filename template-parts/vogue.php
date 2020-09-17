@@ -29,29 +29,19 @@
 
     while ($loop->have_posts()) : $loop->the_post();
         global $product; ?>
-        <div class="container u-margin-bottom-big" style="height:400px; background: url('<?php $url ?>')">
+        <div class="vogue__main-product container u-margin-bottom-big">
+            <?php
+            if (has_post_thumbnail()) {
+                the_post_thumbnail('full', array('class' => 'img-main'));
+            }
+            ?>
+
             <div class="vogue__main-content center">
+                <h4 class="heading-quaternary u-margin-bottom-normal u-margin-top-normal"><?php the_title(); ?></h4>
 
-                <a href="<?php echo get_permalink(); ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
-
-
-                    <?php
-                    if (has_post_thumbnail()) {
-                    ?>
-                        <figure>';
-                            <?php the_post_thumbnail('full', array('class' => 'vogue__main-product')); ?>
-                        </figure>";
-                    <?php
-                    }
-
-                    $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
-                    ?>
-
-                    <h4 class="heading-quaternary u-margin-bottom-normal u-margin-top-normal"><?php the_title(); ?></h4>
-                    <button class="btn"><a href="<?php echo get_permalink() ?>">Voir le produit</a></button>
-
-                </a>
-
+                <p class='p-light u-margin-bottom-normal'>
+                    <?php echo get_the_excerpt() ?> </p>
+                <button class="btn"><a href="<?php echo get_permalink() ?>">Voir le produit</a></button>
             </div>
         </div>
     <?php
