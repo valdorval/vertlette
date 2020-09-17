@@ -32,10 +32,9 @@
         <div class="vogue__main-product container u-margin-bottom-big">
             <?php
             if (has_post_thumbnail()) {
-                the_post_thumbnail('full', array('class' => 'img-main'));
+                the_post_thumbnail();
             }
             ?>
-
             <div class="vogue__main-content center">
                 <h4 class="heading-quaternary u-margin-bottom-normal u-margin-top-normal"><?php the_title(); ?></h4>
 

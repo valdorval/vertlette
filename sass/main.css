@@ -649,8 +649,9 @@ p {
 }
 
 .vogue__main-content p {
+  display: inline;
   text-align: center;
-  word-wrap: break-word;
+  overflow-wrap: break-word;
   padding: 0 3rem;
   font-weight: 500;
 }
