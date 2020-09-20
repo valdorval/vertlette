@@ -24,20 +24,16 @@ get_header();
                          <button class="btn u-margin-top-xsmall"><a href="#"></a>Lire l'article</a></button>
                     </div>
                </div>
-
           </header>
 
           <article class="gradient u-margin-top-big">
-               <div class="container">
-                    <h1 class="heading-tertiary u-margin-bottom-normal">Qu'est que l'abonnement corporatif?</h1>
-                    <p class="u-margin-bottom-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque sollicitudin metus nec ullamcorper. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla tincidunt vestibulum enim, ornare dapibus nisi vulputate et. Nunc non augue justo. Duis metus odio, pellentesque ac gravida nec, viverra sed lorem. Morbi euismod turpis eleifend aliquet tempus. Sed gravida placerat ligula, ut accumsan orci luctus nec. </p>
-                    <p class="u-margin-bottom-normal">Donec suscipit mauris turpis, eu egestas nunc fringilla nec. Aliquam facilisis, metus eu imperdiet eleifend, metus enim efficitur risus, vulputate euismod metus tellus id nulla. Cras varius imperdiet sem, et ullamcorper ligula aliquet a. Ut et ligula eget est semper pellentesque. Nam suscipit imperdiet velit eu pharetra. Phasellus vel leo eros. Cras semper quis leo a finibus.</p>
-                    <h2 class="heading-tertiary u-margin-bottom-normal">Lorem ipsum dolor sit amet</h2>
-                    <p class="u-margin-bottom-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque sollicitudin metus nec ullamcorper. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla tincidunt vestibulum enim, ornare dapibus nisi vulputate et. Nunc non augue justo. Duis metus odio, pellentesque ac gravida nec, viverra sed lorem. Morbi euismod turpis eleifend aliquet tempus. Sed gravida placerat ligula, ut accumsan orci luctus nec. </p>
-                    <p class="u-margin-bottom-normal">Donec suscipit mauris turpis, eu egestas nunc fringilla nec. Aliquam facilisis, metus eu imperdiet eleifend, metus enim efficitur risus, vulputate euismod metus tellus id nulla. Cras varius imperdiet sem, et ullamcorper ligula aliquet a. Ut et ligula eget est semper pellentesque. Nam suscipit imperdiet velit eu pharetra. Phasellus vel leo eros. Cras semper quis leo a finibus.</p>
-                    <h2 class="heading-tertiary u-margin-bottom-normal">Lorem ipsum dolor sit amet</h2>
-                    <p class="u-margin-bottom-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque sollicitudin metus nec ullamcorper. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla tincidunt vestibulum enim, ornare dapibus nisi vulputate et. Nunc non augue justo. Duis metus odio, pellentesque ac gravida nec, viverra sed lorem. Morbi euismod turpis eleifend aliquet tempus. Sed gravida placerat ligula, ut accumsan orci luctus nec. </p>
-                    <p class="u-padding-bottom-big">Donec suscipit mauris turpis, eu egestas nunc fringilla nec. Aliquam facilisis, metus eu imperdiet eleifend, metus enim efficitur risus, vulputate euismod metus tellus id nulla. Cras varius imperdiet sem, et ullamcorper ligula aliquet a. Ut et ligula eget est semper pellentesque. Nam suscipit imperdiet velit eu pharetra. Phasellus vel leo eros. Cras semper quis leo a finibus.</p>
+               <div class="container abonnement__article">
+                    <h1 class="heading-tertiary u-margin-bottom-normal"><?php echo get_field('abonnement_title'); ?></h1>
+                    <p><?php echo get_field('abonnement_p'); ?></p>
+                    <h2 class="heading-tertiary u-margin-bottom-normal"><?php echo get_field('second_abonnement_title'); ?></h2>
+                    <p><?php echo get_field('second_abonnement_p'); ?></p>
+                    <h2 class="heading-tertiary u-margin-bottom-normal"><?php echo get_field('third_abonnement_title'); ?></h2>
+                    <p><?php echo get_field('third_abonnement_p'); ?></p>
                </div>
           </article>
      </section>

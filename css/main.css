@@ -30,20 +30,26 @@ a {
     background-color: #917A5E;
     color: #FEF5DC; }
   .btn__dark {
-    background-color: #917A5E; }
+    background-color: #D7BB7E;
+    border: 1px solid #917A5E;
+    color: #FEF5DC; }
 
 .form-input {
   border: 1px solid #D7BB7E;
   border-radius: 3px;
   background-color: rgba(254, 245, 220, 0.6);
   color: #917A5E;
-  padding: 1.3rem 2rem;
-  margin: 1.5rem; }
-  .form-inputfocus {
+  padding: 1.3rem 2rem; }
+  .form-input:focus {
     outline: none;
     box-shadow: 0 0 0 0.2rem rgba(215, 187, 126, 0.7); }
   .form-input::placeholder {
     color: rgba(145, 122, 94, 0.5); }
+  .form-input--textarea {
+    resize: none;
+    width: 50%;
+    height: 30rem;
+    font-family: "Rubik", sans-serif; }
 
 body {
   font-family: "Rubik", sans-serif;
@@ -66,6 +72,16 @@ p {
   color: #917A5E;
   font-weight: 500;
   font-size: 1.4rem; }
+
+.p-big {
+  font-size: 9rem;
+  color: #D7BB7E;
+  font-weight: 400; }
+
+.p-member {
+  color: #fff;
+  font-size: 2.6rem;
+  letter-spacing: 1.3rem; }
 
 .heading-primary {
   font-size: 5.5rem; }
@@ -110,6 +126,9 @@ p {
 
 .center {
   text-align: center; }
+
+.align-right {
+  text-align: right; }
 
 .gradient {
   background-image: linear-gradient(to bottom, #fff 0%, #fff 70%, #FEF5DC 100%); }
@@ -228,11 +247,48 @@ p {
       color: #07043A;
       cursor: pointer; }
 
+.abonnement__header {
+  background-color: #39384F;
+  height: 40rem;
+  position: relative; }
+  .abonnement__header::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: -2.5rem;
+    bottom: -2.5rem;
+    border: 1px solid #D7BB7E;
+    z-index: -1; }
+
+.abonnement__corpo {
+  width: 60%; }
+  .abonnement__corpo img {
+    margin-top: 2.4rem;
+    width: 40%; }
+
+.abonnement__details--special {
+  color: #FEF5DC; }
+
+.abonnement__details--p {
+  text-align: right; }
+
+.abonnement__details button {
+  width: 100%; }
+
+.about p, .reparation__text p, .recup__text p,
+.abonnement__article p {
+  padding-bottom: 2.4rem; }
+
 .contact__header img {
   width: 100%; }
 
+.contact__content {
+  justify-content: space-between; }
+
 .contact__coordonne {
-  width: 40%;
+  width: 45%;
   border-right: 1px solid #D7BB7E; }
 
 .contact__map {
@@ -247,9 +303,23 @@ p {
     width: 70%;
     justify-content: space-between; }
 
-.contact__form {
-  background: red;
+.contact__form-section {
   width: 50%; }
+  .contact__form-section label {
+    display: block;
+    width: 45%; }
+
+.contact__form--item {
+  width: 100%;
+  justify-content: space-between; }
+  .contact__form--item div {
+    width: 45%; }
+
+.contact__input {
+  width: 100%; }
+
+.contact__textarea {
+  width: 100%; }
 
 .index-corpo__image {
   position: relative;
@@ -340,7 +410,8 @@ p {
     width: 25%;
     position: relative; }
     .promo__content--item img {
-      width: 100%; }
+      width: 100%;
+      height: 438px; }
     .promo__content--item::after {
       content: '';
       display: block;
@@ -388,6 +459,7 @@ p {
 
 .reparation__img {
   width: 30%;
+  height: 50%;
   position: relative; }
   .reparation__img::after {
     content: '';
@@ -414,6 +486,7 @@ p {
   border-right: 1px solid #D7BB7E; }
 
 .recup__img {
+  height: 50%;
   width: 30%;
   position: relative; }
   .recup__img::after {
@@ -436,23 +509,30 @@ p {
   background-color: rgba(254, 245, 220, 0.5);
   padding: 7rem 0 9rem; }
   .vogue__main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: rgba(215, 187, 126, 0.8);
     width: 25%;
-    height: 48rem;
+    height: 100%;
     position: absolute;
     left: 0;
     top: 0; }
     .vogue__main-content p {
-      padding: 0 1rem;
+      text-align: center;
+      overflow-wrap: break-word;
+      padding: 0 3rem;
       font-weight: 500; }
+    .vogue__main-content button {
+      align-self: center; }
   .vogue__main-product {
     position: relative;
     height: 48rem;
-    background-image: url(../img/sofa.jpg);
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover; }
     .vogue__main-product img {
+      width: 100%;
       height: 100%; }
     .vogue__main-product::after {
       content: '';
@@ -470,14 +550,20 @@ p {
     width: 36%;
     position: relative;
     height: 40rem;
-    background-image: url(../img/laveuse.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover; }
     .vogue__second-item--text {
+      text-align: center;
+      overflow-wrap: break-word;
       background-color: rgba(254, 245, 220, 0.9);
-      height: 22%;
+      height: 25%;
       padding: 1rem 5rem; }
+    .vogue__second-item button {
+      align-self: center; }
     .vogue__second-item::after {
       content: '';
       display: block;
@@ -490,16 +576,22 @@ p {
       z-index: -1; }
   .vogue__third-item {
     width: 56%;
-    position: relative;
     height: 40rem;
-    background-image: url(../img/chambre.jpg);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover; }
     .vogue__third-item--text {
+      text-align: center;
+      overflow-wrap: break-word;
       background-color: rgba(254, 245, 220, 0.9);
-      height: 22%;
+      height: 25%;
       padding: 1rem 5rem; }
+    .vogue__third-item button {
+      align-self: center; }
     .vogue__third-item::after {
       content: '';
       display: block;
@@ -510,3 +602,11 @@ p {
       bottom: -2.5rem;
       border: 1px solid #D7BB7E;
       z-index: -1; }
+
+.recent-embed-container iframe {
+  width: 900px;
+  height: 500px; }
+
+.embed-container iframe {
+  width: 440px;
+  height: 260px; }
