@@ -185,6 +185,12 @@ p {
         color: rgba(255, 255, 255, 0.6); }
     .footer__category p:first-child {
       font-weight: 700; }
+    .footer__category--social img {
+      width: 4rem;
+      margin-right: 1.5rem;
+      transition: all .4s; }
+      .footer__category--social img:hover {
+        transform: scale(1.2); }
   .footer__allrights {
     color: #07043A;
     position: absolute;
@@ -199,6 +205,16 @@ p {
 .header__box {
   height: 22rem;
   background-image: linear-gradient(to bottom, #fff, #FEF5DC); }
+
+.header__content {
+  justify-content: space-between; }
+
+.header__items--nav img {
+  height: 3rem;
+  padding-right: 1rem;
+  transition: all .4s; }
+  .header__items--nav img:hover {
+    transform: scale(1.2); }
 
 .header .nav {
   background-color: #D7BB7E;
@@ -281,7 +297,7 @@ p {
   width: 100%; }
 
 .about p, .reparation__text p, .recup__text p,
-.abonnement__article p {
+.abonnement__article p, .privacy p, .condition p {
   padding-bottom: 2.4rem; }
 
 .contact__header img {
