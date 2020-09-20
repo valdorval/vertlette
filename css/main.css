@@ -62,6 +62,9 @@ h4, h5, h6 {
   color: #917A5E;
   text-transform: uppercase; }
 
+a {
+  color: inherit; }
+
 p {
   text-align: justify; }
 
