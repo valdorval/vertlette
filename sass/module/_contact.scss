@@ -7,12 +7,8 @@
           }
      }
 
-     &__content {
-          justify-content: space-between;
-     }
-
      &__coordonne {
-          width: 45%;
+          width: 40%;
           border-right: 1px solid $color-primary;
      }
 
@@ -32,32 +28,9 @@
           }
      }
 
-     &__form-section {
-          width: 50%;
-
-          label {
-               display: block;
-               width: 45%;
-          }
-     }
-
      &__form {
 
-          &--item  {
-               width: 100%;
-               justify-content: space-between;
-
-               div {
-                    width: 45%;
-               }
-          }
-     }
-
-     &__input {
-          width: 100%;
-     }
-
-     &__textarea {
-          width: 100%;
+          background: red;
+          width: 50%;
      }
 }
