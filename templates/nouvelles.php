@@ -33,7 +33,7 @@ get_header();
 // affiche tout les post exepté le dernier publié avec offset
 $args = new WP_Query(array(
     'post_type'             => 'nouvelles',
-    'post_per_page'         =>  10,
+    'post_per_page'         =>  6,
     'ignore_sticky_posts'   => 1,
     'paged'                 => $paged,
     'offset'                => 1,
@@ -44,7 +44,7 @@ if ($args->have_posts()) :
 ?>
         <h2> <?php echo the_title(); ?> </h2>
         <p> <?php echo the_content(); ?></p>
-        <h6> <?php echo get_the_author(); ?></h6>
+        <h6> <?php echo the_author(); ?></h6>
 <?php
     endwhile;
 endif;
