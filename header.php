@@ -20,7 +20,6 @@
                     <div class="header__items">
                          <nav class="header__items--nav flex">
 
-
                               <?php
                               global $woocommerce;
                               $cart_url = $woocommerce->cart->get_cart_url();
@@ -30,8 +29,6 @@
                               ?>
 
                               <a href="<?php echo $myaccount_page_url; ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/compte.svg" alt="Mon compte"></a>
-
-
 
                               <a href="<?php echo $cart_url ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/panier.svg" alt="Panier"></a>
                          </nav>
