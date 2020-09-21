@@ -31,20 +31,9 @@ a {
   border-radius: 3px;
   border: transparent;
   cursor: pointer;
-<<<<<<< HEAD
   -webkit-transition: all .4s;
   transition: all .4s;
 }
-=======
-  transition: all .4s; }
-  .btn:hover {
-    background-color: #917A5E;
-    color: #FEF5DC; }
-  .btn__dark {
-    background-color: #D7BB7E;
-    border: 1px solid #917A5E;
-    color: #FEF5DC; }
->>>>>>> parent of 476bb40... Merge branch 'devval'
 
 .btn:hover {
   background-color: #917A5E;
@@ -61,17 +50,8 @@ a {
   background-color: rgba(254, 245, 220, 0.6);
   color: #917A5E;
   padding: 1.3rem 2rem;
-<<<<<<< HEAD
   margin: 1.5rem;
 }
-=======
-  margin: 1.5rem; }
-  .form-inputfocus {
-    outline: none;
-    box-shadow: 0 0 0 0.2rem rgba(215, 187, 126, 0.7); }
-  .form-input::placeholder {
-    color: rgba(145, 122, 94, 0.5); }
->>>>>>> parent of 476bb40... Merge branch 'devval'
 
 .form-inputfocus {
   outline: none;
@@ -122,19 +102,6 @@ p {
   font-size: 1.4rem;
 }
 
-<<<<<<< HEAD
-=======
-.p-big {
-  font-size: 9rem;
-  color: #D7BB7E;
-  font-weight: 400; }
-
-.p-member {
-  color: #fff;
-  font-size: 2.6rem;
-  letter-spacing: 1.3rem; }
-
->>>>>>> parent of 476bb40... Merge branch 'devval'
 .heading-primary {
   font-size: 5.5rem;
 }
@@ -194,12 +161,6 @@ p {
   text-align: center;
 }
 
-<<<<<<< HEAD
-=======
-.align-right {
-  text-align: right; }
-
->>>>>>> parent of 476bb40... Merge branch 'devval'
 .gradient {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(70%, #fff), to(#FEF5DC));
   background-image: linear-gradient(to bottom, #fff 0%, #fff 70%, #FEF5DC 100%);
@@ -349,7 +310,6 @@ p {
   background-color: #FEF5DC;
 }
 
-<<<<<<< HEAD
 .header__message p {
   padding: 3rem 0;
   color: #07043A;
@@ -371,25 +331,14 @@ p {
   cursor: pointer;
 }
 
-=======
->>>>>>> parent of 476bb40... Merge branch 'devval'
 .contact__header img {
   width: 100%;
 }
 
-<<<<<<< HEAD
 .contact__coordonne {
   width: 40%;
   border-right: 1px solid #D7BB7E;
 }
-=======
-.contact__content {
-  justify-content: space-between; }
-
-.contact__coordonne {
-  width: 40%;
-  border-right: 1px solid #D7BB7E; }
->>>>>>> parent of 476bb40... Merge branch 'devval'
 
 .contact__map {
   width: 80%;
@@ -401,7 +350,6 @@ p {
   width: 90%;
 }
 
-<<<<<<< HEAD
 .contact__details--hours {
   margin: 0 auto;
   width: 70%;
@@ -414,23 +362,6 @@ p {
   background: red;
   width: 50%;
 }
-=======
-.contact__form {
-  background: red;
-  width: 50%; }
-
-.contact__form--item {
-  width: 100%;
-  justify-content: space-between; }
-  .contact__form--item div {
-    width: 45%; }
-
-.contact__input {
-  width: 100%; }
-
-.contact__textarea {
-  width: 100%; }
->>>>>>> parent of 476bb40... Merge branch 'devval'
 
 .index-corpo__image {
   position: relative;
