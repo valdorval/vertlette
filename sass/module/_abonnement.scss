@@ -1,0 +1,36 @@
+.abonnement {
+
+     &__header {
+          background-color: $color-secondary;
+          height: 40rem;
+          position: relative;
+
+          &::after {
+               @include contour;
+          }
+     }
+
+     &__corpo {
+          width: 60%;
+
+          img {
+               margin-top: 2.4rem;
+               width: 40%;
+          }
+     }
+
+     &__details {
+
+          &--special {
+               color: $color-primary-light;
+          }
+
+          &--p {
+               text-align: right;
+          }
+
+          button {
+               width: 100%;
+          }
+     }
+}

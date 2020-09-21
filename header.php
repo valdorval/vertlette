@@ -13,15 +13,34 @@
 
      <header class="header">
           <div class="header__box">
-               <div class="header__logo container-big">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo-v-luxe.svg" alt="Image du logo">
+               <div class="header__content container-big flex">
+                    <div class="header__logo">
+                         <img src="<?php echo get_template_directory_uri(); ?>/img/logo-v-luxe.svg" alt="Image du logo">
+                    </div>
+                    <div class="header__items">
+                         <nav class="header__items--nav flex">
+
+                              <?php
+                              global $woocommerce;
+                              $cart_url = $woocommerce->cart->get_cart_url();
+
+                              $myaccount_page_id = get_option('woocommerce_myaccount_page_id');
+                              $myaccount_page_url = get_permalink($myaccount_page_id);
+                              ?>
+
+                              <a href="<?php echo $myaccount_page_url; ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/compte.svg" alt="Mon compte"></a>
+
+                              <a href="<?php echo $cart_url ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/panier.svg" alt="Panier"></a>
+                         </nav>
+                    </div>
                </div>
+
           </div>
 
-          <nav class="nav" id="main_nav">
+          <nav class="nav">
                <?php wp_nav_menu(
                     array(
-                         'theme_location' => 'primary',
+                         'theme_location' => 'main_nav',
                          'container' => 'ul',
                          'menu_class' => 'nav__menu container-big flex center'
                     )

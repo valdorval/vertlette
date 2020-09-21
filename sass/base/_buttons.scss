@@ -14,5 +14,12 @@
 
      &:hover {
           background-color: $color-primary-dark;
+          color: $color-primary-light;
+     }
+
+     &__dark {
+          background-color: $color-primary;
+          border: 1px solid $color-primary-dark;
+          color: $color-primary-light;
      }
 }

@@ -13,6 +13,14 @@ h4, h5, h6 {
      text-transform: uppercase;
 }
 
+a {
+     color: inherit;
+}
+
+p {
+     text-align: justify;
+}
+
 .p-light {
      color: $color-white;
 }
@@ -21,6 +29,18 @@ h4, h5, h6 {
      color: $color-primary-dark;
      font-weight: 500;
      font-size: 1.4rem;
+}
+
+.p-big {
+     font-size: 9rem;
+     color: $color-primary;
+     font-weight: 400;
+}
+
+.p-member {
+     color: $color-white;
+     font-size: 2.6rem;
+     letter-spacing: 1.3rem;
 }
 
 .heading-primary {
@@ -41,6 +61,11 @@ h4, h5, h6 {
      &--dark {
           color: inherit;
      }
+}
+
+.heading-black {
+     font-size: 3rem;
+     color: $color-black;
 }
 
 .heading-rubik {

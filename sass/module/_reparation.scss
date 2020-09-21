@@ -1,0 +1,59 @@
+.reparation {
+
+     &__content {
+          justify-content: space-between;
+     }
+
+     &__text {
+          width: 60%;
+          padding-left: 1rem;
+          border-left: 1px solid $color-primary;
+     }
+
+     &__img {
+          width: 30%;
+          height: 50%;
+          position: relative;
+
+          &::after {
+               @include contour;
+          }
+
+          img {
+               width: 100%;
+          }
+     }
+}
+
+.recup {
+
+     h2 {text-align: right;}
+
+     &__content {
+          justify-content: space-between;
+     }
+
+     &__text {
+          width: 60%;
+          padding-right: 1rem;
+          border-right: 1px solid $color-primary;
+     }
+
+     &__img {
+          height: 50%;
+          width: 30%;
+          position: relative;
+
+          &::after {
+               @include contour;
+          }
+
+          img {
+               width: 100%;
+          }
+     }
+
+     &__button-right {
+          text-align: right;
+     }
+}

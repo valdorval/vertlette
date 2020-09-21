@@ -1,0 +1,63 @@
+.contact {
+
+     &__header {
+
+          img {
+               width: 100%;
+          }
+     }
+
+     &__content {
+          justify-content: space-between;
+     }
+
+     &__coordonne {
+          width: 45%;
+          border-right: 1px solid $color-primary;
+     }
+
+     &__map {
+          width: 80%;
+          height: 40rem;
+     }
+
+     &__details {
+          margin: 0 auto;
+          width: 90%;
+
+          &--hours {
+               margin: 0 auto;
+               width: 70%;
+               justify-content: space-between;
+          }
+     }
+
+     &__form-section {
+          width: 50%;
+
+          label {
+               display: block;
+               width: 45%;
+          }
+     }
+
+     &__form {
+
+          &--item  {
+               width: 100%;
+               justify-content: space-between;
+
+               div {
+                    width: 45%;
+               }
+          }
+     }
+
+     &__input {
+          width: 100%;
+     }
+
+     &__textarea {
+          width: 100%;
+     }
+}
