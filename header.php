@@ -19,8 +19,21 @@
                     </div>
                     <div class="header__items">
                          <nav class="header__items--nav flex">
-                              <a href="<?php echo get_permalink('50'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/compte.svg" alt="Mon compte"></a>
-                              <a href="<?php echo get_permalink('48'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/panier.svg" alt="Panier"></a>
+
+
+                              <?php
+                              global $woocommerce;
+                              $cart_url = $woocommerce->cart->get_cart_url();
+
+                              $myaccount_page_id = get_option('woocommerce_myaccount_page_id');
+                              $myaccount_page_url = get_permalink($myaccount_page_id);
+                              ?>
+
+                              <a href="<?php echo $myaccount_page_url; ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/compte.svg" alt="Mon compte"></a>
+
+
+
+                              <a href="<?php echo $cart_url ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/panier.svg" alt="Panier"></a>
                          </nav>
                     </div>
                </div>
