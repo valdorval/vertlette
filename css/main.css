@@ -207,7 +207,8 @@ p {
   background-image: linear-gradient(to bottom, #fff, #FEF5DC); }
 
 .header__content {
-  justify-content: space-between; }
+  justify-content: space-between;
+  align-items: center; }
 
 .header__items--nav img {
   height: 3rem;
