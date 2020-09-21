@@ -24,7 +24,6 @@
 }
 =======
 {
-<<<<<<< HEAD
   "name": "vertlette",
   "version": "1.0.0",
   "description": "Projet Vertlette",
@@ -45,28 +44,5 @@
   "devDependencies": {
     "node-sass": "^4.14.1"
   }
-}
->>>>>>> devval
-=======
-     "name": "vertlette",
-     "version": "1.0.0",
-     "description": "Projet V.Luxe",
-     "main": "index.js",
-     "scripts": {
-          "compile:sass": "node-sass sass/main.scss css/main.css -w"
-     },
-     "repository": {
-          "type": "git",
-          "url": "git+https://github.com/valdorval/vertlette.git"
-     },
-     "author": "",
-     "license": "ISC",
-     "bugs": {
-          "url": "https://github.com/valdorval/vertlette/issues"
-     },
-     "homepage": "https://github.com/valdorval/vertlette#readme",
-     "devDependencies": {
-          "node-sass": "^4.14.1"
-     }
 }
 >>>>>>> devval

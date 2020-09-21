@@ -13,18 +13,9 @@
 
      <header class="header">
           <div class="header__box">
-               <div class="header__content container-big flex">
-                    <div class="header__logo">
-                         <img src="<?php echo get_template_directory_uri(); ?>/img/logo-v-luxe.svg" alt="Image du logo">
-                    </div>
-                    <div class="header__items">
-                         <nav class="header__items--nav flex">
-                              <a href="<?php echo get_permalink('50'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/compte.svg" alt="Mon compte"></a>
-                              <a href="<?php echo get_permalink('48'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/panier.svg" alt="Panier"></a>
-                         </nav>
-                    </div>
+               <div class="header__logo container-big">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo-v-luxe.svg" alt="Image du logo">
                </div>
-
           </div>
 
           <nav class="nav">
