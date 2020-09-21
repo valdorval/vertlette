@@ -58,11 +58,12 @@
           background-size: cover;
 
           &--text {
-               text-align: center;
-               overflow-wrap: break-word;
                background-color: rgba($color-primary-light, .9);
                height: 25%;
                padding: 1rem 5rem;
+               p{
+                    text-align: center!important;
+               }
           } 
 
           button{
@@ -86,11 +87,12 @@
           background-size: cover;
 
           &--text {
-               text-align: center;
-               overflow-wrap: break-word;
                background-color: rgba($color-primary-light, .9);
                height: 25%;
                padding: 1rem 5rem;
+               p{
+                    text-align: center!important;
+               }
           } 
 
           button{

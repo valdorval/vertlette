@@ -801,11 +801,13 @@ p {
 }
 
 .vogue__second-item--text {
-  text-align: center;
-  overflow-wrap: break-word;
   background-color: rgba(254, 245, 220, 0.9);
   height: 25%;
   padding: 1rem 5rem;
+}
+
+.vogue__second-item--text p {
+  text-align: center !important;
 }
 
 .vogue__second-item button {
@@ -846,11 +848,13 @@ p {
 }
 
 .vogue__third-item--text {
-  text-align: center;
-  overflow-wrap: break-word;
   background-color: rgba(254, 245, 220, 0.9);
   height: 25%;
   padding: 1rem 5rem;
+}
+
+.vogue__third-item--text p {
+  text-align: center !important;
 }
 
 .vogue__third-item button {
