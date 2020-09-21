@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Name: Recupération
+ * Template Name: Récupération
  *
  */
 
