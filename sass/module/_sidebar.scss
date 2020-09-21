@@ -1,0 +1,9 @@
+li.sub-category a{
+    margin-left: 5px;
+}
+
+
+li.second-sub-category a::before{
+    content: "ㅡ" ;
+
+}
