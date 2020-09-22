@@ -1,9 +1,21 @@
-li.sub-category a{
-    margin-left: 5px;
-}
+.menu-category{
+    margin-right: 100px;
+    ul{
+        li{
+            list-style-type: none;
+        }
 
+        li.second-sub-category a{
+            margin-left: 20px;
+        }
+    }
+}
 
 li.second-sub-category a::before{
     content: "ㅡ" ;
+}
 
+
+.category-id-18, .category-id-16{
+    display: none;
 }
