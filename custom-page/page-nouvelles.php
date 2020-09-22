@@ -164,7 +164,7 @@ get_header();
 
 
     <section class="blog-articles u-margin-bottom-normal u-margin-top-big">
-        <div class=class="container-big flex blog-articles__content">
+        <div class="container-big flex blog-articles__content">
             <?php
             // affiche tout les post exepté le dernier publié avec offset
             $args = new WP_Query(array(
