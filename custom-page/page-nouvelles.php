@@ -59,18 +59,22 @@ get_header();
             if ($args->have_posts()) :
                 while ($args->have_posts()) : $args->the_post();
                     $feat_image = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>
+
                     <div class="blog-articles__item u-margin-top-big">
-                        <img src="<?php echo $feat_image; ?>">
-                        <div class="blog-articles__text">
-                            <h3 class="heading-quaternary"> <?php echo the_title(); ?> </h3>
-                            <p class="p-light"> <?php echo the_field('description_de_larticle'); ?></p>
-                        </div>
+                        <a href="<?php the_permalink($the_query->ID) ?>">
+                            <img src="<?php echo $feat_image; ?>">
+                            <div class="blog-articles__text">
+                                <h3 class="heading-quaternary"> <?php echo the_title(); ?> </h3>
+                                <p class="p-light"> <?php echo the_field('description_de_larticle'); ?></p>
+                        </a>
                     </div>
-            <?php
+        </div>
+
+<?php
                 endwhile;
             endif;
-            ?>
-        </div>
+?>
+</div>
     </section>
 
     <section class="archives u-margin-bottom-big">
