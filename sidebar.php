@@ -1,4 +1,4 @@
-<nav class="menu-category">
+<nav class="menu-category u-margin-bottom-big">
     <h4 class="all-categories">
         <a href=" <?php echo get_permalink('6') ?>">Tout</a>
         <hr>

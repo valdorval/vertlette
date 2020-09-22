@@ -32,6 +32,12 @@
     }
 }
 
+// pour retirer le produit abonnement de la boutique
+// remplacer l'id pour celui du post abonnement.
+// .post-152{
+//     display: none;
+// }
+
 .woocommerce ul.products li.product .woocommerce-loop-category__title, .woocommerce ul.products li.product .woocommerce-loop-product__title, .woocommerce ul.products li.product h3{
     text-transform: inherit;
 }

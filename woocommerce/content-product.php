@@ -24,8 +24,9 @@ global $product;
 if (empty($product) || !$product->is_visible()) {
 	return;
 }
+
 ?>
-<li <?php wc_product_class('sub-category-product', $product); ?>>
+<li <?php wc_product_class('', $product); ?>>
 	<?php
 	/**
 	 * Hook: woocommerce_before_shop_loop_item.
