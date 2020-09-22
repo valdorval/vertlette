@@ -67,7 +67,7 @@ get_header('shop');
 			?>
 		</div>
 
-		<section class="boutique__produit flex ">
+		<section class="flex ">
 			<?php
 
 			/**

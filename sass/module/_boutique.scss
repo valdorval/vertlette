@@ -16,7 +16,7 @@
 }
 
 .boutique{
-    margin: 0px 10%;
+    margin: 0px 5%;
     &__produits{
         width: 100%;
     }
@@ -32,13 +32,6 @@
     }
 }
 
-
-
-
-
-
-
-// overwritting woocommerce
 .woocommerce ul.products li.product .woocommerce-loop-category__title, .woocommerce ul.products li.product .woocommerce-loop-product__title, .woocommerce ul.products li.product h3{
     text-transform: inherit;
 }
@@ -47,7 +40,6 @@
     color: $color-primary-dark;
     font-size: 2rem;
 }
-
 
 .woocommerce .woocommerce-ordering, .woocommerce-page .woocommerce-ordering{
     float: none;
@@ -66,7 +58,6 @@ p.woocommerce-result-count{
     opacity: 0%;
     display: none;
 }
-
 
 .woocommerce ul.products li.product .onsale{
     top: 0;

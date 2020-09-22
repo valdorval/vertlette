@@ -1,21 +1,32 @@
 .menu-category{
-    margin-right: 100px;
+    padding-right: 100px;
+    width: 21%;
+
+    .all-categories{
+        font-family: $text-font;
+        font-weight: 500;
+    }
+
     ul{
         li{
             list-style-type: none;
         }
 
-        li.second-sub-category a{
+        .main-category a{
+            font-family: $text-font;
+            font-weight: 500;
+        }
+
+        .second-sub-category a{
             margin-left: 20px;
         }
+
+        .second-sub-category a::before{
+                content: "ㅡ " ;
+            }
     }
 }
 
-li.second-sub-category a::before{
-    content: "ㅡ" ;
-}
-
-
-.category-id-18, .category-id-16{
+.category-id-18, .category-id-15, .category-id-16{
     display: none;
 }

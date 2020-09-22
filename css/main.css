@@ -910,7 +910,7 @@ p {
 }
 
 .boutique {
-  margin: 0px 10%;
+  margin: 0px 5%;
 }
 
 .boutique__produits {
@@ -1008,22 +1008,33 @@ p.woocommerce-result-count {
 }
 
 .menu-category {
-  margin-right: 100px;
+  padding-right: 100px;
+  width: 21%;
+}
+
+.menu-category .all-categories {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
 }
 
 .menu-category ul li {
   list-style-type: none;
 }
 
-.menu-category ul li.second-sub-category a {
+.menu-category ul .main-category a {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+}
+
+.menu-category ul .second-sub-category a {
   margin-left: 20px;
 }
 
-li.second-sub-category a::before {
-  content: "ㅡ";
+.menu-category ul .second-sub-category a::before {
+  content: "ㅡ ";
 }
 
-.category-id-18, .category-id-16 {
+.category-id-18, .category-id-15, .category-id-16 {
   display: none;
 }
 /*# sourceMappingURL=main.css.map */
