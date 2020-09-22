@@ -19,8 +19,11 @@ get_header();
     if ($the_query->have_posts()) :
         while ($the_query->have_posts()) : $the_query->the_post();
     ?>
-            <h2> <?php echo the_title(); ?> </h2>
-            <p> <?php echo the_content(); ?></p>
+            <a href="<?php the_permalink($the_query->ID) ?>">
+                <h2> <?php echo the_title(); ?> </h2>
+                <p> <?php echo the_content(); ?></p>
+                <h6> <?php echo get_the_author(); ?></h6>
+            </a>
     <?php endwhile;
         wp_reset_postdata();
     else :
@@ -42,9 +45,11 @@ $args = new WP_Query(array(
 if ($args->have_posts()) :
     while ($args->have_posts()) : $args->the_post();
 ?>
-        <h2> <?php echo the_title(); ?> </h2>
-        <p> <?php echo the_content(); ?></p>
-        <h6> <?php echo get_the_author(); ?></h6>
+        <a href="<?php the_permalink($the_query->ID) ?>">
+            <h2> <?php echo the_title(); ?> </h2>
+            <p> <?php echo the_content(); ?></p>
+            <h6> <?php echo get_the_author(); ?></h6>
+        </a>
 <?php
     endwhile;
 endif;
