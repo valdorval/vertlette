@@ -6,7 +6,6 @@
 
 get_header();
 ?>
-
 <main>
     <section class="main-blog">
         <div class="flex container-big main-blog__article u-margin-top-big">
@@ -119,6 +118,7 @@ get_header();
     </section>
 </main>
 
+
 <div>
     <p> ---------recent post-------</p>
     <?php
@@ -131,8 +131,11 @@ get_header();
     if ($the_query->have_posts()) :
         while ($the_query->have_posts()) : $the_query->the_post();
     ?>
-            <h2> <?php echo the_title(); ?> </h2>
-            <p> <?php echo the_content(); ?></p>
+            <a href="<?php the_permalink($the_query->ID) ?>">
+                <h2> <?php echo the_title(); ?> </h2>
+                <p> <?php echo the_content(); ?></p>
+                <h6> <?php echo get_the_author(); ?></h6>
+            </a>
     <?php endwhile;
         wp_reset_postdata();
     else :
@@ -145,7 +148,7 @@ get_header();
 // affiche tout les post exepté le dernier publié avec offset
 $args = new WP_Query(array(
     'post_type'             => 'nouvelles',
-    'post_per_page'         =>  6,
+    'post_per_page'         =>  10,
     'ignore_sticky_posts'   => 1,
     'paged'                 => $paged,
     'offset'                => 1,
@@ -154,9 +157,11 @@ $args = new WP_Query(array(
 if ($args->have_posts()) :
     while ($args->have_posts()) : $args->the_post();
 ?>
-        <h2> <?php echo the_title(); ?> </h2>
-        <p> <?php echo the_content(); ?></p>
-        <h6> <?php echo the_author(); ?></h6>
+        <a href="<?php the_permalink($the_query->ID) ?>">
+            <h2> <?php echo the_title(); ?> </h2>
+            <p> <?php echo the_content(); ?></p>
+            <h6> <?php echo get_the_author(); ?></h6>
+        </a>
 <?php
     endwhile;
 endif;

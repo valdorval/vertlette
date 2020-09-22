@@ -11,7 +11,7 @@
                          <p class="center u-margin-top-xsmall abonnement__details--special">Un vaste choix pour tous les goûts.</p>
                          <p class="p-big center u-margin-top-normal">2000 $</p>
                          <p class="p-dark u-margin-top-normal abonnement__details--p">Valable pendant 12 mois</p>
-                         <button class="btn u-margin-top-xsmall"><a href="#"></a>Je m'abonne</a></button>
+                         <button class="btn u-margin-top-xsmall"><a href="#"></a>Lire l'article</a></button>
                     </div>
                </div>
           </header>
