@@ -26,21 +26,22 @@ get_header();
                             <h2 class="heading-tertiary heading-tertiary--light u-margin-bottom-normal"><?php echo the_title(); ?></h2>
                             <p class="main-blog__article--description center u-margin-bottom-normal"><?php echo get_the_excerpt(); ?></p>
                             <button class="btn btn--light u-margin-top-normal"><a href="<?php echo get_the_permalink(); ?>">Lire l'article</a></button>
-                    <?php endwhile;
-                        wp_reset_postdata();
-                    else :
-                    endif;
-                    ?>
+
                 </div>
 
             </div>
-            <div class="main-blog__image">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/deco-resize.jpg" alt="Image de l'article">
+            <div class="main-blog__image" style="background-image:url(<?php echo get_the_post_thumbnail_url($the_query->ID); ?>);background-position:center;background-size:cover;background-repeat:no-repeat;">
+
             </div>
+    <?php endwhile;
+                        wp_reset_postdata();
+                    else :
+                    endif;
+    ?>
         </div>
     </section>
 
-    <section class="blog-articles u-margin-bottom-normal u-margin-top-big">
+    <section class=" blog-articles u-margin-bottom-normal u-margin-top-big">
         <div class="container-big flex blog-articles__content">
             <?php
             // affiche tout les post exepté le dernier publié avec offset
@@ -55,9 +56,7 @@ get_header();
             if ($args->have_posts()) :
                 while ($args->have_posts()) : $args->the_post();
             ?>
-                    <div class="blog-articles__item u-margin-top-big">
-
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/fauteuil-resize.jpg" alt="Fauteuil">
+                    <div class="blog-articles__item u-margin-top-big" style="background-image:url(<?php echo get_the_post_thumbnail_url($the_query->ID); ?>);background-position:top;background-size:cover;background-repeat:no-repeat;">
                         <div class="blog-articles__text">
                             <h3 class="heading-quaternary"><a href="<?php echo get_the_permalink(); ?>"><?php echo the_title(); ?></a></h3>
                             <p class="p-light"><?php echo get_the_excerpt(); ?></p>
@@ -70,9 +69,9 @@ get_header();
         </div>
     </section>
 
-    <section class="archives u-margin-bottom-big">
+    <section class="archives">
         <h4 class="container-big heading-secondary heading-secondary--dark u-margin-bottom-normal">Archives</h4>
-        <div class="archives__content">
+        <div class="archives__content u-padding-bottom-normal">
             <div class="archives__content--box container-big flex">
                 <div class="archives__content--menu">
                     <h5 class="heading-rubik--black u-margin-bottom-small">Récents</h5>

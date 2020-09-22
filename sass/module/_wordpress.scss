@@ -2,3 +2,14 @@
      width: 100%;
      height: auto;
 }
+
+.single-news {
+
+     &__image {
+          position: relative;
+
+          &::after {
+               @include contour;
+          }
+     }
+}

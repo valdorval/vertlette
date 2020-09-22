@@ -1,7 +1,7 @@
 .main-blog {
 
      &__article {
-          height: 75rem;
+          height: 75vh;
 
           &--text {
                background-color: $color-primary-dark;
@@ -25,6 +25,7 @@
 
      &__image { 
           width: 80%;
+          height: 75vh;
 
           img {
                height: 100%;
@@ -61,12 +62,8 @@
 
      &__item {
           width: 30%;
-          height: 50rem;
+          height: 40vh;
           position: relative;
-
-          img {
-               width: 100%;
-          }
 
           a {
                transition: all .6s;
@@ -78,13 +75,17 @@
      }
 
      &__text {
-          padding: 2.5rem;
           height: 27%;
           background-color: $color-primary;
           position: absolute;
           left: 0;
           right: 0;
-          bottom: 0;
+          bottom: -1rem;
+          padding: 1.5rem;
+
+          p {
+               font-size: 1.4rem;
+          }
      }
 }
 

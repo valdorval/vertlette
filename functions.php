@@ -123,7 +123,6 @@ function vluxe_supports()
     add_image_size('promotions', 600, 438);
     add_theme_support('menus');
     add_theme_support('woocommerce');
-    add_image_size('single-news', )
     register_nav_menu('main_nav', 'Navigation en-tête');
     register_nav_menu('magasin', 'Compte et panier');
 
