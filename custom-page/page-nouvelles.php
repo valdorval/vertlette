@@ -6,7 +6,7 @@
 
 get_header();
 ?>
-<main>
+<!-- <main>
     <section class="main-blog">
         <div class="flex container-big main-blog__article u-margin-top-big">
             <div class="main-blog__article--text center">
@@ -116,7 +116,7 @@ get_header();
             </div>
         </div>
     </section>
-</main>
+</main> -->
 
 
 <div>
