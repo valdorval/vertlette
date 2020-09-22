@@ -28,3 +28,4 @@ global $product;
 <div class="content-single-product">
 	<?php the_content(); ?>
 </div>
+<hr>

@@ -45,3 +45,4 @@ if ($rating_count > 0) : ?>
 
 <?php endif;
 ?>
+<hr>

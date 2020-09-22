@@ -1266,11 +1266,106 @@ p.woocommerce-result-count {
 
 .content-single-product {
   margin: 1.9rem 0;
+  word-wrap: break-word;
 }
 
 .woocommerce div.product {
-  width: 70%;
+  width: 60%;
   margin: auto;
   margin-top: 8rem;
+}
+
+hr {
+  margin: 1.5rem 0 1.5rem 0;
+}
+
+.woocommerce div.product p.price, .woocommerce div.product span.price {
+  color: #917A5E;
+}
+
+.woocommerce div.product .product_title {
+  text-transform: none;
+}
+
+.woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt {
+  margin: 0;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  overflow: visible;
+  left: auto;
+  border: 0;
+  display: inline-block;
+  background-color: #FEF5DC;
+  font-family: "Domine", serif;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  color: #D7BB7E;
+  padding: 1rem 2rem;
+  border-radius: 3px;
+  border: transparent;
+  cursor: pointer;
+}
+
+.woocommerce div.product form.cart .button, .woocommerce div.product form.cart div.quantity {
+  float: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.woocommerce .quantity .qty {
+  height: 32px;
+  background-color: #917A5E;
+  color: #fff;
+  border: none;
+}
+
+.woocommerce div.product form.cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.woocommerce div.product form.cart::after, .woocommerce div.product form.cart::before, .woocommerce div.product form.cart::after {
+  display: none;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.quantity-product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.spinner-button {
+  cursor: default;
+  z-index: 2;
+  width: 14.5px;
+  text-align: center;
+  margin: 0px;
+  pointer-events: none;
+  height: 10px;
+  line-height: 10px;
+}
+
+#inc-button {
+  margin-left: 10px;
+}
+
+#dec-button {
+  margin-right: 10px;
 }
 /*# sourceMappingURL=main.css.map */
