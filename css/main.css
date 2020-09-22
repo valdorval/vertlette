@@ -133,13 +133,20 @@ p {
 
 .heading-secondary {
   font-size: 3.6rem;
-  color: #D7BB7E; }
+  color: #D7BB7E;
+}
+
+.heading-secondary--dark {
+  color: #917A5E;
+  text-transform: none;
+}
 
 .heading-tertiary {
   color: #FEF5DC;
   font-size: 2.8rem;
   font-weight: 300;
-  text-transform: none; }
+  text-transform: none;
+}
 
 .heading-quaternary {
   color: #fff;
@@ -163,14 +170,18 @@ p {
   color: #FEF5DC;
   text-transform: inherit;
   font-size: 3.6rem;
-  text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.6); }
-  .heading-rubik--light {
-    color: #fff;
-    text-shadow: none; }
+  text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.6);
+}
 
 .heading-rubik--light {
   color: #fff;
   text-shadow: none;
+}
+
+.heading-rubik--black {
+  text-transform: uppercase;
+  color: black;
+  font-size: 3rem;
 }
 
 .container {
@@ -309,7 +320,13 @@ p {
 }
 
 .header__content {
-  justify-content: space-between; }
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 
 .header__items--nav img {
   height: 3rem;
@@ -495,6 +512,183 @@ p {
   background-color: #39384F;
   height: 35rem;
   position: relative;
+}
+
+.newsletter p {
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+.newsletter__box {
+  width: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.newsletter__form--input {
+  width: 50%;
+  padding: 1.3rem 2rem;
+  margin-right: 5rem;
+  background-color: #FEF5DF;
+  border: 1px solid transparent;
+  border-bottom: 4px solid #D7BB7E;
+  color: #917A5E;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.newsletter__form--input:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(215, 187, 126, 0.7);
+          box-shadow: 0 0 0 0.2rem rgba(215, 187, 126, 0.7);
+}
+
+.newsletter__form--input::-webkit-input-placeholder {
+  color: rgba(145, 122, 94, 0.5);
+}
+
+.newsletter__form--input:-ms-input-placeholder {
+  color: rgba(145, 122, 94, 0.5);
+}
+
+.newsletter__form--input::-ms-input-placeholder {
+  color: rgba(145, 122, 94, 0.5);
+}
+
+.newsletter__form--input::placeholder {
+  color: rgba(145, 122, 94, 0.5);
+}
+
+.main-blog__article {
+  height: 75rem;
+}
+
+.main-blog__article--text {
+  background-color: #917A5E;
+  width: 20%;
+  position: relative;
+}
+
+.main-blog__article--description {
+  color: #FEF5DC;
+  font-style: italic;
+  opacity: .8;
+  font-weight: 300;
+}
+
+.main-blog__center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 2.5rem;
+}
+
+.main-blog__image {
+  width: 80%;
+}
+
+.main-blog__image img {
+  height: 100%;
+  width: 100%;
+}
+
+.p-primary-light {
+  color: #FEF5DC;
+  text-transform: uppercase;
+  font-weight: 300;
+  position: relative;
+}
+
+.p-primary-light::after {
+  content: '';
+  display: block;
+  width: 40%;
+  height: 1px;
+  background-color: #FEF5DC;
+  position: absolute;
+  bottom: -3rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.blog-articles__content {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.blog-articles__item {
+  width: 30%;
+  height: 50rem;
+  position: relative;
+}
+
+.blog-articles__item img {
+  width: 100%;
+}
+
+.blog-articles__item a {
+  -webkit-transition: all .6s;
+  transition: all .6s;
+}
+
+.blog-articles__item a:hover {
+  color: #b68f39;
+}
+
+.blog-articles__text {
+  padding: 2.5rem;
+  height: 27%;
+  background-color: #D7BB7E;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.archives {
+  margin-top: 12rem;
+}
+
+.archives a:hover {
+  text-decoration: underline;
+}
+
+.archives__content {
+  background-color: rgba(254, 245, 220, 0.5);
+  position: relative;
+}
+
+.archives__content::before {
+  content: '';
+  display: block;
+  width: 90%;
+  height: 1px;
+  background-color: #917A5E;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.archives__content--box {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.archives__content--menu {
+  margin: 2.5rem 0;
 }
 
 .presentation {
