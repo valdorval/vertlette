@@ -13,12 +13,8 @@
 
         while ($loop->have_posts()) : $loop->the_post();
             global $product; ?>
-            <div class="promo__content--item">
-
+            <div class="promo__content--item" style="background-image:url(<?php echo get_the_post_thumbnail_url($post->ID); ?>);background-position:center;background-size:cover; background-repeat:no-repeat">
                 <a href="<?php echo get_permalink(); ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
-
-                    <img src="<?php echo get_the_post_thumbnail_url($post->ID); ?>" />
-
                     <div class=" promo__title">
                         <h4 class="heading-rubik heading-rubik--light"><?php the_title(); ?></h4>
                     </div>

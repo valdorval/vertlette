@@ -86,10 +86,22 @@ function create_post_type_nouvelles()
     register_post_type('nouvelles', $args);
 }
 
+function create_taxonomy_nouvelles()
+{
+}
+
 function enqueue_styles_vluxe()
 {
     wp_enqueue_style('style-principal', get_template_directory_uri() . '/css/main.css');
     wp_enqueue_style('style-vluxe', get_template_directory_uri() . '/style.css');
+}
+
+function enqueue_scripts_vluxe()
+{
+    wp_deregister_script('jquery');
+    wp_register_script('jquery', 'https://code.jquery.com/jquery-3.5.1.min.js', [], false, true);
+    wp_enqueue_script('jquery');
+    wp_enqueue_script('js-file', get_template_directory_uri() . '/js/main.js', [], false, true);
 }
 
 function vluxe_supports()
@@ -144,6 +156,7 @@ function vluxe_menu_class($classes)
 
 add_action('after_setup_theme', 'vluxe_supports');
 add_action('wp_enqueue_scripts', 'enqueue_styles_vluxe');
+add_action('wp_enqueue_scripts', 'enqueue_scripts_vluxe');
 add_filter('nav_menu_css_class', 'vluxe_menu_class', 10, 4);
 add_filter('woocommerce_cart_item_price', 'bbloomer_change_cart_table_price_display', 30, 3);
 

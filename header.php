@@ -40,5 +40,6 @@
 
           <div class="header__message">
                <p class="center">Livraison gratuite à partir de 2 500$ d'achats</p>
+               <span class="header__message--close" id="messageClose">X</span>
           </div>
      </header>

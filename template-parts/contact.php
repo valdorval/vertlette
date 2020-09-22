@@ -36,21 +36,21 @@
                          <div class="flex contact__form--item">
                               <div>
                                    <label for="prenom" class="p-dark">Prénom</label>
-                                   <input type="text" placeholder="Entrez votre prénom" id="prenom" class="form-input contact__input">
+                                   <input type="text" required placeholder="Entrez votre prénom" id="prenom" class="form-input contact__input">
                               </div>
                               <div>
                                    <label for="nom" class="p-dark">Nom</label>
-                                   <input type="text" placeholder="Entrez votre nom" id=" nom" class="form-input contact__input">
+                                   <input type="text" required placeholder="Entrez votre nom" id=" nom" class="form-input contact__input">
                               </div>
                          </div>
                          <div class="flex contact__form--item u-margin-top-normal">
                               <div>
                                    <label for="courriel" class="p-dark">Courriel</label>
-                                   <input type="text" placeholder="Entrez votre adresse courriel" id="courriel" class="form-input contact__input">
+                                   <input type="email" required placeholder="Entrez votre adresse courriel" id="courriel" class="form-input contact__input">
                               </div>
                               <div>
                                    <label for="sujet" class="p-dark">Sujet du message</label>
-                                   <select id="sujet" class="form-input contact__input">
+                                   <select id="sujet" class="form-input contact__input" required>
                                         <option value="selection" disabled selected>Sélectionner</option>
                                         <option value="question">Question</option>
                                         <option value="suggestion">Suggestion</option>
@@ -62,7 +62,7 @@
                          </div>
 
                          <label for="message" class="p-dark u-margin-top-normal">Message</label>
-                         <textarea placeholder="Entrez votre texte" id="message" class="form-input form-input--textarea contact__textarea"></textarea>
+                         <textarea required placeholder="Entrez votre texte" id="message" class="form-input form-input--textarea contact__textarea"></textarea>
                          <div class="recup__button-right u-margin-top-big">
                               <button class="btn btn__dark u-margin-top-small u-margin-bottom-big"><a href="#"></a>Envoyer</a></button>
                          </div>
