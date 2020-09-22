@@ -913,6 +913,10 @@ p {
   margin: 0px 10%;
 }
 
+.boutique__produits {
+  width: 100%;
+}
+
 .filter-bar {
   margin: 120px 0 30px 0;
   -webkit-box-pack: end;
@@ -925,6 +929,15 @@ p {
 
 .filter-bar span {
   margin-right: 10px;
+}
+
+.woocommerce ul.products li.product .woocommerce-loop-category__title, .woocommerce ul.products li.product .woocommerce-loop-product__title, .woocommerce ul.products li.product h3 {
+  text-transform: inherit;
+}
+
+.woocommerce ul.products li.product .price {
+  color: #917A5E;
+  font-size: 2rem;
 }
 
 .woocommerce .woocommerce-ordering, .woocommerce-page .woocommerce-ordering {
@@ -941,6 +954,56 @@ p {
 
 p.woocommerce-result-count {
   opacity: 0%;
+  display: none;
+}
+
+.woocommerce ul.products li.product .onsale {
+  top: 0;
+  right: 0;
+  left: auto;
+  margin: 1em -1em 0 0;
+}
+
+.woocommerce span.onsale {
+  min-height: 1em !important;
+  min-width: 1.236em;
+  padding: 5px 15px;
+  font-size: 1em;
+  font-weight: 700;
+  position: absolute;
+  text-align: center;
+  line-height: 1;
+  top: -.5em;
+  left: -.5em;
+  margin: 0;
+  border-radius: 0%;
+  background-color: #D1B877;
+  color: #fff;
+  font-size: .857em;
+  z-index: 9;
+}
+
+.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button {
+  margin: 0;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  overflow: visible;
+  left: auto;
+  border: 0;
+  display: inline-block;
+  background-color: #FEF5DC;
+  font-family: "Domine", serif;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  color: #D7BB7E;
+  padding: 1rem 2rem;
+  border-radius: 3px;
+  border: transparent;
+  cursor: pointer;
+}
+
+.woocommerce a.added_to_cart {
   display: none;
 }
 
