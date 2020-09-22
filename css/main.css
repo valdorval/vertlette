@@ -886,6 +886,135 @@ p {
   height: 260px;
 }
 
+.main-blog__article {
+  height: 75rem;
+}
+
+.main-blog__article--text {
+  background-color: #917A5E;
+  width: 20%;
+  position: relative;
+}
+
+.main-blog__article--description {
+  color: #FEF5DC;
+  font-style: italic;
+  opacity: .8;
+  font-weight: 300;
+}
+
+.main-blog__center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 2.5rem;
+}
+
+.main-blog__image {
+  width: 80%;
+}
+
+.main-blog__image img {
+  height: 100%;
+  width: 100%;
+}
+
+.p-primary-light {
+  color: #FEF5DC;
+  text-transform: uppercase;
+  font-weight: 300;
+  position: relative;
+}
+
+.p-primary-light::after {
+  content: '';
+  display: block;
+  width: 40%;
+  height: 1px;
+  background-color: #FEF5DC;
+  position: absolute;
+  bottom: -3rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.blog-articles__content {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.blog-articles__item {
+  width: 30%;
+  height: 50rem;
+  position: relative;
+}
+
+.blog-articles__item img {
+  width: 100%;
+}
+
+.blog-articles__item a {
+  -webkit-transition: all .6s;
+  transition: all .6s;
+}
+
+.blog-articles__item a:hover {
+  color: #b68f39;
+}
+
+.blog-articles__text {
+  padding: 2.5rem;
+  height: 27%;
+  background-color: #D7BB7E;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.archives {
+  margin-top: 12rem;
+}
+
+.archives a:hover {
+  text-decoration: underline;
+}
+
+.archives__content {
+  background-color: rgba(254, 245, 220, 0.5);
+  position: relative;
+}
+
+.archives__content::before {
+  content: '';
+  display: block;
+  width: 90%;
+  height: 1px;
+  background-color: #917A5E;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.archives__content--box {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.archives__content--menu {
+  margin: 2.5rem 0;
+}
+
 .header-boutique--img {
   position: relative;
   width: 80%;
