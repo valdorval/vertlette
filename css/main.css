@@ -1189,4 +1189,62 @@ p.woocommerce-result-count {
 .category-id-18, .category-id-15, .category-id-16 {
   display: none;
 }
+
+.article {
+  width: 65%;
+  margin: auto;
+}
+
+.article h2, .article h3, .article h4, .article h5, .article h6 {
+  color: #D7BB7E;
+  font-weight: 500;
+  margin: 5rem 0 1.2rem 0;
+}
+
+.article p {
+  margin-bottom: 2.4rem;
+}
+
+.article--description {
+  margin-bottom: 6rem !important;
+}
+
+.article__header {
+  width: 100%;
+  margin: auto;
+  position: relative;
+}
+
+.article__header img {
+  width: 100%;
+}
+
+.article__header::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: -2.5rem;
+  bottom: -2.5rem;
+  border: 1px solid #D7BB7E;
+  z-index: -1;
+}
+
+.article__content {
+  margin-top: 10rem;
+}
+
+.article div.auteur {
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.article div.auteur span {
+  margin-right: 10px;
+}
 /*# sourceMappingURL=main.css.map */
