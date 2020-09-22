@@ -26,7 +26,7 @@ get_header();
                 <?php the_field('lien'); ?>
             </div>
 
-            <?php the_content(); ?>
+            <?php the_field('description_du_video'); ?>
 
             <p> Date de publication: <?php echo get_the_date() ?></p>
     <?php endwhile;
@@ -57,8 +57,7 @@ get_header();
                 <div class="embed-container">
                     <?php the_field('lien'); ?>
                 </div>
-                <br>
-                <?php the_content(); ?>
+                <?php the_field('description_du_video'); ?>
                 <p> Date de publication: <?php echo get_the_date(); ?></p>
             </div>
     <?php

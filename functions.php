@@ -52,8 +52,8 @@ add_action('init', 'create_post_type_nouvelles', 10, 1);
 function create_post_type_nouvelles()
 {
     $label = array(
-        'name'               => __('Articles', 'vluxe'),
-        'singular name'      => __('Article', 'vluxe'),
+        'name'               => __('Nouvelle', 'vluxe'),
+        'singular name'      => __('Nouvelle', 'vluxe'),
         'menu_name'          => _x('Nouvelles', 'Admin menu name', 'vluxe'),
         'add_new'            => __('Ajouter un article', 'vluxe'),
         'add_new_item'       => __('Ajouter un article', 'vluxe'),
