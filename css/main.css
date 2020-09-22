@@ -1251,4 +1251,12 @@ p.woocommerce-result-count {
 .about .heading-tertiary {
   color: #917A5E !important;
 }
+
+.about p {
+  margin-bottom: 1.8rem;
+}
+
+.about .second-section {
+  margin-top: 4rem;
+}
 /*# sourceMappingURL=main.css.map */
