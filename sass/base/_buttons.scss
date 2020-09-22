@@ -22,4 +22,11 @@
           border: 1px solid $color-primary-dark;
           color: $color-primary-light;
      }
+
+     &--light {
+          &:hover {
+               background-color: $color-primary;
+               color: $color-primary-light;
+          }
+     }
 }

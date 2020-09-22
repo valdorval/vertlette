@@ -45,6 +45,17 @@ function create_post_type_video()
     register_post_type('video', $args);
 }
 
+function new_excerpt_length($length)
+{
+    return 15;
+}
+add_filter('excerpt_length', 'new_excerpt_length');
+
+function new_excerpt_more($more)
+{
+    return '';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
 
 // custom post type pour la page nouvelles
 add_action('init', 'create_post_type_nouvelles', 10, 1);
@@ -112,6 +123,7 @@ function vluxe_supports()
     add_image_size('promotions', 600, 438);
     add_theme_support('menus');
     add_theme_support('woocommerce');
+    add_image_size('single-news', )
     register_nav_menu('main_nav', 'Navigation en-tête');
     register_nav_menu('magasin', 'Compte et panier');
 

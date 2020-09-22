@@ -33,6 +33,9 @@ a {
     background-color: #D7BB7E;
     border: 1px solid #917A5E;
     color: #FEF5DC; }
+  .btn--light:hover {
+    background-color: #D7BB7E;
+    color: #FEF5DC; }
 
 .form-input {
   border: 1px solid #D7BB7E;
@@ -103,6 +106,8 @@ p {
   color: #917A5E;
   font-size: 2.8rem;
   font-weight: 300; }
+  .heading-tertiary--light {
+    color: #FEF5DC; }
 
 .heading-quaternary {
   color: #fff;
@@ -111,6 +116,8 @@ p {
   text-transform: none; }
   .heading-quaternary--dark {
     color: inherit; }
+  .heading-quaternary--primary {
+    color: #D7BB7E; }
 
 .heading-black {
   font-size: 3rem;
@@ -315,7 +322,8 @@ p {
   width: 100%; }
 
 .about p, .reparation__text p, .recup__text p,
-.abonnement__article p, .privacy p, .condition p {
+.abonnement__article p, .privacy p, .condition p,
+.single-news p {
   padding-bottom: 2.4rem; }
 
 .contact__header img {
@@ -758,3 +766,7 @@ p {
 .old-live__old-embed iframe {
   width: 44rem;
   height: 26rem; }
+
+.wp-post-image {
+  width: 100%;
+  height: auto; }
