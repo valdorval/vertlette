@@ -21,7 +21,6 @@
                     <hr>
                 </h4>
 
-
                 <?php
                 $child_args = array(
                     'taxonomy' => 'product_cat',

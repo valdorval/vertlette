@@ -148,3 +148,30 @@ add_filter('nav_menu_css_class', 'vluxe_menu_class', 10, 4);
 add_filter('woocommerce_cart_item_price', 'bbloomer_change_cart_table_price_display', 30, 3);
 
 //nav_menu_submenu_css_class
+
+
+function change_role_on_purchase($order_id)
+{
+
+    $order = new WC_Order($order_id);
+    $items = $order->get_items();
+
+    foreach ($items as $item) {
+        $product_name = $item['name'];
+        $product_id = $item['product_id'];
+        $product_variation_id = $item['variation_id'];
+
+        if ($order->user_id > 0 && $product_id == '257') {
+            update_user_meta($order->user_id, 'paying_customer', 1);
+            $user = new WP_User($order->user_id);
+
+            // Remove role
+            $user->remove_role('subscriber');
+
+            // Add role
+            $user->add_role('membre_corporatif');
+        }
+    }
+}
+
+add_action('woocommerce_order_status_processing', 'change_role_on_purchase');
