@@ -505,6 +505,58 @@ p {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
+.abonnement__header {
+  background-color: #39384F;
+  height: 40rem;
+  position: relative;
+}
+
+.abonnement__header::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: -2.5rem;
+  bottom: -2.5rem;
+  border: 1px solid #D7BB7E;
+  z-index: -1;
+}
+
+.abonnement__corpo {
+  width: 60%;
+}
+
+.abonnement__corpo img {
+  margin-top: 2.4rem;
+  width: 40%;
+}
+
+.abonnement__details--special {
+  color: #FEF5DC;
+}
+
+.abonnement__details--p {
+  text-align: right;
+}
+
+.abonnement__details button {
+  width: 100%;
+}
+
+.abonnement__article {
+  padding: 2.4rem 0;
+}
+
+.abonnement__article p {
+  padding-bottom: 2.4rem;
+}
+
+.abonnement__article .heading-tertiary {
+  color: #917A5E;
+  text-transform: none;
+}
+
 .presentation {
   margin: 9rem 0;
 }

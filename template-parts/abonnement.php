@@ -19,11 +19,11 @@
           <article class="gradient u-margin-top-big">
                <div class="container abonnement__article">
                     <h1 class="heading-tertiary u-margin-bottom-normal"><?php echo get_field('abonnement_title'); ?></h1>
-                    <p><?php echo get_field('abonnement_p'); ?></p>
+                    <?php echo get_field('abonnement_p'); ?>
                     <h2 class="heading-tertiary u-margin-bottom-normal"><?php echo get_field('second_abonnement_title'); ?></h2>
-                    <p><?php echo get_field('second_abonnement_p'); ?></p>
+                    <?php echo get_field('second_abonnement_p'); ?>
                     <h2 class="heading-tertiary u-margin-bottom-normal"><?php echo get_field('third_abonnement_title'); ?></h2>
-                    <p><?php echo get_field('third_abonnement_p'); ?></p>
+                    <?php echo get_field('third_abonnement_p'); ?>
                </div>
           </article>
      </section>
