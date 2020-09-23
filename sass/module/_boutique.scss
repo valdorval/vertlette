@@ -61,7 +61,6 @@
 
 // retirer l'affichage du nombre de résultat
 p.woocommerce-result-count{
-    opacity: 0%;
     display: none;
 }
 
@@ -91,6 +90,6 @@ p.woocommerce-result-count{
     z-index: 9;
 }
 
-.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce .star-rating span, .woocommerce ul.products li.product .star-rating, .woocommerce a.added_to_cart{
-    display: none!important;
+.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce .products .star-rating{
+    display: none;
 }

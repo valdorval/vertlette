@@ -1,5 +1,21 @@
 .woocommerce div.product .woocommerce-product-rating{
-        margin-bottom: 0;
+        margin-bottom: 1rem;
+        display: flex;
+}
+
+.woocommerce .star-rating{
+    color: #D7BB7E;
+}
+
+.woocommerce .woocommerce-product-rating .star-rating{
+    float: none;
+    order: 2;
+}
+
+.woocommerce-review-link{
+    float: left;
+    order: 1;
+    margin-right: 1.4rem;
 }
 
 .content-single-product{
@@ -13,18 +29,24 @@
     margin-top: 8rem;
 }
 
-hr{
-    margin: 1.5rem 0 1.5rem 0;
+span.deco-line::before{
+    display: block;
+    content: " ";
+    width: 100%;
+    border-bottom: 0.5px solid #d3ced2;;
+    z-index: 1;
 }
 
 .woocommerce div.product p.price, .woocommerce div.product span.price{
-    color: $color-primary-dark
+    color: $color-primary-dark;
+    margin-top: 1.9rem;
 }
 
 .woocommerce div.product .product_title{
     text-transform: none;
 }
 
+// formulaire bouton ajout de quantité
 .woocommerce div.product form.cart .button{
     margin: 0;
     cursor: pointer;
@@ -68,6 +90,11 @@ hr{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin: 1.9rem 0;
+}
+
+div.product_meta{
+    padding-top: 1.9rem;
 }
 
 .woocommerce div.product form.cart::after, .woocommerce div.product form.cart::before, .woocommerce div.product form.cart::after{
@@ -76,14 +103,14 @@ hr{
 
 input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
-  }
+}
 
 .quantity-product{
     display: flex;
     align-items: center;
 }
   
-  .spinner-button {
+.spinner-button {
     cursor: default;
     z-index: 2;
     width: 14.5px;
@@ -92,12 +119,99 @@ input[type=number]::-webkit-inner-spin-button {
     pointer-events: none;
     height: 10px;
     line-height: 10px;
-  }
+}
   
-  #inc-button {
+#inc-button {
    margin-left: 10px
-  }
+}
   
-  #dec-button {
+#dec-button {
     margin-right: 10px;
-  }
+}
+
+//  gallery d'image
+.woocommerce div.product div.images .woocommerce-product-gallery__image{
+      margin: 0 2rem 2rem 0;
+}
+
+// section table description, avis, information supplémentaire
+.woocommerce #reviews #comments h2, #tab-description h2{
+    text-transform: none;
+    font-weight: 500;
+    color: $color-primary;
+    margin-bottom: 1.4rem;
+}
+
+.wrapprer-content-tabs{
+    width: 80%;
+}
+
+.woocommerce div.product .woocommerce-tabs .panel{
+    word-wrap: break-word!important;
+    margin: 1rem 0 2rem 4rem;
+    padding: 0;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs::before{
+    display: none;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li::after{
+    display: none;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li::after, .woocommerce div.product .woocommerce-tabs ul.tabs li::before{
+    display:none;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active::after{
+    display: none;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li{
+    border: none;
+    background-color:#fff;
+    display: inline-block;
+    position: relative;
+    z-index: 0;
+    border-radius: none;
+    margin: 15px -5px;
+    padding: 0 1em;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs{
+    width: 20%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    position: inherit;
+    display: flex;
+    flex-direction: column;
+}
+
+.woocommerce #content div.product .woocommerce-tabs, .woocommerce div.product .woocommerce-tabs, .woocommerce-page #content div.product .woocommerce-tabs, .woocommerce-page div.product .woocommerce-tabs{
+    display: -webkit-box;
+    margin-bottom: 6rem;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active a::after{
+    position: absolute;
+    display: block;
+    content: '>';
+    right: 20px;
+    bottom: 3px;
+    font-size: 30px;
+    font-weight: 100;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li a{
+    display: inline-block;
+    padding: .5em 0;
+    font-weight: 400;
+    color: #515151;
+    text-decoration: none;
+}
+
+section.related.products{
+    display: none;
+}
