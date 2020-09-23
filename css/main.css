@@ -63,7 +63,8 @@ h1, h2, h3,
 h4, h5, h6 {
   font-family: "Domine", serif;
   color: #917A5E;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin-bottom: 2rem; }
 
 a {
   color: inherit; }

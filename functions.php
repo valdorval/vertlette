@@ -59,6 +59,7 @@ add_filter('excerpt_more', 'new_excerpt_more');
 
 // custom post type pour la page nouvelles
 add_action('init', 'create_post_type_nouvelles', 10, 1);
+add_action('init', 'create_taxonomy_nouvelles', 10, 1);
 
 function create_post_type_nouvelles()
 {
@@ -99,6 +100,32 @@ function create_post_type_nouvelles()
 
 function create_taxonomy_nouvelles()
 {
+    $labels = [
+        'name'                  => _x('Nouvelle catégorie', 'taxonomy general name', 'vluxe'),
+        'singular_name'         => _x('Nouvelle catégorie', 'taxonomy singular name', 'vluxe'),
+        'search_items'          => __('Recherche de catégorie', 'vluxe'),
+        'all_items'             => __('Toutes les catégories', 'vluxe'),
+        'parent_item'           => __('Catégorie parent', 'vluxe'),
+        'parent_item_colon'     => __('Catégorie parent', 'vluxe'),
+        'edit_item'             => __('Éditer la catégorie', 'vluxe'),
+        'update_item'           => __('Mettre à jour la catégorie', 'vluxe'),
+        'add_new_item'          => __('Ajouter une nouvelle catégorie', 'vluxe'),
+        'new_item_name'         => __('Nouvelle catégorie', 'vluxe'),
+        'menu_name'             => __('Catégorie', 'vluxe')
+    ];
+
+    $args = [
+        'hierarchical'          => true,
+        'labels'                => $labels,
+        'show_ui'               => true,
+        'show_admin_column'     => true,
+        'show_in_menu'          => true,
+        'show_in_nav_menus'     => true,
+        'show_in_rest'          => true,
+        'query_var'             => true,
+        'rewrite'               => array('slug' => 'categorie', 'with_front' => true),
+    ];
+    register_taxonomy('vluxe_nouvelles_categorie', array('nouvelles'), $args);
 }
 
 function enqueue_styles_vluxe()
@@ -112,7 +139,7 @@ function enqueue_scripts_vluxe()
     wp_deregister_script('jquery');
     wp_register_script('jquery', 'https://code.jquery.com/jquery-3.5.1.min.js', [], false, true);
     wp_enqueue_script('jquery');
-    wp_enqueue_script('js-file', get_template_directory_uri() . '/js/main.js', [], false, true);
+    wp_enqueue_script('js-file', get_template_directory_uri() . '/js/main.js', array('jquery'), false, true);
 }
 
 function vluxe_supports()

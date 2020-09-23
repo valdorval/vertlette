@@ -17,16 +17,24 @@ get_header();
                     $the_query = new WP_Query(array(
                         'post_type' => 'nouvelles',
                         'posts_per_page' => 1,
+                        'tax_query' => array(
+                            'taxonomy' => 'vluxe_nouvelles_categorie',
+                            'fields' => 'slug',
+                            'terms' => 'all'
+                        )
                     ));
 
                     if ($the_query->have_posts()) :
                         while ($the_query->have_posts()) : $the_query->the_post();
+
+                            $term = get_the_terms($the_query->ID, 'vluxe_nouvelles_categorie');
                     ?>
-                            <p class="p-primary-light center u-margin-bottom-big">Idées de décoration</p>
+                            <p class="p-primary-light center u-margin-bottom-big"><?php echo $term[0]->name; ?></p>
                             <h2 class="heading-tertiary heading-tertiary--light u-margin-bottom-normal"><?php echo the_title(); ?></h2>
                             <p class="main-blog__article--description center u-margin-bottom-normal"><?php echo get_the_excerpt(); ?></p>
                             <button class="btn btn--light u-margin-top-normal"><a href="<?php echo get_the_permalink(); ?>">Lire l'article</a></button>
 
+                            <!-- <?php var_dump(get_the_terms($the_query->ID, 'vluxe_nouvelles_categorie')); ?> -->
                 </div>
 
             </div>
