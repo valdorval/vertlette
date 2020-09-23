@@ -818,6 +818,10 @@ p {
   z-index: -1;
 }
 
+.reparation__text p, .recup__text p {
+  padding-bottom: 2.4rem;
+}
+
 .reparation__content {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
