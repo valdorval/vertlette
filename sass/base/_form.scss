@@ -21,3 +21,38 @@
           font-family: $text-font;
      }
 }
+
+.search-form {
+     position: relative;
+
+     &__input {
+          border: 1px solid $color-primary;
+          border-radius: $b-radius;     
+          background-color: rgba($color-primary-light, .6);
+          color: $color-primary-dark;
+          padding: 1.3rem 1.5rem;
+          width: 25rem;
+          
+          &:focus {
+               outline: none;
+               box-shadow: 0 0 0 .2rem rgba($color-primary, .7);
+          }
+     
+          &::placeholder {
+               color: rgba($color-primary-dark, .5);
+          }
+
+     }
+     
+     &__loupe {
+          height: 2rem;
+          width: 2rem;
+          position: absolute;
+          right: 5%;
+          top: 50%;
+          transform: translateY(-50%);
+
+     }
+
+
+}

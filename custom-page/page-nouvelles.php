@@ -33,8 +33,6 @@ get_header();
                             <h2 class="heading-tertiary heading-tertiary--light u-margin-bottom-normal"><?php echo the_title(); ?></h2>
                             <p class="main-blog__article--description center u-margin-bottom-normal"><?php echo get_the_excerpt(); ?></p>
                             <button class="btn btn--light u-margin-top-normal"><a href="<?php echo get_the_permalink(); ?>">Lire l'article</a></button>
-
-                            <!-- <?php var_dump(get_the_terms($the_query->ID, 'vluxe_nouvelles_categorie')); ?> -->
                 </div>
 
             </div>

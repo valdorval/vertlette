@@ -1,9 +1,5 @@
 .header {
 
-     img {
-          height: 16rem;
-          margin-top: 2rem;
-     }
 
      &__box {
           height: 22rem;
@@ -16,20 +12,41 @@
      &__content {
           justify-content: space-between;
           align-items: center;
+          padding-top: 3rem;
      }
 
-     &__items--nav {
-          
-          img {
-               height: 3rem;
-               padding-right: 1rem;
-               transition: all .4s;
+     &__logo {
+          height: 16rem;
+     }
 
-               &:hover {
+     &__items {
+          align-items: center;
+
+          &--search-form {
+               margin-right: 5rem;
+          }
+
+          &--img {
+               height: 3rem;
+               margin-right: 2.5rem;
+          }
+
+          &--nav {
+
+              
+
+               a {
+                    transition: all .4s;
+
+                    &:hover {
                     transform: scale(1.2);
                }
+               }
+
+               
           }
-     }
+     }  
+          
 
      .nav {
           background-color: $color-primary;
