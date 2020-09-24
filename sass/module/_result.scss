@@ -1,0 +1,35 @@
+.result {
+
+     h1 {
+          padding-bottom: 5rem;
+     }
+      
+     &__thumbnail {
+          margin-right: 6.5rem;
+          transition: all .4s;
+          position: relative;
+
+          &::after {
+               @include contour;
+          }
+
+          &:hover {
+               filter: saturate(3);
+          }
+
+
+     }
+
+     &__text {
+          width: 100%;
+
+          a {
+               color: $color-primary;
+               transition: all .4s;
+
+               &:hover {
+                    color: $color-primary-dark;
+               }
+          }
+     }
+}

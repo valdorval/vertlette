@@ -665,6 +665,34 @@ p {
 .recup__button-right {
   text-align: right; }
 
+.result h1 {
+  padding-bottom: 5rem; }
+
+.result__thumbnail {
+  margin-right: 6.5rem;
+  transition: all .4s;
+  position: relative; }
+  .result__thumbnail::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: -2.5rem;
+    bottom: -2.5rem;
+    border: 1px solid #D7BB7E;
+    z-index: -1; }
+  .result__thumbnail:hover {
+    filter: saturate(3); }
+
+.result__text {
+  width: 100%; }
+  .result__text a {
+    color: #D7BB7E;
+    transition: all .4s; }
+    .result__text a:hover {
+      color: #917A5E; }
+
 .vogue {
   background-color: rgba(254, 245, 220, 0.5);
   padding: 7rem 0 9rem; }
