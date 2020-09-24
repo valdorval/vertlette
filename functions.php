@@ -117,17 +117,6 @@ function vluxe_supports()
     );
 }
 
-// lorsqu'il y a une promotion, le prix regulier sera line-through (a tester, il faudra enlever le lin-through en css)
-function bbloomer_change_cart_table_price_display($price, $values, $cart_item_key)
-{
-    $slashed_price = $values['data']->get_price_html();
-    $is_on_sale = $values['data']->is_on_sale();
-    if ($is_on_sale) {
-        $price = $slashed_price;
-    }
-    return $price;
-}
-
 add_action('init', 'init_remove_support', 100);
 function init_remove_support()
 {
