@@ -25,12 +25,12 @@ $user = wp_get_current_user();
         <span>Filtrer par:</span>
     </div>
 
-    <section class="flex boutique__corporative">
+    <section class="flex">
         <?php
         if (in_array('administrator', (array) $user->roles)) {
             get_template_part('sidebar', 'corporatif');
         ?>
-            <div class="boutique__corporative--item">
+            <div class="boutique__corporative">
                 <ul class="products columns-4">
                     <?php
                     $args = array(
