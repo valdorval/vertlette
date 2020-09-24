@@ -840,3 +840,17 @@ p {
     bottom: -2.5rem;
     border: 1px solid #D7BB7E;
     z-index: -1; }
+
+.widget {
+  margin-right: 2rem;
+  color: #07043A !important; }
+  .widget_weglot-translate {
+    list-style: none; }
+
+#weglot-translate-2 a {
+  color: #07043A;
+  transition: all .4s; }
+
+#weglot-translate-2 a:hover {
+  text-decoration: none;
+  color: #917A5E; }

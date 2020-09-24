@@ -13,3 +13,25 @@
           }
      }
 }
+
+.widget {
+     margin-right: 2rem;
+     color: $color-secondary-dark !important;
+     
+     &_weglot-translate {
+          list-style: none;
+
+     }
+}
+
+#weglot-translate-2 {
+     a {
+          color: $color-secondary-dark;
+                    transition: all .4s;
+     }
+
+     a:hover {
+          text-decoration: none;
+          color: $color-primary-dark;
+     }
+}

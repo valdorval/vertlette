@@ -16,6 +16,11 @@
                <div class="header__content container-big flex">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/logo-v-luxe.svg" class="header__logo" alt="Image du logo">
                     <div class="header__items flex">
+                         <?php if (is_active_sidebar('sidebar1')) : ?>
+                              <div id="primary-sidebar" class="header__widget" role="complementary">
+                                   <?php dynamic_sidebar('sidebar1'); ?>
+                              </div><!-- #primary-sidebar -->
+                         <?php endif; ?>
                          <div class="header__items--search-form">
                               <?php get_search_form(); ?>
                          </div>

@@ -162,7 +162,8 @@ function vluxe_supports()
             'gallery',
             'caption',
             'style',
-            'script'
+            'script',
+            'navigation-widgets'
         ]
     );
 }
@@ -192,10 +193,18 @@ function vluxe_menu_class($classes)
     return $classes;
 }
 
+function my_widget_init()
+{
+    register_sidebar(array(
+        'name' => 'Sidebar',
+        'id' => 'sidebar1',
+    ));
+}
+
 add_action('after_setup_theme', 'vluxe_supports');
 add_action('wp_enqueue_scripts', 'enqueue_styles_vluxe');
 add_action('wp_enqueue_scripts', 'enqueue_scripts_vluxe');
 add_filter('nav_menu_css_class', 'vluxe_menu_class', 10, 4);
 add_filter('woocommerce_cart_item_price', 'bbloomer_change_cart_table_price_display', 30, 3);
-
+add_action('widgets_init', 'my_widget_init');
 //nav_menu_submenu_css_class
