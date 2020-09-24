@@ -148,6 +148,22 @@ function change_role_on_purchase($order_id)
     }
 }
 
+// N'affiche pas les produits corporatif dans la boutique
+add_action('woocommerce_product_query', 'ts_custom_pre_get_posts_query');
+function ts_custom_pre_get_posts_query($q)
+{
+    if (is_shop()) {
+        $tax_query = (array) $q->get('tax_query');
+        $tax_query[] = array(
+            'taxonomy' => 'product_cat',
+            'field' => 'slug',
+            'terms' => array('corporatif'),
+            'operator' => 'NOT IN'
+        );
+        $q->set('tax_query', $tax_query);
+    }
+}
+
 // N'affiche pas les catégories non-classe et corporatif dans la sidebar
 // de la boutique
 add_filter('get_terms', 'ts_get_subcategory_terms', 10, 3);
@@ -166,25 +182,9 @@ function ts_get_subcategory_terms($terms, $taxonomies, $args)
     return $terms;
 }
 
-// N'affiche pas les produits corporatif dans la boutique
-add_action('woocommerce_product_query', 'ts_custom_pre_get_posts_query');
-function ts_custom_pre_get_posts_query($q)
-{
-    if (is_shop()) {
-        $tax_query = (array) $q->get('tax_query');
-        $tax_query[] = array(
-            'taxonomy' => 'product_cat',
-            'field' => 'slug',
-            'terms' => array('corporatif'),
-            'operator' => 'NOT IN'
-        );
-        $q->set('tax_query', $tax_query);
-    }
-}
-
 // pour les catégorie de la boutique normal
 // N'affiche pas les catégories non-classe et corporatif dans la sidebar
-// lorsqu'on entre dans un catégorie spécifique
+// lorsqu'on entre dans une catégorie spécifique
 add_filter('get_terms', 'corpo_sidebar_category_terms', 10, 3);
 function corpo_sidebar_category_terms($terms, $taxonomies, $args)
 {

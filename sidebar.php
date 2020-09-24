@@ -1,16 +1,9 @@
 <?php
-$category_link = get_category_link('47');
-$cat_link = get_category_link('46');
 
-$cat_bureau = get_term_link(47, 'product_cat');
-$cat_corporatif = get_term_link(46, 'product_cat');
+$pattern = "/corporatif/";
+$preg = preg_match($pattern, home_url($wp->request));
 
-
-$page_link = home_url($wp->request);
-// retirer le slash de trop
-$category_link = substr($cat_bureau, 0, -1);
-
-if ($page_link === $category_link || is_page('boutique-corporative')) {
+if ($preg === 1 || is_page('boutique-corporative')) {
 ?>
     <nav class="menu-category u-margin-bottom-big">
         <h4 class="all-categories">

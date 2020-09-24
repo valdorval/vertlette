@@ -25,7 +25,7 @@ $user = wp_get_current_user();
     <section class="flex">
         <?php
         if (in_array('membre_corporatif', (array) $user->roles) || in_array('administrator', (array) $user->roles)) {
-            get_template_part('sidebar', 'corporatif');
+            get_template_part('sidebar');
         ?>
             <div class="boutique__corporative">
                 <ul class="products columns-4">
