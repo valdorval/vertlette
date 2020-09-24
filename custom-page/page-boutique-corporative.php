@@ -53,5 +53,4 @@ $user = wp_get_current_user();
     </section>
 </main>
 <?php
-
 get_footer();

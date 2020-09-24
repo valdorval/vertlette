@@ -148,13 +148,14 @@ function change_role_on_purchase($order_id)
     }
 }
 
-// // N'affiche pas les catégories non-classe et corporatif dans la sidebar
+// N'affiche pas les catégories non-classe et corporatif dans la sidebar
+// de la boutique
 add_filter('get_terms', 'ts_get_subcategory_terms', 10, 3);
 function ts_get_subcategory_terms($terms, $taxonomies, $args)
 {
     $new_terms = array();
     // if it is a product category and on the shop page
-    if (in_array('product_cat', $taxonomies) && !is_admin() && is_shop()) {
+    if (in_array('product_cat', $taxonomies) && is_shop()) {
         foreach ($terms as $key => $term) {
             if (!in_array($term->slug, array('non-classe', 'corporatif', 'vogue', 'promotions'))) { //pass the slug name here
                 $new_terms[] = $term;
@@ -179,4 +180,23 @@ function ts_custom_pre_get_posts_query($q)
         );
         $q->set('tax_query', $tax_query);
     }
+}
+
+// pour les catégorie de la boutique normal
+// N'affiche pas les catégories non-classe et corporatif dans la sidebar
+// lorsqu'on entre dans un catégorie spécifique
+add_filter('get_terms', 'corpo_sidebar_category_terms', 10, 3);
+function corpo_sidebar_category_terms($terms, $taxonomies, $args)
+{
+    $new_terms = array();
+    // if it is a product category and on the shop page
+    if (in_array('product_cat', $taxonomies) && is_tax('product_cat')) {
+        foreach ($terms as $key => $term) {
+            if (!in_array($term->slug, array('non-classe', 'vogue', 'promotions', ('corporatif')))) { //pass the slug name here
+                $new_terms[] = $term;
+            }
+        }
+        $terms = $new_terms;
+    }
+    return $terms;
 }
