@@ -117,13 +117,6 @@ function vluxe_supports()
     );
 }
 
-add_action('init', 'init_remove_support', 100);
-function init_remove_support()
-{
-    $post_type = 'video';
-    remove_post_type_support($post_type, 'video');
-}
-
 function vluxe_menu_class($classes)
 {
     unset($classes);
@@ -135,10 +128,11 @@ add_action('after_setup_theme', 'vluxe_supports');
 add_action('wp_enqueue_scripts', 'enqueue_styles_vluxe');
 add_filter('nav_menu_css_class', 'vluxe_menu_class', 10, 4);
 add_filter('woocommerce_cart_item_price', 'bbloomer_change_cart_table_price_display', 30, 3);
-
 //nav_menu_submenu_css_class
 
 
+// changer le role de sunscriber pour membre corporatif
+// lorsque le produit est acheté
 function change_role_on_purchase($order_id)
 {
 
@@ -162,18 +156,17 @@ function change_role_on_purchase($order_id)
         }
     }
 }
-
 add_action('woocommerce_order_status_processing', 'change_role_on_purchase');
 
 
-add_filter('get_terms', 'ts_get_subcategory_terms', 10, 3);
+// N'affiche pas les catégories non-classe et corporatif dans la sidebar
 function ts_get_subcategory_terms($terms, $taxonomies, $args)
 {
     $new_terms = array();
     // if it is a product category and on the shop page
     if (in_array('product_cat', $taxonomies) && !is_admin() && is_shop()) {
         foreach ($terms as $key => $term) {
-            if (!in_array($term->slug, array('non-classe', 'corporatif'))) { //pass the slug name here
+            if (!in_array($term->slug, array('non-classe', 'corporatif', 'vogue', 'promotions'))) { //pass the slug name here
                 $new_terms[] = $term;
             }
         }
@@ -181,7 +174,10 @@ function ts_get_subcategory_terms($terms, $taxonomies, $args)
     }
     return $terms;
 }
+add_filter('get_terms', 'ts_get_subcategory_terms', 10, 3);
 
+
+// N'affiche pas les produits corporatif dans la boutique
 add_action('woocommerce_product_query', 'ts_custom_pre_get_posts_query');
 function ts_custom_pre_get_posts_query($q)
 {
@@ -189,7 +185,7 @@ function ts_custom_pre_get_posts_query($q)
     $tax_query[] = array(
         'taxonomy' => 'product_cat',
         'field' => 'slug',
-        'terms' => array('corporatif'), // Don't display products in the corporatif category on the shop page.
+        'terms' => array('corporatif'),
         'operator' => 'NOT IN'
     );
     $q->set('tax_query', $tax_query);

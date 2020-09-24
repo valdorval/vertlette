@@ -25,44 +25,39 @@ $user = wp_get_current_user();
         <span>Filtrer par:</span>
     </div>
 
-    <section class="flex ">
-
+    <section class="flex boutique__corporative">
         <?php
         if (in_array('administrator', (array) $user->roles)) {
-            /**
-             * Hook: woocommerce_sidebar.
-             *
-             * @hooked woocommerce_get_sidebar - 10
-             */
-            do_action('woocommerce_sidebar');
+            get_template_part('sidebar', 'corporatif');
         ?>
-
-            <div class="boutique__produits">
+            <div class="boutique__corporative--item">
+                <ul class="products columns-4">
+                    <?php
+                    $args = array(
+                        'posts_per_page'  => 5000,
+                        'product_cat' => 'corporatif',
+                        'order'           => 'ASC',
+                        'post_type'       => 'product',
+                    );
+                    $loop = new WP_Query($args);
+                    if ($loop->have_posts()) {
+                        while ($loop->have_posts()) : $loop->the_post();
+                            wc_get_template_part('content', 'product');
+                        endwhile;
+                    } else {
+                        echo __('No products found');
+                    }
+                    wp_reset_postdata();
+                    ?>
                 <?php
-                $args = array(
-                    'posts_per_page'  => 5000,
-                    'product_cat' => 'corporatif',
-                    'order'           => 'ASC',
-                    'post_type'       => 'product',
-                );
-                $loop = new WP_Query($args);
-                if ($loop->have_posts()) {
-                    while ($loop->have_posts()) : $loop->the_post();
-                        wc_get_template_part('content', 'product');
-                    endwhile;
-                } else {
-                    echo __('No products found');
-                }
-                wp_reset_postdata();
+
+            } else {
+                echo 'you dont have access';
+            }
+
                 ?>
+                </ul>
             </div>
-        <?php
-
-        } else {
-            echo 'you dont have access';
-        }
-
-        ?>
     </section>
 
 </main>
