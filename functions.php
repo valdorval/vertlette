@@ -1,13 +1,7 @@
 <?php
 
-// function create_post_type()
-// {
-//     new App\Nouvelles();
-// }
-
 // custom post type pour live youtube
 add_action('init', 'create_post_type_video', 10, 1);
-
 function create_post_type_video()
 {
     $label = array(
@@ -45,10 +39,8 @@ function create_post_type_video()
     register_post_type('video', $args);
 }
 
-
 // custom post type pour la page nouvelles
 add_action('init', 'create_post_type_nouvelles', 10, 1);
-
 function create_post_type_nouvelles()
 {
     $label = array(
@@ -86,12 +78,15 @@ function create_post_type_nouvelles()
     register_post_type('nouvelles', $args);
 }
 
+
+add_action('wp_enqueue_scripts', 'enqueue_styles_vluxe');
 function enqueue_styles_vluxe()
 {
     wp_enqueue_style('style-principal', get_template_directory_uri() . '/css/main.css');
     wp_enqueue_style('style-vluxe', get_template_directory_uri() . '/style.css');
 }
 
+add_action('after_setup_theme', 'vluxe_supports');
 function vluxe_supports()
 {
     add_theme_support('automatic-feed-links');
@@ -117,6 +112,8 @@ function vluxe_supports()
     );
 }
 
+//nav_menu_submenu_css_class
+add_filter('nav_menu_css_class', 'vluxe_menu_class', 10, 4);
 function vluxe_menu_class($classes)
 {
     unset($classes);
@@ -124,15 +121,9 @@ function vluxe_menu_class($classes)
     return $classes;
 }
 
-add_action('after_setup_theme', 'vluxe_supports');
-add_action('wp_enqueue_scripts', 'enqueue_styles_vluxe');
-add_filter('nav_menu_css_class', 'vluxe_menu_class', 10, 4);
-add_filter('woocommerce_cart_item_price', 'bbloomer_change_cart_table_price_display', 30, 3);
-//nav_menu_submenu_css_class
-
-
 // changer le role de sunscriber pour membre corporatif
 // lorsque le produit est acheté
+add_action('woocommerce_order_status_processing', 'change_role_on_purchase');
 function change_role_on_purchase($order_id)
 {
 
@@ -156,10 +147,9 @@ function change_role_on_purchase($order_id)
         }
     }
 }
-add_action('woocommerce_order_status_processing', 'change_role_on_purchase');
-
 
 // // N'affiche pas les catégories non-classe et corporatif dans la sidebar
+add_filter('get_terms', 'ts_get_subcategory_terms', 10, 3);
 function ts_get_subcategory_terms($terms, $taxonomies, $args)
 {
     $new_terms = array();
@@ -174,8 +164,6 @@ function ts_get_subcategory_terms($terms, $taxonomies, $args)
     }
     return $terms;
 }
-add_filter('get_terms', 'ts_get_subcategory_terms', 10, 3);
-
 
 // N'affiche pas les produits corporatif dans la boutique
 add_action('woocommerce_product_query', 'ts_custom_pre_get_posts_query');
@@ -192,22 +180,3 @@ function ts_custom_pre_get_posts_query($q)
         $q->set('tax_query', $tax_query);
     }
 }
-
-
-// function my_post_queries($query)
-// {
-//     // do not alter the query on wp-admin pages and only alter it if it's the main query
-//     if (!is_admin() && $query->is_main_query()) {
-
-//         // alter the query for the home and category pages 
-
-//         if (is_home()) {
-//             $query->set('posts_per_page', 3);
-//         }
-
-//         if (is_category()) {
-//             $query->set('posts_per_page', 3);
-//         }
-//     }
-// }
-// add_action('pre_get_posts', 'my_post_queries');
