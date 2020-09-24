@@ -159,7 +159,7 @@ function change_role_on_purchase($order_id)
 add_action('woocommerce_order_status_processing', 'change_role_on_purchase');
 
 
-// N'affiche pas les catégories non-classe et corporatif dans la sidebar
+// // N'affiche pas les catégories non-classe et corporatif dans la sidebar
 function ts_get_subcategory_terms($terms, $taxonomies, $args)
 {
     $new_terms = array();
@@ -181,12 +181,33 @@ add_filter('get_terms', 'ts_get_subcategory_terms', 10, 3);
 add_action('woocommerce_product_query', 'ts_custom_pre_get_posts_query');
 function ts_custom_pre_get_posts_query($q)
 {
-    $tax_query = (array) $q->get('tax_query');
-    $tax_query[] = array(
-        'taxonomy' => 'product_cat',
-        'field' => 'slug',
-        'terms' => array('corporatif'),
-        'operator' => 'NOT IN'
-    );
-    $q->set('tax_query', $tax_query);
+    if (is_shop()) {
+        $tax_query = (array) $q->get('tax_query');
+        $tax_query[] = array(
+            'taxonomy' => 'product_cat',
+            'field' => 'slug',
+            'terms' => array('corporatif'),
+            'operator' => 'NOT IN'
+        );
+        $q->set('tax_query', $tax_query);
+    }
 }
+
+
+// function my_post_queries($query)
+// {
+//     // do not alter the query on wp-admin pages and only alter it if it's the main query
+//     if (!is_admin() && $query->is_main_query()) {
+
+//         // alter the query for the home and category pages 
+
+//         if (is_home()) {
+//             $query->set('posts_per_page', 3);
+//         }
+
+//         if (is_category()) {
+//             $query->set('posts_per_page', 3);
+//         }
+//     }
+// }
+// add_action('pre_get_posts', 'my_post_queries');

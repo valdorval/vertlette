@@ -24,36 +24,34 @@ $user = wp_get_current_user();
 
     <section class="flex">
         <?php
-        if (in_array('administrator', (array) $user->roles)) {
+        if (in_array('membre_corporatif', (array) $user->roles)) {
             get_template_part('side', 'corporatif');
         ?>
             <div class="boutique__corporative">
                 <ul class="products columns-4">
-                    <?php
-                    $args = array(
-                        'posts_per_page'  => 16,
-                        'product_cat' => 'corporatif',
-                        'order'           => 'ASC',
-                        'post_type'       => 'product',
-                    );
-                    $loop = new WP_Query($args);
-                    if ($loop->have_posts()) {
-                        while ($loop->have_posts()) : $loop->the_post();
-                            wc_get_template_part('content', 'product');
-                        endwhile;
-                    }
-                    wp_reset_postdata();
-                    ?>
                 <?php
 
+                $args = array(
+                    'product_cat' => 'corporatif',
+                    'order'           => 'ASC',
+                    'post_type'       => 'product',
+                );
+
+                $loop = new WP_Query($args);
+                if ($loop->have_posts()) {
+                    while ($loop->have_posts()) : $loop->the_post();
+                        wc_get_template_part('content', 'product');
+                    endwhile;
+                }
+                wp_reset_postdata();
             } else {
                 echo 'you dont have access';
             }
-
                 ?>
                 </ul>
             </div>
     </section>
 </main>
 <?php
+
 get_footer();

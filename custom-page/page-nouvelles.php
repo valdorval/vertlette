@@ -17,7 +17,9 @@ get_header();
                 'post_type' => 'nouvelles',
                 'posts_per_page' => 1,
             ));
+            ?>
 
+            <?php
             if ($the_query->have_posts()) :
                 while ($the_query->have_posts()) : $the_query->the_post();
             ?>
@@ -66,15 +68,14 @@ get_header();
                             <div class="blog-articles__text">
                                 <h3 class="heading-quaternary"> <?php echo the_title(); ?> </h3>
                                 <p class="p-light"> <?php echo the_field('description_de_larticle'); ?></p>
+                            </div>
                         </a>
                     </div>
-        </div>
-
-<?php
+            <?php
                 endwhile;
             endif;
-?>
-</div>
+            ?>
+        </div>
     </section>
 
     <section class="archives u-margin-bottom-big">
@@ -122,8 +123,7 @@ get_header();
             </div>
         </div>
     </section>
-
-    <?php
-    get_footer();
-    ?>
 </main>
+<?php
+get_footer();
+?>
