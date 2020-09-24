@@ -6,9 +6,7 @@
  */
 get_header();
 
-
 $user = wp_get_current_user();
-
 //The user has the "author" role
 ?>
 
@@ -17,7 +15,6 @@ $user = wp_get_current_user();
         <img src="<?php echo get_template_directory_uri(); ?>/img/image-boutique.png" alt="Image du logo">
     </div>
 </header>
-
 
 <main class="boutique">
 
@@ -28,13 +25,13 @@ $user = wp_get_current_user();
     <section class="flex">
         <?php
         if (in_array('administrator', (array) $user->roles)) {
-            get_template_part('sidebar', 'corporatif');
+            get_template_part('side', 'corporatif');
         ?>
             <div class="boutique__corporative">
                 <ul class="products columns-4">
                     <?php
                     $args = array(
-                        'posts_per_page'  => 5000,
+                        'posts_per_page'  => 16,
                         'product_cat' => 'corporatif',
                         'order'           => 'ASC',
                         'post_type'       => 'product',
@@ -44,8 +41,6 @@ $user = wp_get_current_user();
                         while ($loop->have_posts()) : $loop->the_post();
                             wc_get_template_part('content', 'product');
                         endwhile;
-                    } else {
-                        echo __('No products found');
                     }
                     wp_reset_postdata();
                     ?>
@@ -59,7 +54,6 @@ $user = wp_get_current_user();
                 </ul>
             </div>
     </section>
-
 </main>
 <?php
 get_footer();
