@@ -7,4 +7,4 @@ $(function () {
 
      closeItem($('#messageClose'), $('.header__message'));
 
-})
+});
