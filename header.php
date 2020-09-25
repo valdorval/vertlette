@@ -25,8 +25,8 @@
                               <?php get_search_form(); ?>
                          </div>
                          <nav class="header__items--nav flex">
-                              <a href="<?php echo get_permalink('50'); ?>"><img class="header__items--img" src="<?php echo get_template_directory_uri(); ?>/img/compte.svg" alt="Mon compte"></a>
-                              <a href="<?php echo get_permalink('48'); ?>"><img class="header__items--img" src="<?php echo get_template_directory_uri(); ?>/img/panier.svg" alt="Panier"></a>
+                              <a href="<?php echo get_permalink('9'); ?>"><img class="header__items--img" src="<?php echo get_template_directory_uri(); ?>/img/compte.svg" alt="Mon compte"></a>
+                              <a href="<?php echo get_permalink('7'); ?>"><img class="header__items--img" src="<?php echo get_template_directory_uri(); ?>/img/panier.svg" alt="Panier"></a>
                          </nav>
                     </div>
                </div>
