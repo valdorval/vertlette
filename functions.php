@@ -39,8 +39,23 @@ function create_post_type_video()
     register_post_type('video', $args);
 }
 
+function new_excerpt_length($length)
+{
+    return 15;
+}
+add_filter('excerpt_length', 'new_excerpt_length');
+
+function new_excerpt_more($more)
+{
+    return '';
+}
+
+add_filter('excerpt_more', 'new_excerpt_more');
+
 // custom post type pour la page nouvelles
 add_action('init', 'create_post_type_nouvelles', 10, 1);
+add_action('init', 'create_taxonomy_nouvelles', 10, 1);
+
 function create_post_type_nouvelles()
 {
     $label = array(
@@ -80,6 +95,36 @@ function create_post_type_nouvelles()
 
 
 add_action('wp_enqueue_scripts', 'enqueue_styles_vluxe');
+function create_taxonomy_nouvelles()
+{
+    $labels = [
+        'name'                  => _x('Nouvelle catégorie', 'taxonomy general name', 'vluxe'),
+        'singular_name'         => _x('Nouvelle catégorie', 'taxonomy singular name', 'vluxe'),
+        'search_items'          => __('Recherche de catégorie', 'vluxe'),
+        'all_items'             => __('Toutes les catégories', 'vluxe'),
+        'parent_item'           => __('Catégorie parent', 'vluxe'),
+        'parent_item_colon'     => __('Catégorie parent', 'vluxe'),
+        'edit_item'             => __('Éditer la catégorie', 'vluxe'),
+        'update_item'           => __('Mettre à jour la catégorie', 'vluxe'),
+        'add_new_item'          => __('Ajouter une nouvelle catégorie', 'vluxe'),
+        'new_item_name'         => __('Nouvelle catégorie', 'vluxe'),
+        'menu_name'             => __('Catégorie', 'vluxe')
+    ];
+
+    $args = [
+        'hierarchical'          => true,
+        'labels'                => $labels,
+        'show_ui'               => true,
+        'show_admin_column'     => true,
+        'show_in_menu'          => true,
+        'show_in_nav_menus'     => true,
+        'show_in_rest'          => true,
+        'query_var'             => true,
+        'rewrite'               => array('slug' => 'categorie', 'with_front' => true),
+    ];
+    register_taxonomy('vluxe_nouvelles_categorie', array('nouvelles'), $args);
+}
+
 function enqueue_styles_vluxe()
 {
     wp_enqueue_style('style-principal', get_template_directory_uri() . '/css/main.css');
@@ -87,6 +132,13 @@ function enqueue_styles_vluxe()
 }
 
 add_action('after_setup_theme', 'vluxe_supports');
+function enqueue_scripts_vluxe()
+{
+    wp_deregister_script('jquery');
+    wp_register_script('jquery', 'https://code.jquery.com/jquery-3.1.1.min.js', array(), '3.1.1', true);
+    wp_enqueue_script('js-file', get_template_directory_uri() . '/js/main.js', array(), '1.0', true);
+}
+
 function vluxe_supports()
 {
     add_theme_support('automatic-feed-links');
@@ -107,7 +159,8 @@ function vluxe_supports()
             'gallery',
             'caption',
             'style',
-            'script'
+            'script',
+            'navigation-widgets'
         ]
     );
 }
@@ -199,4 +252,87 @@ function corpo_sidebar_category_terms($terms, $taxonomies, $args)
         $terms = $new_terms;
     }
     return $terms;
+}
+
+function my_widget_init()
+{
+    register_sidebar(array(
+        'name' => 'Sidebar',
+        'id' => 'sidebar1',
+    ));
+}
+
+function contact_widget_init()
+{
+    register_sidebar(array(
+        'name' => 'Sidebar2',
+        'id' => 'sidebar2',
+    ));
+}
+
+add_action('after_setup_theme', 'vluxe_supports');
+add_action('wp_enqueue_scripts', 'enqueue_styles_vluxe');
+add_action('wp_enqueue_scripts', 'enqueue_scripts_vluxe');
+add_filter('nav_menu_css_class', 'vluxe_menu_class', 10, 4);
+add_filter('woocommerce_cart_item_price', 'bbloomer_change_cart_table_price_display', 30, 3);
+add_action('widgets_init', 'my_widget_init');
+add_action('widgets_init', 'contact_widget_init');
+//nav_menu_submenu_css_class
+
+add_action('woocommerce_order_status_processing', 'change_role_on_purchase');
+function change_role_on_purchase($order_id)
+{
+
+    $order = new WC_Order($order_id);
+    $items = $order->get_items();
+
+    foreach ($items as $item) {
+        $product_name = $item['name'];
+        $product_id = $item['product_id'];
+        $product_variation_id = $item['variation_id'];
+
+        if ($order->user_id > 0 && $product_id == '257') {
+            update_user_meta($order->user_id, 'paying_customer', 1);
+            $user = new WP_User($order->user_id);
+
+            // Remove role
+            $user->remove_role('subscriber');
+
+            // Add role
+            $user->add_role('membre_corporatif');
+        }
+    }
+}
+
+// // N'affiche pas les catégories non-classe et corporatif dans la sidebar
+add_filter('get_terms', 'ts_get_subcategory_terms', 10, 3);
+function ts_get_subcategory_terms($terms, $taxonomies, $args)
+{
+    $new_terms = array();
+    // if it is a product category and on the shop page
+    if (in_array('product_cat', $taxonomies) && !is_admin() && is_shop()) {
+        foreach ($terms as $key => $term) {
+            if (!in_array($term->slug, array('non-classe', 'corporatif', 'vogue', 'promotions'))) { //pass the slug name here
+                $new_terms[] = $term;
+            }
+        }
+        $terms = $new_terms;
+    }
+    return $terms;
+}
+
+// N'affiche pas les produits corporatif dans la boutique
+add_action('woocommerce_product_query', 'ts_custom_pre_get_posts_query');
+function ts_custom_pre_get_posts_query($q)
+{
+    if (is_shop()) {
+        $tax_query = (array) $q->get('tax_query');
+        $tax_query[] = array(
+            'taxonomy' => 'product_cat',
+            'field' => 'slug',
+            'terms' => array('corporatif'),
+            'operator' => 'NOT IN'
+        );
+        $q->set('tax_query', $tax_query);
+    }
 }

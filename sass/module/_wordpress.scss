@@ -1,0 +1,42 @@
+.wp-post-image {
+     width: 100%;
+     height: auto;
+}
+
+.single-news {
+
+     &__image {
+          position: relative;
+
+          &::after {
+               @include contour;
+          }
+     }
+}
+
+.widget {
+     margin-right: 2rem;
+     color: $color-secondary-dark !important;
+     
+     &_weglot-translate {
+          list-style: none;
+
+     }
+}
+
+#weglot-translate-2 {
+
+     @include  responsive(desktop) { 
+          font-size: $xsmall-size;
+     }  
+     a {
+          color: $color-secondary-dark;
+          transition: all .4s;
+       
+     }
+
+     a:hover {
+          text-decoration: none;
+          color: $color-primary-dark;
+     }
+}

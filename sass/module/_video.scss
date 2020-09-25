@@ -1,9 +1,55 @@
-.recent-embed-container iframe {
-    width: 900px;
-    height: 500px;
+.live {
+
+    &__recent-embed {
+        iframe {
+            width: 90rem;
+            height: 50rem;
+        }
+
+        &--button {
+            width: 90rem;
+            margin: 0 auto;
+            text-align: left;
+        }
+    }
 }
 
-.embed-container iframe {
-    width: 440px;
-    height: 260px;
+.old-live {
+
+    &__banner {
+        height: 15rem;
+        background-color: rgba($color-primary-light, .5);
+        padding: 7rem;
+    }
+
+
+    &__content {
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        &--item {
+            position: relative;
+            width: 44rem;
+        }
+
+        &--date {
+            position: absolute;
+            width: 100%;
+            bottom: -7rem;
+            height: 8rem;
+            border-left: 1px solid $color-primary;
+            border-right: 1px solid $color-primary;
+            border-bottom: 1px solid $color-primary;
+        }
+    }
+
+    &__old-embed {
+
+        iframe {
+            width: 44rem;
+            height: 26rem;
+        }
+    }
 }
+
+

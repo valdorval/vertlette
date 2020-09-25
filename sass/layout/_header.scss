@@ -1,10 +1,5 @@
 .header {
 
-     img {
-          height: 16rem;
-          margin-top: 2rem;
-     }
-
      &__box {
           height: 22rem;
           background-image: linear-gradient(
@@ -15,20 +10,56 @@
 
      &__content {
           justify-content: space-between;
+          align-items: center;
+          padding-top: 3rem;
+
+          @include  responsive(desktop) { 
+               padding-top: 5rem;
+       }
      }
 
-     &__items--nav {
-          
-          img {
-               height: 3rem;
-               padding-right: 1rem;
-               transition: all .4s;
+     &__logo {
+          height: 16rem;
 
-               &:hover {
+          @include  responsive(desktop) { 
+               height: 10rem;    
+       }
+          
+     }
+
+     &__items {
+          align-items: center;
+
+          &--search-form {
+               margin-right: 5rem;
+          }
+
+          &--img {
+               height: 3rem;
+               margin-right: 2.5rem;
+
+               @include  responsive(desktop) { 
+                    height: 2rem;
+                    margin-right: 2rem;
+            }
+          }
+
+          &--nav {
+
+              
+
+               a {
+                    transition: all .4s;
+
+                    &:hover {
                     transform: scale(1.2);
                }
+               }
+
+               
           }
-     }
+     }  
+          
 
      .nav {
           background-color: $color-primary;
@@ -41,12 +72,18 @@
                justify-content: space-between;
 
                &--item {
+                    font-size: $small-size;
                     padding: 0 5rem;
                     cursor: pointer;
                     height: 100%;
                     position: relative;
                     width: 12%;
                     transition: all .5s;
+
+                    @include  responsive(desktop) { 
+                         font-size: $xsmall-size;
+                         padding: 0 2.5rem;
+                 }
 
                     a {
                          display: block;
@@ -74,6 +111,7 @@
 
      &__message {
           background-color: $color-primary-light;
+          position: relative;
 
           p {
                padding: 3rem 0;
@@ -83,16 +121,25 @@
                font-size: 2rem;
                position: relative;
 
-               &::after {
-                    content: 'X';
-                    display: block;
-                    position: absolute;
-                    top: 50%;
-                    right: 2%;
-                    transform: translateY(-50%);
-                    color: $color-secondary-dark;
-                    cursor: pointer;
-               }
+               @include  responsive(desktop) { 
+                    font-size: $small-size;
+                    padding: 2rem 0;
+            }
+          }
+
+          &--close {
+               position: absolute;
+               right: 2rem;
+               top: 50%;
+               transform: translateY(-50%);
+               cursor: pointer;
+               font-family: $title-font;
+               font-weight: bold;
+               color: $color-secondary-dark;
+
+               @include  responsive(desktop) { 
+                    font-size: $small-size;
+            }
           }
      }
 } 
