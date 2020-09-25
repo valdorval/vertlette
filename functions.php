@@ -39,23 +39,20 @@ function create_post_type_video()
     register_post_type('video', $args);
 }
 
+add_filter('excerpt_length', 'new_excerpt_length');
 function new_excerpt_length($length)
 {
     return 15;
 }
-add_filter('excerpt_length', 'new_excerpt_length');
 
+add_filter('excerpt_more', 'new_excerpt_more');
 function new_excerpt_more($more)
 {
     return '';
 }
 
-add_filter('excerpt_more', 'new_excerpt_more');
-
 // custom post type pour la page nouvelles
 add_action('init', 'create_post_type_nouvelles', 10, 1);
-add_action('init', 'create_taxonomy_nouvelles', 10, 1);
-
 function create_post_type_nouvelles()
 {
     $label = array(
@@ -94,7 +91,7 @@ function create_post_type_nouvelles()
 }
 
 
-add_action('wp_enqueue_scripts', 'enqueue_styles_vluxe');
+add_action('init', 'create_taxonomy_nouvelles', 10, 1);
 function create_taxonomy_nouvelles()
 {
     $labels = [
@@ -125,13 +122,14 @@ function create_taxonomy_nouvelles()
     register_taxonomy('vluxe_nouvelles_categorie', array('nouvelles'), $args);
 }
 
+add_action('wp_enqueue_scripts', 'enqueue_styles_vluxe');
 function enqueue_styles_vluxe()
 {
     wp_enqueue_style('style-principal', get_template_directory_uri() . '/css/main.css');
     wp_enqueue_style('style-vluxe', get_template_directory_uri() . '/style.css');
 }
 
-add_action('after_setup_theme', 'vluxe_supports');
+add_action('wp_enqueue_scripts', 'enqueue_scripts_vluxe');
 function enqueue_scripts_vluxe()
 {
     wp_deregister_script('jquery');
@@ -139,6 +137,7 @@ function enqueue_scripts_vluxe()
     wp_enqueue_script('js-file', get_template_directory_uri() . '/js/main.js', array(), '1.0', true);
 }
 
+add_action('after_setup_theme', 'vluxe_supports');
 function vluxe_supports()
 {
     add_theme_support('automatic-feed-links');
@@ -172,6 +171,24 @@ function vluxe_menu_class($classes)
     unset($classes);
     $classes[] = 'nav__menu--item';
     return $classes;
+}
+
+add_action('widgets_init', 'my_widget_init');
+function my_widget_init()
+{
+    register_sidebar(array(
+        'name' => 'Sidebar',
+        'id' => 'sidebar1',
+    ));
+}
+
+add_action('widgets_init', 'contact_widget_init');
+function contact_widget_init()
+{
+    register_sidebar(array(
+        'name' => 'Sidebar2',
+        'id' => 'sidebar2',
+    ));
 }
 
 // changer le role de sunscriber pour membre corporatif
@@ -253,29 +270,3 @@ function corpo_sidebar_category_terms($terms, $taxonomies, $args)
     }
     return $terms;
 }
-
-add_action('widgets_init', 'my_widget_init');
-function my_widget_init()
-{
-    register_sidebar(array(
-        'name' => 'Sidebar',
-        'id' => 'sidebar1',
-    ));
-}
-
-add_action('widgets_init', 'contact_widget_init');
-function contact_widget_init()
-{
-    register_sidebar(array(
-        'name' => 'Sidebar2',
-        'id' => 'sidebar2',
-    ));
-}
-
-add_action('after_setup_theme', 'vluxe_supports');
-add_action('wp_enqueue_scripts', 'enqueue_styles_vluxe');
-add_action('wp_enqueue_scripts', 'enqueue_scripts_vluxe');
-add_filter('nav_menu_css_class', 'vluxe_menu_class', 10, 4);
-add_filter('woocommerce_cart_item_price', 'bbloomer_change_cart_table_price_display', 30, 3);
-
-//nav_menu_submenu_css_class

@@ -21,7 +21,7 @@ get_header();
             <div class="index-corpo__content">
                 <h3 class="heading-rubik u-margin-bottom-xsmall">Lorem ipsum dolor sit amet</h3>
                 <p class="p-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet urna tellus. Nullam imperdiet.</p>
-                <button class="btn u-margin-top-normal">En savoir plus</button>
+                <a href="<?php the_permalink('160'); ?>"><button class="btn u-margin-top-normal">En savoir plus</button></a>
             </div>
         </div>
     </section>
