@@ -1347,10 +1347,15 @@ p {
 .menu-category .all-categories {
   font-family: "Rubik", sans-serif;
   font-weight: 500;
+  margin-bottom: 0rem;
 }
 
 .menu-category ul li {
   list-style-type: none;
+}
+
+.menu-category ul h4 {
+  margin-bottom: 0.5rem;
 }
 
 .menu-category ul .main-category a {
@@ -2179,10 +2184,15 @@ p.woocommerce-result-count {
 .menu-category .all-categories {
   font-family: "Rubik", sans-serif;
   font-weight: 500;
+  margin-bottom: 0rem;
 }
 
 .menu-category ul li {
   list-style-type: none;
+}
+
+.menu-category ul h4 {
+  margin-bottom: 0.5rem;
 }
 
 .menu-category ul .main-category a {
