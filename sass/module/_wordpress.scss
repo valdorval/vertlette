@@ -29,6 +29,13 @@
      @include  responsive(desktop) { 
           font-size: $xsmall-size;
      }  
+
+     @include  responsive(tablet) { 
+          position: absolute;
+          right: -1%;
+          top: 25%;
+     }  
+
      a {
           color: $color-secondary-dark;
           transition: all .4s;

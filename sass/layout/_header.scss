@@ -15,7 +15,12 @@
 
           @include  responsive(desktop) { 
                padding-top: 5rem;
-       }
+           }
+
+          @include  responsive(tablet) { 
+               display: block;  
+               position: relative; 
+          }
      }
 
      &__logo {
@@ -23,15 +28,30 @@
 
           @include  responsive(desktop) { 
                height: 10rem;    
-       }
-          
+          }
+               
+          @include  responsive(tablet) { 
+               height: 8rem;    
+               @include position;
+          }
      }
 
      &__items {
           align-items: center;
 
+          @include  responsive(tablet) { 
+               display: block;
+       }
+
           &--search-form {
                margin-right: 5rem;
+
+
+               @include  responsive(tablet) { 
+                    position: absolute;
+                    left: 2.5%;
+                    bottom: -180%;
+            }
           }
 
           &--img {
@@ -46,14 +66,19 @@
 
           &--nav {
 
-              
+
+               @include  responsive(tablet) { 
+                    position: absolute;
+                    right: 0%;
+                    top: 75%;
+               }  
 
                a {
                     transition: all .4s;
 
                     &:hover {
                     transform: scale(1.2);
-               }
+                    }
                }
 
                
@@ -83,7 +108,9 @@
                     @include  responsive(desktop) { 
                          font-size: $xsmall-size;
                          padding: 0 2.5rem;
-                 }
+                     }
+
+                    
 
                     a {
                          display: block;
@@ -143,3 +170,39 @@
           }
      }
 } 
+
+#wprmenu_bar {
+     @include  responsive(tablet) { 
+          background-color: $color-transparent;
+  }
+}
+
+#wprmenu_menu_ul {
+     @include  responsive(tablet) { 
+          padding-top: 35%;
+          margin-left: 50%;
+          transform: translateX( -50%);
+          text-align: center;
+          color: $color-primary-light;
+          
+          a {
+               transition: all .3s;
+
+               &:hover {
+               background-color: $color-primary;
+               color: $color-primary-dark;
+          }
+          }
+          
+  }
+}
+
+.hamburger-box {
+     margin-top: 5rem;
+}
+
+#wprmenu_bar {
+     margin-top: 5rem;
+     width: 8rem;
+}
+
