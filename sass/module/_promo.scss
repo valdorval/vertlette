@@ -43,6 +43,10 @@
           position: absolute;
           left: -4rem;
           top: 2rem;
+          
+          h4{
+               font-size: 3.6rem;
+          }
 
           @include  responsive(desktop) { 
                left: -2rem;
@@ -65,8 +69,12 @@
           font-weight: 300;
 
           span {
-               text-decoration: line-through;
-               padding-right: 2rem;
+               padding-right: 1.2rem;
+          }
+
+          ins{
+               font-weight: 600;
+               text-decoration: none;
           }
      }
 }

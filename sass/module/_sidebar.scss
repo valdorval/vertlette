@@ -5,11 +5,16 @@
     .all-categories{
         font-family: $text-font;
         font-weight: 500;
+        margin-bottom: 0rem;
     }
 
     ul{
         li{
             list-style-type: none;
+        }
+
+        h4{
+            margin-bottom: 0.5rem;
         }
 
         .main-category a{
@@ -23,6 +28,6 @@
 
         .second-sub-category a::before{
                 content: "ㅡ " ;
-            }
+        }
     }
 }

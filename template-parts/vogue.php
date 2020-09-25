@@ -6,6 +6,7 @@
         'post_type'         => 'product',
         'posts_per_page'    => 1,
         'product_cat'       => 'vogue',
+        'order'             => 'ASC'
     );
 
     $loop = new WP_Query($args_products);
@@ -31,6 +32,7 @@
             'posts_per_page'    => 1,
             'offset'            => 1,
             'product_cat'       => 'vogue',
+            'order'             => 'ASC'
         );
 
         $loop_deux = new WP_Query($product_deux);
@@ -55,6 +57,7 @@
             'posts_per_page'    => 1,
             'offset'            => 2,
             'product_cat'       => 'vogue',
+            'order'             => 'ASC'
         );
 
         $loop_trois = new WP_Query($product_trois);

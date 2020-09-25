@@ -19,13 +19,16 @@ get_header();
     ?>
             <div class="live__recent-embed center u-margin-top-normal">
                 <?php the_field('lien'); ?>
-
+                <br>
+                <div class="live__recent-embed--description">
+                    <?php the_field('description_du_video'); ?>
+                </div>
                 <div class="live__recent-embed--button">
-                    <button class="btn btn__dark u-margin-top-normal"><a href="<?php echo "salut" ?>">S'abonner</a></button>
+                    <button class="btn btn__dark u-margin-top-normal"><a href="https://www.youtube.com/user/blbboistv" target="_blank">S'abonner</a></button>
                 </div>
             </div>
 
-            <?php the_content(); ?>
+
 
     <?php endwhile;
     endif;
@@ -55,7 +58,8 @@ get_header();
                         <?php the_field('lien'); ?>
                     </div>
                     <div class="old-live__content--date">
-                        <p class="center u-margin-top-normal p-dark"> Date de publication: <?php echo get_the_date(); ?></p>
+                        <p class="description"><?php echo the_field('description_du_video'); ?></p>
+                        <p class="center u-margin-top-xsmall p-dark"> Date de publication: <?php echo get_the_date(); ?></p>
                     </div>
                 </div>
 
@@ -66,10 +70,6 @@ get_header();
     </div>
 
 </section>
-
-
-
-
 <?php
 get_footer();
 ?>

@@ -14,10 +14,13 @@
 @import "./module/boutique-corporative";
 @import "./module/contact";
 @import "./module/index-corpo";
-@import "./module/newsletter";
-@import "./module/nouvelles";
+@import "./module/abonnement";
+
 @import "./module/presentation";
+@import "./module/newsletter";
 @import "./module/promo";
+@import "./module/vogue";
+
 @import "./module/reparation";
 @import "./module/result";
 @import "./module/sidebar";
@@ -26,3 +29,13 @@
 @import "./module/vogue";
 @import "./module/video";
 @import "./module/wordpress";
+
+@import "./module/nouvelles";
+@import "./module/single-article";
+
+@import "./module/boutique";
+@import "./module/sidebar";
+@import "./module/single-product";
+
+@import "./module/_boutique-corporative";
+@import "./module/_sidebar-corporatif";

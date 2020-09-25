@@ -33,4 +33,18 @@
                width: 100%;
           }
      }
+
+     &__article {
+
+          padding: 2.4rem 0;
+
+          p{
+               padding-bottom: 2.4rem;   
+          }
+
+          .heading-tertiary{
+               color: $color-primary-dark;
+               text-transform: none;
+          }
+     }
 }
