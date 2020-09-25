@@ -14,7 +14,7 @@
      <header class="header">
           <div class="header__box">
                <div class="header__content container-big flex">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo-v-luxe.svg" class="header__logo" alt="Image du logo">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo-v-luxe.png" class="header__logo" alt="Image du logo">
                     <div class="header__items flex">
                          <?php if (is_active_sidebar('sidebar1')) : ?>
                               <div id="primary-sidebar" class="header__widget" role="complementary">
@@ -25,8 +25,8 @@
                               <?php get_search_form(); ?>
                          </div>
                          <nav class="header__items--nav flex">
-                              <a href="<?php echo get_permalink('50'); ?>"><img class="header__items--img" src="<?php echo get_template_directory_uri(); ?>/img/compte.svg" alt="Mon compte"></a>
-                              <a href="<?php echo get_permalink('48'); ?>"><img class="header__items--img" src="<?php echo get_template_directory_uri(); ?>/img/panier.svg" alt="Panier"></a>
+                              <a href="<?php echo get_permalink('50'); ?>"><img class="header__items--img" src="<?php echo get_template_directory_uri(); ?>/img/compte.png" alt="Mon compte"></a>
+                              <a href="<?php echo get_permalink('48'); ?>"><img class="header__items--img" src="<?php echo get_template_directory_uri(); ?>/img/panier.png" alt="Panier"></a>
                          </nav>
                     </div>
                </div>
