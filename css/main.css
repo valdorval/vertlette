@@ -760,7 +760,11 @@ p {
   font-size: 2rem;
 }
 
+<<<<<<< HEAD
 .boutique__corporative .add_to_cart_button, .boutique__corporative .post-144 {
+=======
+.boutique__corporative .add_to_cart_button {
+>>>>>>> MergeBianka
   display: none;
 }
 
@@ -2953,7 +2957,11 @@ section.related.products {
   font-size: 2rem;
 }
 
+<<<<<<< HEAD
 .boutique__corporative .add_to_cart_button, .boutique__corporative .post-144 {
+=======
+.boutique__corporative .add_to_cart_button {
+>>>>>>> MergeBianka
   display: none;
 }
 
