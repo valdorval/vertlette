@@ -25,9 +25,14 @@
 }
 
 #weglot-translate-2 {
+
+     @include  responsive(desktop) { 
+          font-size: $xsmall-size;
+     }  
      a {
           color: $color-secondary-dark;
-                    transition: all .4s;
+          transition: all .4s;
+       
      }
 
      a:hover {

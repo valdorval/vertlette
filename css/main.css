@@ -253,9 +253,15 @@ p {
   justify-content: space-between;
   align-items: center;
   padding-top: 3rem; }
+  @media (max-width: 1200px) {
+    .header__content {
+      padding-top: 5rem; } }
 
 .header__logo {
   height: 16rem; }
+  @media (max-width: 1200px) {
+    .header__logo {
+      height: 10rem; } }
 
 .header__items {
   align-items: center; }
@@ -264,6 +270,10 @@ p {
   .header__items--img {
     height: 3rem;
     margin-right: 2.5rem; }
+    @media (max-width: 1200px) {
+      .header__items--img {
+        height: 2rem;
+        margin-right: 2rem; } }
   .header__items--nav a {
     transition: all .4s; }
     .header__items--nav a:hover {
@@ -278,12 +288,17 @@ p {
     margin: 0 auto;
     justify-content: space-between; }
     .header .nav__menu--item {
+      font-size: 1.4rem;
       padding: 0 5rem;
       cursor: pointer;
       height: 100%;
       position: relative;
       width: 12%;
       transition: all .5s; }
+      @media (max-width: 1200px) {
+        .header .nav__menu--item {
+          font-size: 1.2rem;
+          padding: 0 2.5rem; } }
       .header .nav__menu--item a {
         display: block;
         width: 100%;
@@ -310,6 +325,10 @@ p {
     font-weight: bold;
     font-size: 2rem;
     position: relative; }
+    @media (max-width: 1200px) {
+      .header__message p {
+        font-size: 1.4rem;
+        padding: 2rem 0; } }
   .header__message--close {
     position: absolute;
     right: 2rem;
@@ -319,6 +338,9 @@ p {
     font-family: "Domine", serif;
     font-weight: bold;
     color: #07043A; }
+    @media (max-width: 1200px) {
+      .header__message--close {
+        font-size: 1.4rem; } }
 
 .abonnement__header {
   background-color: #39384F;
@@ -1137,6 +1159,10 @@ section.related.products {
   color: #07043A !important; }
   .widget_weglot-translate {
     list-style: none; }
+
+@media (max-width: 1200px) {
+  #weglot-translate-2 {
+    font-size: 1.2rem; } }
 
 #weglot-translate-2 a {
   color: #07043A;

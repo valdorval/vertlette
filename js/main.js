@@ -1,7 +1,7 @@
 $(function () {
      function closeItem(item, modify) {
           item.click(function () {
-               modify.fadeIn();
+               modify.fadeOut();
           })
      }
 
