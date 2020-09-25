@@ -205,7 +205,7 @@ function change_role_on_purchase($order_id)
         $product_id = $item['product_id'];
         $product_variation_id = $item['variation_id'];
 
-        if ($order->user_id > 0 && $product_id == '257') {
+        if ($order->user_id > 0 && $product_id == '144') {
             update_user_meta($order->user_id, 'paying_customer', 1);
             $user = new WP_User($order->user_id);
 
