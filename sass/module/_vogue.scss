@@ -102,18 +102,14 @@
                p{
                     text-align: center!important;
                     overflow-wrap: break-word;
+                    @include  responsive(tablet) { 
+                         display: none;
+                    }
                }
 
                @include  responsive(tablet) { 
                     background-color: $color-transparent;
                     padding: 2.5rem 5rem;
-               }
-
-               p {
-
-                    @include  responsive(tablet) { 
-                         display: none;
-                    }
                }
           } 
 
@@ -153,6 +149,18 @@
                padding: 1rem 5rem;
           } 
 
+          h4{
+               margin-bottom: 0.8rem;
+          }
+
+          p{
+               text-align: center!important;
+               overflow-wrap: break-word;
+               @include  responsive(tablet) { 
+                    display: none;
+               }
+          }
+          
           button{
                align-self: center;
 
