@@ -1,0 +1,129 @@
+.main-blog {
+
+     &__article {
+          height: 75rem;
+
+          &--text {
+               background-color: $color-primary-dark;
+               width: 20%;
+               position: relative;
+          }
+
+          &--description {
+               color: $color-primary-light;
+               font-style: italic;
+               opacity: .8;
+               font-weight: 300;
+          }
+     }
+
+     &__center {
+          @include position;
+          width: 100%;
+          padding: 2.5rem;
+     }
+
+     &__image { 
+          width: 80%;
+
+          img {
+               height: 100%;
+               width: 100%;
+          }
+     }
+}
+
+.p-primary-light {
+     color: $color-primary-light;
+     text-transform: uppercase;
+     font-weight: 300;
+     position: relative;
+
+     &::after {
+          content:'';
+          display: block;
+          width: 40%;
+          height: 1px;
+          background-color: $color-primary-light;
+          position: absolute;
+          bottom: -3rem;
+          left: 50%;
+          transform: translateX(-50%);
+     }
+}
+
+.blog-articles {
+     
+     &__content {
+          justify-content: space-between;
+          flex-wrap: wrap;
+     }
+
+     &__item {
+          width: 30%;
+          height: 50rem;
+          position: relative;
+
+          img {
+               width: 100%;
+               height: 73%;
+          }
+
+          a {
+               transition: all .6s;
+
+               &:hover {
+                    color: darken($color-primary, 20%);
+               }
+          }
+     }
+
+     &__text {
+          padding: 2.5rem;
+          height: 27%;
+          background-color: $color-primary;
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+
+          h3{
+               font-weight: 500;
+          }
+     }
+}
+
+.archives {
+     margin-top: 12rem;
+
+     a {
+          &:hover {
+               text-decoration: underline;
+          }
+     }
+
+     &__content {
+          background-color: rgba($color-primary-light, .5);
+          position: relative;
+
+          &::before {
+               content:'';
+               display: block;
+               width: 90%;
+               height: 1px;
+               background-color: $color-primary-dark;
+               position: absolute;
+               top: 0;
+               left: 50%;
+               transform: translateX(-50%);
+          }
+
+          &--box {
+               justify-content: space-between;
+          }
+
+          &--menu{
+               margin: 2.5rem 0;
+          }
+     }
+}    

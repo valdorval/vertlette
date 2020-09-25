@@ -1,6 +1,95 @@
-.header-boutique-img{
-    img{
+.header-boutique{
+    &--img {
+        position: relative;
         width: 80%;
+        margin: auto;
+
+        img{
+            display: block;
+            width: 100%;
+        }
+    } 
+
+    &--img::after {
+        @include contour;
     }
-       
+}
+
+.boutique{
+    margin: 0px 5%;
+    &__produits{
+        width: 100%;
+    }
+}
+
+.filter-bar{
+    margin: 120px 0 30px 0;
+    justify-content: flex-end;
+    align-items: center;
+
+    span{
+        margin-right: 10px;
+    }
+}
+
+// pour retirer le produit abonnement de la boutique
+// remplacer l'id pour celui du post abonnement.
+// .post-152{
+//     display: none;
+// }
+
+.woocommerce ul.products li.product .woocommerce-loop-category__title, .woocommerce ul.products li.product .woocommerce-loop-product__title, .woocommerce ul.products li.product h3{
+    text-transform: inherit;
+}
+
+.woocommerce ul.products li.product .price{
+    color: $color-primary-dark;
+    font-size: 2rem;
+}
+
+.woocommerce .woocommerce-ordering, .woocommerce-page .woocommerce-ordering{
+    float: none;
+}
+
+.woocommerce .woocommerce-ordering{
+    margin:0;
+}
+
+.woocommerce ul.products li.first, .woocommerce-page ul.products li.first{
+    clear: none;
+}
+
+// retirer l'affichage du nombre de résultat
+p.woocommerce-result-count{
+    display: none;
+}
+
+.woocommerce ul.products li.product .onsale{
+    top: 0;
+    right: 0;
+    left: auto;
+    margin: 1em -1em 0 0;
+}
+
+.woocommerce span.onsale{
+    min-height: 1em!important;
+    min-width: 1.236em;
+    padding: 5px 15px;
+    font-size: 1em;
+    font-weight: 700;
+    position: absolute;
+    text-align: center;
+    line-height: 1;
+    top: -.5em;
+    left: -.5em;
+    margin: 0;
+    border-radius: 0%;
+    background-color: $color-primary-special;
+    color: #fff;
+    font-size: .857em;
+    z-index: 9;
+}
+
+.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce .products .star-rating{
+    display: none;
 }

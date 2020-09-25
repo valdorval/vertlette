@@ -1,7 +1,13 @@
-.about, .reparation__text, .recup__text,
-.abonnement__article, .privacy, .condition {
+.about {
+     .heading-tertiary{
+          color: $color-primary-dark!important;
+     }
 
-     p {
-          padding-bottom: 2.4rem;
+     p{
+          margin-bottom: 1.8rem;
+     }
+
+     .second-section{
+          margin-top: 4rem;
      }
 }

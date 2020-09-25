@@ -1,0 +1,28 @@
+.menu-category{
+    padding-right: 100px;
+    width: 21%;
+
+    .all-categories{
+        font-family: $text-font;
+        font-weight: 500;
+    }
+
+    ul{
+        li{
+            list-style-type: none;
+        }
+
+        .main-category a{
+            font-family: $text-font;
+            font-weight: 500;
+        }
+
+        .second-sub-category a{
+            margin-left: 20px;
+        }
+
+        .second-sub-category a::before{
+                content: "ㅡ " ;
+            }
+    }
+}
