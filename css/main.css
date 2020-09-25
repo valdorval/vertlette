@@ -465,6 +465,11 @@ p {
 .about .second-section {
   margin-top: 4rem; }
 
+.reparation__text p, .recup__text p,
+.abonnement__article p, .privacy p, .condition p,
+.single-news p {
+  padding-bottom: 2.4rem; }
+
 .boutique__corporative {
   width: 100%; }
   .boutique__corporative ul.products {
