@@ -7,7 +7,7 @@ if ($preg === 1 || is_page('boutique-corporative')) {
 ?>
     <nav class="menu-category u-margin-bottom-big">
         <h4 class="all-categories">
-            <a href=" <?php echo get_permalink('258') ?>">Tout</a>
+            <a href=" <?php echo get_permalink('141') ?>">Tout</a>
             <hr>
         </h4>
 
