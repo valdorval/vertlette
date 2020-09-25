@@ -24,7 +24,7 @@
      }
 
      &__logo {
-          height: 16rem;
+          height: 16rem!important;
 
           @include  responsive(desktop) { 
                height: 10rem;    
@@ -55,7 +55,7 @@
           }
 
           &--img {
-               height: 3rem;
+               height: 3rem!important;
                margin-right: 2.5rem;
 
                @include  responsive(desktop) { 
@@ -205,4 +205,3 @@
      margin-top: 5rem;
      width: 8rem;
 }
-
