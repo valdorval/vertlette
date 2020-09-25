@@ -760,7 +760,7 @@ p {
   font-size: 2rem;
 }
 
-.boutique__corporative .add_to_cart_button, .boutique__corporative .post-257 {
+.boutique__corporative .add_to_cart_button {
   display: none;
 }
 
@@ -2953,7 +2953,7 @@ section.related.products {
   font-size: 2rem;
 }
 
-.boutique__corporative .add_to_cart_button, .boutique__corporative .post-257 {
+.boutique__corporative .add_to_cart_button {
   display: none;
 }
 
