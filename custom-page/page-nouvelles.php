@@ -103,16 +103,12 @@ get_header();
                 <div class="archives__content--menu">
                     <h5 class="heading-rubik--black u-margin-bottom-small">Catégories</h5>
                     <?php
-                    $archive_terms = get_terms(array(
-                        'taxonomy' => 'vluxe_nouvelles_categorie',
-                        'fields' => 'slug',
-                        'terms' => 'all'
+                    $terms = get_terms(array(
+                        'taxonomy'   => 'vluxe_nouvelles_categorie', // Swap in your custom taxonomy name
                     ));
-                    if (!empty($archive_terms) && is_array($archive_terms)) {
-                        foreach ($archive_terms as $terms) { ?>
-                            <p class="u-margin-bottom-xsmall"><a href="<?php echo esc_url(get_term_link($terms)); ?>"><?php echo $terms->name; ?></a></p>
+                    foreach ($terms as $term) { ?>
+                        <p class="u-margin-bottom-xsmall"><a href="<?php get_term_link($term); ?>"><?php echo $term->name; ?></a></p>
                     <?php
-                        }
                     }
                     ?>
 
