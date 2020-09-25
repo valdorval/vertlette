@@ -24,7 +24,7 @@ get_header();
                     <?php the_field('description_du_video'); ?>
                 </div>
                 <div class="live__recent-embed--button">
-                    <button class="btn btn__dark u-margin-top-normal"><a href="<?php echo "salut" ?>">S'abonner</a></button>
+                    <button class="btn btn__dark u-margin-top-normal"><a href="https://www.youtube.com/user/blbboistv" target="_blank">S'abonner</a></button>
                 </div>
             </div>
 
