@@ -1,8 +1,16 @@
 .promo {
 
+     @include  responsive(tablet) { 
+          margin-top: 15rem;
+  }
+
      &__content {
           
           justify-content: space-between;
+
+          @include  responsive(desktop) { 
+               flex-wrap: wrap;
+       }
 
           &--item {
                width: 28%;
@@ -12,6 +20,11 @@
                &::after {
                     @include contour;
                }
+
+               @include  responsive(desktop) { 
+                    width: 100%;
+                    margin-bottom: 5rem;
+            }
           }
 
           button {
@@ -24,16 +37,26 @@
 
      &__title {
           background-color: $color-primary-special;
-          width: 100%;
+          width: 120%;
           height: 5rem;
           padding: .4rem;
           position: absolute;
-          left: -2rem;
+          left: -4rem;
           top: 2rem;
           
           h4{
                font-size: 3.6rem;
           }
+
+          @include  responsive(desktop) { 
+               left: -2rem;
+               width: 100%;
+       }
+
+          @include  responsive(tablet) { 
+               left: 0;
+               top: 0;
+       }
      }
 
      &__price {

@@ -15,6 +15,10 @@
      bottom: -2.5rem;
      border: 1px solid $color-primary;
      z-index: -1;
+
+     @include  responsive(tablet) { 
+        display: none;
+}
 }
 
 @mixin responsive($mymedia){
