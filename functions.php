@@ -254,6 +254,7 @@ function corpo_sidebar_category_terms($terms, $taxonomies, $args)
     return $terms;
 }
 
+add_action('widgets_init', 'my_widget_init');
 function my_widget_init()
 {
     register_sidebar(array(
@@ -262,6 +263,7 @@ function my_widget_init()
     ));
 }
 
+add_action('widgets_init', 'contact_widget_init');
 function contact_widget_init()
 {
     register_sidebar(array(
@@ -275,64 +277,5 @@ add_action('wp_enqueue_scripts', 'enqueue_styles_vluxe');
 add_action('wp_enqueue_scripts', 'enqueue_scripts_vluxe');
 add_filter('nav_menu_css_class', 'vluxe_menu_class', 10, 4);
 add_filter('woocommerce_cart_item_price', 'bbloomer_change_cart_table_price_display', 30, 3);
-add_action('widgets_init', 'my_widget_init');
-add_action('widgets_init', 'contact_widget_init');
+
 //nav_menu_submenu_css_class
-
-add_action('woocommerce_order_status_processing', 'change_role_on_purchase');
-function change_role_on_purchase($order_id)
-{
-
-    $order = new WC_Order($order_id);
-    $items = $order->get_items();
-
-    foreach ($items as $item) {
-        $product_name = $item['name'];
-        $product_id = $item['product_id'];
-        $product_variation_id = $item['variation_id'];
-
-        if ($order->user_id > 0 && $product_id == '257') {
-            update_user_meta($order->user_id, 'paying_customer', 1);
-            $user = new WP_User($order->user_id);
-
-            // Remove role
-            $user->remove_role('subscriber');
-
-            // Add role
-            $user->add_role('membre_corporatif');
-        }
-    }
-}
-
-// // N'affiche pas les catégories non-classe et corporatif dans la sidebar
-add_filter('get_terms', 'ts_get_subcategory_terms', 10, 3);
-function ts_get_subcategory_terms($terms, $taxonomies, $args)
-{
-    $new_terms = array();
-    // if it is a product category and on the shop page
-    if (in_array('product_cat', $taxonomies) && !is_admin() && is_shop()) {
-        foreach ($terms as $key => $term) {
-            if (!in_array($term->slug, array('non-classe', 'corporatif', 'vogue', 'promotions'))) { //pass the slug name here
-                $new_terms[] = $term;
-            }
-        }
-        $terms = $new_terms;
-    }
-    return $terms;
-}
-
-// N'affiche pas les produits corporatif dans la boutique
-add_action('woocommerce_product_query', 'ts_custom_pre_get_posts_query');
-function ts_custom_pre_get_posts_query($q)
-{
-    if (is_shop()) {
-        $tax_query = (array) $q->get('tax_query');
-        $tax_query[] = array(
-            'taxonomy' => 'product_cat',
-            'field' => 'slug',
-            'terms' => array('corporatif'),
-            'operator' => 'NOT IN'
-        );
-        $q->set('tax_query', $tax_query);
-    }
-}
