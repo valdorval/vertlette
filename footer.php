@@ -3,18 +3,18 @@
      <div class="footer__content container flex">
           <div class="footer__category center">
                <p class="u-margin-bottom-xsmall">L'entreprise</p>
-               <p><a href="#">À propos de nous</a></p>
-               <p><a href="#">Nous contacter</a></p>
-               <p><a href="#">Nouvelles</a></p>
+               <p><a href="<?php echo get_permalink('12'); ?>">À propos de nous</a></p>
+               <p><a href="<?php echo get_permalink('63'); ?>">Nous contacter</a></p>
+               <p><a href="<?php echo get_permalink('65'); ?>">Nouvelles</a></p>
           </div>
           <div class="footer__category center">
                <p class="u-margin-bottom-xsmall">Nos services</p>
-               <p><a href="#">Réparations et récupérations</a></p>
+               <p><a href="<?php echo get_permalink('71'); ?>">Réparations et récupérations</a></p>
           </div>
           <div class="footer__category center">
                <p class="u-margin-bottom-xsmall">Politiques & Conditions</p>
-               <p><a href="#">Politique de confidentialité</a></p>
-               <p><a href="#">Politique des conditions de ventes</a></p>
+               <p><a href="<?php echo get_permalink('68'); ?>">Politique de confidentialité</a></p>
+               <p><a href="<?php echo get_permalink('68'); ?>">Politique des conditions de ventes</a></p>
           </div>
           <div class="footer__category center">
                <p class="u-margin-bottom-xsmall">Réseaux sociaux</p>
