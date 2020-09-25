@@ -30,6 +30,10 @@
           position: absolute;
           left: -2rem;
           top: 2rem;
+          
+          h4{
+               font-size: 3.6rem;
+          }
      }
 
      &__price {
@@ -42,7 +46,12 @@
           font-weight: 300;
 
           span {
-               padding-right: 2rem;
+               padding-right: 1.2rem;
+          }
+
+          ins{
+               font-weight: 600;
+               text-decoration: none;
           }
      }
 }

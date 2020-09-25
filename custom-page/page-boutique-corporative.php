@@ -12,7 +12,7 @@ $user = wp_get_current_user();
 
 <header class="header-boutique u-margin-top-big">
     <div class="header-boutique--img">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/image-boutique.png" alt="Image du logo">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/image-corporative.png" alt="Image du logo">
     </div>
 </header>
 

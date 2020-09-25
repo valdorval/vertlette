@@ -1022,6 +1022,10 @@ p {
   top: 2rem;
 }
 
+.promo__title h4 {
+  font-size: 3.6rem;
+}
+
 .promo__price {
   display: block;
   width: 100%;
@@ -1033,7 +1037,12 @@ p {
 }
 
 .promo__price span {
-  padding-right: 2rem;
+  padding-right: 1.2rem;
+}
+
+.promo__price ins {
+  font-weight: 600;
+  text-decoration: none;
 }
 
 .vogue {
@@ -1129,8 +1138,13 @@ p {
   padding: 1rem 5rem;
 }
 
+.vogue__second-item--text h4 {
+  margin-bottom: 0.8rem;
+}
+
 .vogue__second-item--text p {
   text-align: center !important;
+  overflow-wrap: break-word;
 }
 
 .vogue__second-item button {
@@ -1176,8 +1190,13 @@ p {
   padding: 1rem 5rem;
 }
 
+.vogue__third-item--text h4 {
+  margin-bottom: 0.8rem;
+}
+
 .vogue__third-item--text p {
   text-align: center !important;
+  overflow-wrap: break-word;
 }
 
 .vogue__third-item button {
@@ -1679,8 +1698,13 @@ section.related.products {
   padding: 1rem 5rem;
 }
 
+.vogue__second-item--text h4 {
+  margin-bottom: 0.8rem;
+}
+
 .vogue__second-item--text p {
   text-align: center !important;
+  overflow-wrap: break-word;
 }
 
 .vogue__second-item button {
@@ -1726,8 +1750,13 @@ section.related.products {
   padding: 1rem 5rem;
 }
 
+.vogue__third-item--text h4 {
+  margin-bottom: 0.8rem;
+}
+
 .vogue__third-item--text p {
   text-align: center !important;
+  overflow-wrap: break-word;
 }
 
 .vogue__third-item button {
@@ -1753,7 +1782,7 @@ section.related.products {
   height: 50rem;
 }
 
-.live__recent-embed--button {
+.live__recent-embed--button, .live__recent-embed--description {
   width: 90rem;
   margin: 0 auto;
   text-align: left;
@@ -1781,11 +1810,21 @@ section.related.products {
 .old-live__content--date {
   position: absolute;
   width: 100%;
-  bottom: -7rem;
+  bottom: -7.5rem;
   height: 8rem;
   border-left: 1px solid #D7BB7E;
   border-right: 1px solid #D7BB7E;
   border-bottom: 1px solid #D7BB7E;
+  background-color: rgba(254, 245, 220, 0.5);
+}
+
+.old-live__content--date p {
+  font-weight: normal;
+}
+
+.old-live__content p.description {
+  margin-top: 1.4rem;
+  text-align: center;
 }
 
 .old-live__old-embed iframe {
@@ -1841,7 +1880,7 @@ section.related.products {
 }
 
 .main-blog__article {
-  height: 75vh;
+  height: 75rem;
 }
 
 .main-blog__article--text {
@@ -1869,7 +1908,6 @@ section.related.products {
 
 .main-blog__image {
   width: 80%;
-  height: 75vh;
 }
 
 .main-blog__image img {
@@ -1907,7 +1945,7 @@ section.related.products {
 
 .blog-articles__item {
   width: 30%;
-  height: 40vh;
+  height: 50rem;
   position: relative;
 }
 
@@ -1926,12 +1964,17 @@ section.related.products {
 }
 
 .blog-articles__text {
-  height: 27%;
+  padding: 2.5rem;
+  height: 30%;
   background-color: #D7BB7E;
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
+}
+
+.blog-articles__text h3 {
+  font-weight: 500;
 }
 
 .archives {

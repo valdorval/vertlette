@@ -62,7 +62,9 @@ get_header();
             if ($args->have_posts()) :
                 while ($args->have_posts()) : $args->the_post();
             ?>
-                    <div class="blog-articles__item u-margin-top-big" style="background-image:url(<?php echo get_the_post_thumbnail_url($the_query->ID); ?>);background-position:top;background-size:cover;background-repeat:no-repeat;">
+                    <div class="blog-articles__item u-margin-top-big">
+
+                        <img src="<?php echo get_the_post_thumbnail_url($the_query->ID); ?>" alt="image de l'article">
                         <div class="blog-articles__text">
                             <h3 class="heading-quaternary"><a href="<?php echo get_the_permalink(); ?>"><?php echo the_title(); ?></a></h3>
                             <p class="p-light"><?php echo get_the_excerpt(); ?></p>

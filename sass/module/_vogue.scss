@@ -61,8 +61,14 @@
                background-color: rgba($color-primary-light, .9);
                height: 25%;
                padding: 1rem 5rem;
+
+               h4{
+                    margin-bottom: 0.8rem;
+               }
+
                p{
                     text-align: center!important;
+                    overflow-wrap: break-word;
                }
           } 
 
@@ -90,8 +96,14 @@
                background-color: rgba($color-primary-light, .9);
                height: 25%;
                padding: 1rem 5rem;
+
+               h4{
+                    margin-bottom: 0.8rem;
+               }
+
                p{
                     text-align: center!important;
+                    overflow-wrap: break-word;
                }
           } 
 
