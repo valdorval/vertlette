@@ -12,10 +12,21 @@
                position: absolute;
                left: 2rem;
                bottom: 2rem;
+
+               @include  responsive(tablet) { 
+                    left: 50%;
+                    bottom: -20%;
+                    transform: translateX(-50%);
+                    margin-bottom: 3rem;
+            }
           }
 
           &::after {
                @include contour;
+
+               @include  responsive(tablet) { 
+                    display: none;
+            }
           }
      }
 
