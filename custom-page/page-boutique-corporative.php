@@ -19,7 +19,7 @@ $user = wp_get_current_user();
 <main class="boutique">
 
     <div class="filter-bar flex">
-        <span>Filtrer par:</span>
+        <span></span>
     </div>
 
     <section class="flex">
