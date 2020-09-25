@@ -19,12 +19,12 @@ $image = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
           <h2 class="heading-quaternary heading-quaternary--primary u-margin-bottom-normal"><?php echo get_field('second_article_subtitle'); ?></h2>
           <p><?php echo get_field('second-article-p'); ?></p>
 
+
           <div class="flex auteur u-margin-top-big u-margin-bottom-big">
-               <span>Auteur:</span>
+               <span>Auteur: </span>
                <p> <?php the_author_meta('user_nicename', $author_id);; ?></p>
           </div>
 </section>
-
 
 <?php
 get_footer();

@@ -78,47 +78,46 @@ get_header();
     </section>
 
     <section class="archives">
-        <h4 class="container-big heading-secondary heading-secondary--dark u-margin-bottom-normal">Archives</h4>
+        <h4 class="container-big heading-secondary heading-secondary--dark u-margin-bottom-normal center">Archives</h4>
         <div class="archives__content u-padding-bottom-normal">
             <div class="archives__content--box container-big flex">
                 <div class="archives__content--menu">
                     <h5 class="heading-rubik--black u-margin-bottom-small">Récents</h5>
-                    <p class="u-margin-bottom-xsmall"><a href="#">Lorem ipsum dolor sit amet</a></p>
-                    <p class="u-margin-bottom-xsmall"><a href="#">Lorem ipsum dolor sit amet</a></p>
-                    <p class="u-margin-bottom-xsmall"><a href="#">Lorem ipsum dolor sit amet</a></p>
-                    <p class="u-margin-bottom-xsmall"><a href="#">Lorem ipsum dolor sit amet</a></p>
-                    <p class="u-margin-bottom-xsmall"><a href="#">Lorem ipsum dolor sit amet</a></p>
+                    <?php
+
+                    $cat = new WP_Query(array(
+                        'post_type'             => 'nouvelles',
+                        'post_per_page'         =>  6,
+                    ));
+
+                    if ($cat->have_posts()) :
+                        while ($cat->have_posts()) : $cat->the_post();
+                    ?>
+                            <p class="u-margin-bottom-xsmall"><a href="<?php echo get_the_permalink(); ?>"><?php the_title(); ?></a></p>
+
+                    <?php
+                        endwhile;
+                    endif; ?>
                 </div>
+
                 <div class="archives__content--menu">
                     <h5 class="heading-rubik--black u-margin-bottom-small">Catégories</h5>
-                    <p class="u-margin-bottom-xsmall"><a href="#">Lorem ipsum dolor sit amet</a></p>
-                    <p class="u-margin-bottom-xsmall"><a href="#">Lorem ipsum dolor sit amet</a></p>
-                    <p class="u-margin-bottom-xsmall"><a href="#">Lorem ipsum dolor sit amet</a></p>
-                    <p class="u-margin-bottom-xsmall"><a href="#">Lorem ipsum dolor sit amet</a></p>
+                    <?php
+                    $archive_terms = get_terms(array(
+                        'taxonomy' => 'vluxe_nouvelles_categorie',
+                        'fields' => 'slug',
+                        'terms' => 'all'
+                    ));
+                    if (!empty($archive_terms) && is_array($archive_terms)) {
+                        foreach ($archive_terms as $terms) { ?>
+                            <p class="u-margin-bottom-xsmall"><a href="<?php echo esc_url(get_term_link($terms)); ?>"><?php echo $terms->name; ?></a></p>
+                    <?php
+                        }
+                    }
+                    ?>
+
                 </div>
-                <div class="archives__content--menu">
-                    <h5 class="heading-rubik--black u-margin-bottom-small">Tags</h5>
-                    <p class="u-margin-bottom-xsmall"><a href="#">Lorem ipsum dolor sit amet</a></p>
-                    <p class="u-margin-bottom-xsmall"><a href="#">Lorem ipsum dolor sit amet</a></p>
-                    <p class="u-margin-bottom-xsmall"><a href="#">Lorem ipsum dolor sit amet</a></p>
-                    <p class="u-margin-bottom-xsmall"><a href="#">Lorem ipsum dolor sit amet</a></p>
-                    <p class="u-margin-bottom-xsmall"><a href="#">Lorem ipsum dolor sit amet</a></p>
-                    <p class="u-margin-bottom-xsmall"><a href="#">Lorem ipsum dolor sit amet</a></p>
-                </div>
-                <div class="archives__content--menu">
-                    <h5 class="heading-rubik--black u-margin-bottom-small">Mois</h5>
-                    <p class="u-margin-bottom-xsmall"><a href="#">Lorem ipsum dolor sit amet</a></p>
-                    <p class="u-margin-bottom-xsmall"><a href="#">Lorem ipsum dolor sit amet</a></p>
-                    <p class="u-margin-bottom-xsmall"><a href="#">Lorem ipsum dolor sit amet</a></p>
-                    <p class="u-margin-bottom-xsmall"><a href="#">Lorem ipsum dolor sit amet</a></p>
-                </div>
-                <div class="archives__content--menu">
-                    <h5 class="heading-rubik--black u-margin-bottom-small">Année</h5>
-                    <p class="u-margin-bottom-xsmall"><a href="#">Lorem ipsum dolor sit amet</a></p>
-                    <p class="u-margin-bottom-xsmall"><a href="#">Lorem ipsum dolor sit amet</a></p>
-                    <p class="u-margin-bottom-xsmall"><a href="#">Lorem ipsum dolor sit amet</a></p>
-                    <p class="u-margin-bottom-xsmall"><a href="#">Lorem ipsum dolor sit amet</a></p>
-                </div>
+
             </div>
         </div>
     </section>
