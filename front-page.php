@@ -7,7 +7,7 @@ get_header();
             <div class="presentation__title">
                 <h1 class="heading-quaternary">Lorem ipsum dolor sit amet</h1>
             </div>
-            <button class="btn"><a href="<?php get_permalink('6'); ?>"> Découvrir nos produits</a></button>
+            <button class="btn"><a href="<?php the_permalink('6'); ?>"> Découvrir nos produits</a></button>
         </div>
     </section>
 
