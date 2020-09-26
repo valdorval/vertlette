@@ -1,7 +1,7 @@
 <main>
      <section class="abonnement">
           <header class="abonnement__header container u-margin-top-big">
-               <div class="flex">
+               <div class="abonnement__header--flex flex">
                     <div class="abonnement__corpo center">
                          <img src="<?php echo get_template_directory_uri(); ?>/img/couronne.png" alt="Couronne">
                          <p class="p-member center u-margin-top-big">Devenez membre</p>

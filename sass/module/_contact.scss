@@ -9,16 +9,29 @@
 
      &__content {
           justify-content: space-between;
+
+          @include  responsive(tablet) { 
+              display: block;
+          }  
      }
 
      &__coordonne {
           width: 45%;
           border-right: 1px solid $color-primary;
+
+          @include  responsive(tablet) { 
+              border: none;
+              width: 90%;
+          }  
      }
 
      &__map {
           width: 80%;
           height: 40rem;
+
+          @include  responsive(tablet) { 
+               height: 40rem;
+          }  
      }
 
      &__details {
@@ -29,16 +42,26 @@
                margin: 0 auto;
                width: 70%;
                justify-content: space-between;
+
+               @include  responsive(desktop) { 
+                    width: 90%;
+               }  
           }
      }
 
      &__form-section {
           width: 50%;
 
+          @include  responsive(tablet) { 
+               width: 120%;
+               margin-left: 25%;
+          }  
+          
           label {
                display: block;
                width: 45%;
           }
+
      }
 
      &__form {

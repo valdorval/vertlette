@@ -1,4 +1,10 @@
 .about {
+
+     @include  responsive(tablet) { 
+          padding-left: 3rem;
+          padding-right: 3rem;
+     }  
+     
      .heading-tertiary{
           color: $color-primary-dark!important;
      }
@@ -9,5 +15,14 @@
 
      .second-section{
           margin-top: 4rem;
+     }
+}
+
+.reparation__text, .recup__text,
+.abonnement__article, .privacy, .condition,
+.single-news {
+
+     p {
+          padding-bottom: 2.4rem;
      }
 }
