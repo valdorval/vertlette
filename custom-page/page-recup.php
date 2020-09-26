@@ -20,7 +20,7 @@ get_header();
                     <img src="<?php echo get_template_directory_uri(); ?>/img/renovation.jpg" alt="Renovation">
                </div>
           </div>
-          <button class="btn btn__dark u-margin-top-small"><a href="<?php echo get_permalink('35'); ?>">Nous contacter</a></button>
+          <button class="btn btn__dark u-margin-top-small"><a href="<?php echo get_permalink('63'); ?>">Nous contacter</a></button>
      </section>
      <section class="recup u-margin-top-big container-big">
           <h2 class="heading-black u-margin-bottom-normal">Récupération</h2>
@@ -33,7 +33,7 @@ get_header();
                </div>
           </div>
           <div class="recup__button-right">
-               <button class="btn btn__dark u-margin-top-small u-margin-bottom-big"><a href="<?php echo get_permalink('35'); ?>">Nous contacter</a></button>
+               <button class="btn btn__dark u-margin-top-small u-margin-bottom-big"><a href="<?php echo get_permalink('63'); ?>">Nous contacter</a></button>
           </div>
      </section>
 
