@@ -1,7 +1,7 @@
 <main>
      <section class="abonnement">
           <header class="abonnement__header container u-margin-top-big">
-               <div class="flex">
+               <div class="abonnement__header--flex flex">
                     <div class="abonnement__corpo center">
                          <img src="<?php echo get_template_directory_uri(); ?>/img/couronne.png" alt="Couronne">
                          <p class="p-member center u-margin-top-big">Devenez membre</p>
@@ -11,7 +11,11 @@
                          <p class="center u-margin-top-xsmall abonnement__details--special">Un vaste choix pour tous les goûts.</p>
                          <p class="p-big center u-margin-top-normal">2000 $</p>
                          <p class="p-dark u-margin-top-normal abonnement__details--p">Valable pendant 12 mois</p>
-                         <button class="btn u-margin-top-xsmall"><a href="<?php the_permalink('144'); ?>"></a>Je m'abonne</a></button>
+
+                         <div class="abonnement__details--button">
+                              <button class="btn u-margin-top-xsmall"><a href="<?php the_permalink('14'); ?>"></a>Je m'abonne</a></button>
+                         </div>
+
                     </div>
                </div>
           </header>

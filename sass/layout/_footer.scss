@@ -3,17 +3,41 @@
      height: 25rem;
      position: relative;
 
+     @include  responsive(desktop) { 
+          height: 60vh;
+  }
+
      &__content {
           @include position;
           justify-content: space-around;
+
+          @include  responsive(tablet) { 
+               flex-direction: column;
+               position: absolute;
+       }
+
      }
 
      &__category {
           color: $color-secondary-dark;
 
+          @include  responsive(tablet) { 
+               margin-bottom: 2rem;
+          }
+
+          p, a {
+               @include  responsive(tablet) { 
+                    text-align: center;
+          }
+          }
+
           a {
                color: $color-secondary-dark;
                transition: all .3s;
+
+               @include  responsive(tablet) { 
+                    text-align: center;
+            }
 
                &:hover {
                     color: rgba($color-white, .6);
@@ -26,7 +50,37 @@
                }
           }
 
+          &--info {
+               @include  responsive(tablet) { 
+                    order: 3;
+            }    
+          }
+
+          &--repa {
+               @include  responsive(tablet) { 
+                    order: 2;
+            } 
+          }
+
+          &--politic {
+               @include  responsive(tablet) { 
+                    order: 1;
+            }   
+          }
+
           &--social {
+               @include  responsive(tablet) { 
+                    order: 4;
+            }
+          }
+
+          &--socials {
+
+                    @include  responsive(tablet) { 
+                         position: absolute;
+                         left: 50%;
+                         transform: translateX(-50%);
+                 }
 
                img {
                     width: 4rem;

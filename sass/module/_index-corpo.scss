@@ -22,9 +22,34 @@
           top: 5%;
           left: 5%;
           width: 50%;
+          height: 100%;
+
+          @include  responsive(tablet) { 
+               top: 2%;
+               left: 2%;
+               width: 55%;
+       }
+
+          h3 {
+               @include  responsive(tablet) { 
+                    text-align: left;
+            }
+          }
 
           p {
                text-shadow: 1px 1px 3px rgba($color-black, .8);
+
+               @include  responsive(tablet) { 
+                    font-weight: bold;
+            }
+          }
+
+          button {
+               @include  responsive(tablet) { 
+                    position: absolute;
+                    left: 2%;
+                    bottom:5%;
+            }
           }
      }
 }

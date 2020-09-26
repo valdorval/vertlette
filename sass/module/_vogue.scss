@@ -147,6 +147,23 @@
                background-color: rgba($color-primary-light, .9);
                height: 25%;
                padding: 1rem 5rem;
+
+               h4 {
+                    @include  responsive(tablet) { 
+                         margin-top: 2rem;
+                 }
+               }
+
+               p {
+                    @include  responsive(tablet) { 
+                         display: none;
+                 }
+               }
+
+               @include  responsive(tablet) { 
+                    width: 100%;
+                    background-color: $color-transparent;
+            }
           } 
 
           h4{

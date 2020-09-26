@@ -4,12 +4,29 @@
         iframe {
             width: 90rem;
             height: 50rem;
+
+            @include  responsive(tablet) { 
+                    width: 80%;
+                    height: 35rem;
+            }  
+           
         }
 
         &--button, &--description {
             width: 90rem;
             margin: 0 auto;
             text-align: left;
+
+            @include  responsive(tablet) { 
+                width: 80%;
+        }  
+        }
+
+        &--button {
+
+            @include  responsive(tablet) { 
+                text-align: center;
+            }  
         }
     }
 }
@@ -30,6 +47,11 @@
         &--item {
             position: relative;
             width: 44rem;
+
+            @include  responsive(desktop) { 
+                margin: 6rem auto;
+
+        }  
         }
 
         &--date {
