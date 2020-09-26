@@ -76,6 +76,10 @@ p {
      &--light {
           color: $color-primary-light;
      }
+
+     @include  responsive(tablet) { 
+          font-size: 2.1rem;
+     }  
 }
 
 .heading-quaternary {

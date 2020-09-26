@@ -1,4 +1,10 @@
 .about {
+
+     @include  responsive(tablet) { 
+          padding-left: 3rem;
+          padding-right: 3rem;
+     }  
+     
      .heading-tertiary{
           color: $color-primary-dark!important;
      }

@@ -169,3 +169,11 @@
           }
      }
 }    
+
+.single-news {
+
+     @include  responsive(tablet) { 
+          padding-left: 3rem;
+          padding-right: 3rem;
+     } 
+}
