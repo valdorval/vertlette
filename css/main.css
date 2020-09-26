@@ -177,6 +177,9 @@ p {
     text-transform: uppercase;
     color: black;
     font-size: 3rem; }
+    @media (max-width: 600px) {
+      .heading-rubik--black {
+        font-size: 2rem; } }
   @media (max-width: 1200px) {
     .heading-rubik {
       font-size: 2.8rem;
@@ -1581,12 +1584,25 @@ section.related.products {
   text-decoration: none;
   color: #917A5E; }
 
+#dec-button, #inc-button {
+  cursor: pointer; }
+
 .main-blog__article {
-  height: 75rem; }
+  height: 85rem; }
+  @media (max-width: 1200px) {
+    .main-blog__article {
+      position: relative;
+      width: 90%;
+      background: #917A5E; } }
   .main-blog__article--text {
     background-color: #917A5E;
     width: 20%;
     position: relative; }
+    @media (max-width: 1200px) {
+      .main-blog__article--text {
+        position: absolute;
+        width: 100%;
+        bottom: 20%; } }
   .main-blog__article--description {
     color: #FEF5DC;
     font-style: italic;
@@ -1603,9 +1619,10 @@ section.related.products {
 
 .main-blog__image {
   width: 80%; }
-  .main-blog__image img {
-    height: 100%;
-    width: 100%; }
+  @media (max-width: 1200px) {
+    .main-blog__image {
+      width: 100%;
+      height: 50rem; } }
 
 .p-primary-light {
   color: #FEF5DC;
@@ -1626,11 +1643,23 @@ section.related.products {
 .blog-articles__content {
   justify-content: space-between;
   flex-wrap: wrap; }
+  @media (max-width: 1200px) {
+    .blog-articles__content {
+      justify-content: space-around; } }
 
 .blog-articles__item {
   width: 30%;
-  height: 50rem;
+  height: 40rem;
   position: relative; }
+  @media (max-width: 1200px) {
+    .blog-articles__item {
+      width: 45%; } }
+  @media (max-width: 900px) {
+    .blog-articles__item {
+      width: 60%; } }
+  @media (max-width: 600px) {
+    .blog-articles__item {
+      width: 95%; } }
   .blog-articles__item img {
     width: 100%;
     height: 73%;
@@ -1642,12 +1671,15 @@ section.related.products {
 
 .blog-articles__text {
   padding: 2.5rem;
-  height: 29%;
+  height: 32%;
   background-color: #D7BB7E;
   position: absolute;
   left: 0;
   bottom: -1rem;
   padding: 1.5rem; }
+  @media (max-width: 600px) {
+    .blog-articles__text {
+      width: 95%; } }
   .blog-articles__text h3 {
     font-weight: 500; }
   .blog-articles__text p {
@@ -1655,6 +1687,9 @@ section.related.products {
 
 .archives {
   margin-top: 12rem; }
+  @media (max-width: 600px) {
+    .archives a {
+      font-size: 1.2rem; } }
   .archives a:hover {
     text-decoration: underline; }
   .archives__content {

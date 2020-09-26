@@ -130,6 +130,10 @@ p {
           text-transform: uppercase;
           color: black;
           font-size: 3rem;
+
+          @include  responsive(phone) { 
+               font-size: 2rem;
+          } 
      }
 
      @include  responsive(desktop) { 
