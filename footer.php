@@ -18,10 +18,10 @@
           </div>
           <div class="footer__category footer__category--social center">
                <p class="u-margin-bottom-xsmall">Réseaux sociaux</p>
-               <div class="footer__category--social flex">
-                    <a href="https://twitter.com/"><img src="<?php echo get_template_directory_uri(); ?>/img/twitter.png" alt="Twitter"></a>
-                    <a href="https://www.facebook.com/"><img src="<?php echo get_template_directory_uri(); ?>/img/facebook.png" alt="facebook"></a>
-                    <a href="https://www.instagram.com/"><img src="<?php echo get_template_directory_uri(); ?>/img/instagram.png" alt="instagram"></a>
+               <div class="footer__category--socials flex">
+                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/twitter.png" alt="Twitter"></a>
+                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/facebook.png" alt="facebook"></a>
+                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/instagram.png" alt="instagram"></a>
                </div>
           </div>
      </div>
