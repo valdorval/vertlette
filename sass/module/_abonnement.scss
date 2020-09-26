@@ -5,17 +5,44 @@
           height: 40rem;
           position: relative;
 
+          @include  responsive(desktop) { 
+               height: 85vh;
+          }  
+
+          @include  responsive(tablet) { 
+               width: 90%;
+          }  
+
           &::after {
                @include contour;
+          }
+
+          &--flex {
+               @include  responsive(desktop) { 
+                    flex-direction: column;
+            }  
           }
      }
 
      &__corpo {
-          width: 60%;
+          width: 50%;
+
+          @include  responsive(desktop) { 
+               width: 90%;
+               margin: 0 auto;
+          }  
 
           img {
-               margin-top: 2.4rem;
+               margin-top: 7rem;
+               width: 35%;
+
+               @include  responsive(desktop) { 
+                    width: 50%;
+            }  
+
+            @include  responsive(desktop) { 
                width: 40%;
+          }  
           }
      }
 
@@ -27,16 +54,38 @@
 
           &--p {
                text-align: right;
+
+               @include  responsive(desktop) { 
+                    text-align: center;
+            }  
           }
 
-          button {
-               width: 100%;
+          &--button {
+
+               button {
+                    width: 100%; 
+                    
+                    @include  responsive(desktop) { 
+                    width: 60%;
+                    }  
+               }
+
+               @include  responsive(desktop) { 
+                    text-align: center;
+               }  
+               
+
+              
           }
      }
 
      &__article {
 
           padding: 2.4rem 0;
+
+          @include  responsive(tablet) { 
+               width: 90%;
+          }  
 
           p{
                padding-bottom: 2.4rem;   

@@ -4,20 +4,43 @@
 
 .reparation {
 
+     h1 {
+          @include  responsive(tablet) { 
+               text-align: center;
+          }  
+     }
+
      &__content {
           justify-content: space-between;
+
+          @include  responsive(tablet) { 
+               flex-direction: column;
+               margin-left: 10%;
+          }  
      }
 
      &__text {
           width: 60%;
           padding-left: 1rem;
           border-left: 1px solid $color-primary;
+
+          @include  responsive(tablet) { 
+               order: 2;
+               width: 90%;
+               border: none;
+          }  
      }
 
      &__img {
           width: 30%;
           height: 50%;
           position: relative;
+
+          @include  responsive(tablet) { 
+               order: 1;
+               width: 90%;
+               margin-bottom: 3rem;
+          }  
 
           &::after {
                @include contour;
@@ -27,26 +50,57 @@
                width: 100%;
           }
      }
+
+     &__button-left{
+
+          @include  responsive(tablet) { 
+               text-align: center;
+          }  
+     }
+
 }
 
 .recup {
 
-     h2 {text-align: right;}
+     h2 {
+          text-align: right;
+     
+          @include  responsive(tablet) { 
+               text-align: center;
+          }  
+     }
 
      &__content {
           justify-content: space-between;
+
+          @include  responsive(tablet) { 
+               flex-direction: column;
+               margin-left: 10%;
+          }  
      }
 
      &__text {
           width: 60%;
           padding-right: 1rem;
           border-right: 1px solid $color-primary;
+
+          @include  responsive(tablet) { 
+               order: 2;
+               width: 90%;
+               border: none;
+          }  
      }
 
      &__img {
           height: 50%;
           width: 30%;
           position: relative;
+
+          @include  responsive(tablet) { 
+               order: 1;
+               width: 90%;
+               margin-bottom: 3rem;
+          }  
 
           &::after {
                @include contour;
@@ -59,5 +113,9 @@
 
      &__button-right {
           text-align: right;
+
+          @include  responsive(tablet) { 
+               text-align: center;
+          }  
      }
 }
